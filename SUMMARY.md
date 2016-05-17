@@ -1,7 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-* [基本概念介绍](jiben_gai_nian_jie_shao_md.md)
 * [快速开始](kuai_su_kai_shi.md)
 * [在DataFoundry应用开发](zai_datafoundry_ying_yong_kai_fa.md)
 * [镜像构建及持续交付](jing_xiang_gou_jian_ji_chi_xu_jiao_fu.md)
