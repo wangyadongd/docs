@@ -36,7 +36,7 @@ Docker镜像、镜像仓库、容器间关系如下图：
 ![](registry.png)
 ## Pods
 Pod概念是继承Kubernetes的概念，Pod是一个或多个容器部署在一起的集合，可以给Pod定义计算资源。
-每一个Pod在DataFoundry集群中都会分配一个独立的IP地址，
+每一个Pod在DataFoundry集群中都会分配一个独立的IP地址，在Pod中
 
 ## Services
 
