@@ -48,7 +48,7 @@ Pod的生命周期过程包括：通过配置进行定义，然后分配到一�
 
 ## 后端服务（Backing Services）
 ## 后端服务实例（Backing Service Instances）
-## 模板（templates）
+## 模板（Templates）
 
 
 
