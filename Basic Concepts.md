@@ -6,6 +6,7 @@
     本文提供给平台使用者在应用生命周期中的必要的核心概念。
     
 ## 容器（containers）
+
     linux容器技术提供轻量级的虚拟化设备，以便隔离进程、文件系统、网络等资源。
     容器（containers）是DataFoundry平台中定义的最小应用运行单元。
     DataFoundry平台是基于Docker容器的，而Docker容器是基于Docker镜像运行的应用运行单元。
