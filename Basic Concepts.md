@@ -8,5 +8,5 @@ Service
 Route
 Backing Service
 Backing Service Instance
-模板
+模板（templates）
 
