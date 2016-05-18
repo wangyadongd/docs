@@ -1,7 +1,7 @@
 # 基本概念
+    DataFoundry云平台是基于以Docker为代表的容器技术，
 ## 构建（Builds）
     构建在DataFoundry系统中默认指为Docker build。是指通过dockerfile、源代码为输入，构建出的可运行的镜像（images）为输出的过程。
-    
 ## 镜像（Images）
 ## 镜像仓库（Image registry）
 ## 部署（Deployments）
