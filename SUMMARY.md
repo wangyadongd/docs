@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [基本概念](Basic Concepts.md)
-   * 镜像
+   * [镜像](basicconcepts-builds&images.md)
 * [快速开始](Quick Start.md)
 * [在DataFoundry应用开发](Development on DataFoundry.md)
 * [镜像构建及持续集成](Imagebuild&CI.md)
