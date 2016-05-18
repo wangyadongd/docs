@@ -35,6 +35,7 @@ DataFoundry提供接收及存储Docker镜像的镜像仓库。镜像仓库存储
 Docker镜像、镜像仓库、容器间关系如下图：
 ![](registry.png)
 ## Pods
+Pod概念是继承Kubernetes的概念，Pod是
 
 ## Services
 
