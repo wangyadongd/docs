@@ -1,9 +1,11 @@
 # 基本概念
 ## 构建（Builds）
     构建在DataFoundry系统中默认指为Docker build。是指通过dockerfile、源代码为输入，构建出的可运行的镜像（images）为输出的过程。
+    
 ## 镜像（Images）
 ## 镜像仓库（Image registry）
 ## 容器（containers）
+    容器（containers）是DataFoundry平台中定义的最小应用运行单元，
 ## 部署（Deployments）
 ## Pods
 ## Services
