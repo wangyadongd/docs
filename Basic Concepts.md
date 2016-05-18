@@ -22,7 +22,7 @@
     
 ## 镜像仓库（Image registry）
     
-    DataFoundry提供接收及存储Docker镜像的镜像仓库，镜像仓库包含
+    DataFoundry提供接收及存储Docker镜像的镜像仓库。镜像仓库存储了每次构建成功的镜像，以镜像TAG来区分
 ## 部署（Deployments）
 
 ## Pods
