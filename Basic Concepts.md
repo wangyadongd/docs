@@ -53,6 +53,7 @@ Pod的生命周期过程包括：通过配置进行定义，然后分配到一�
 
 ## 后端服务（Backing Services）
 
+DataFoundry作为大数据PaaS平台，对使用者提供了
 ## 后端服务实例（Backing Service Instances）
 ## 模板（Templates）
 
