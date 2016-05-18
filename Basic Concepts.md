@@ -16,6 +16,8 @@
     构建在DataFoundry系统中构建默认为Docker build。是指通过dockerfile、源代码为输入，构建出的可运行的镜像（images）为输出的过程。
     
 ## 镜像（Images）
+    
+    Docker镜像
 ## 镜像仓库（Image registry）
 ## 部署（Deployments）
 
