@@ -37,7 +37,7 @@ Docker镜像、镜像仓库、容器间关系如下图：
 
 ## 服务部署（Deployments）
 
-DataFoundry服务部署是指将一个或多个镜像根据配置部署到平台上，部署过程根据配置创建一个副本控制器（replication controller），副本控制器负责启动Pod，并通过副本控制器的定义来控制启动的Pod的个数。
+服务部署是指将一个或多个镜像部署到DataFoundry平台上，部署过程根据配置创建一个副本控制器（replication controller），副本控制器负责启动Pod，并通过副本控制器的定义来控制启动的Pod的个数。
 在DataFoundry上已部署的服务可以通过条件触发来触发自动部署，触发自动部署的条件包含：部署配置变化触发、镜像变化触发。
 
 ## Pods
