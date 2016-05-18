@@ -57,9 +57,7 @@ DataFoundry作为大数据PaaS平台，以后端支持服务形式给平台使�
 所谓后端支持服务是通过网络提供的服务组件，这些组件包含：
 数据库组件：MySql、Gbase、MongoDB、Postgresql等；
 消息组件：Kafka、RabbitMQ等；
-计算组件：Storm、Spark等；
-
-
+计算组件：Storm、Spark等。
 
 ## 后端服务实例（Backing Service Instances）
 ## 模板（Templates）
