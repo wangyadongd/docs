@@ -17,7 +17,7 @@
     
 ## 镜像（Images）
     
-    DataFoundry中镜像指Docker镜像，Docker镜像是Docker容器的基础，
+    DataFoundry中镜像指Docker镜像，Docker镜像是Docker容器的基础。Docker镜像是将应用程序以及应用程序的依赖打包到一个单独的容器中。
 ## 镜像仓库（Image registry）
 ## 部署（Deployments）
 
