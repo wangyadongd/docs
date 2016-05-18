@@ -17,7 +17,7 @@
     
 ## 镜像（Images）
     
-    Docker镜像
+    DataFoundry中镜像指Docker镜像
 ## 镜像仓库（Image registry）
 ## 部署（Deployments）
 
