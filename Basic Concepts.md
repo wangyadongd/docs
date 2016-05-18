@@ -34,12 +34,13 @@ DataFoundry提供接收及存储Docker镜像的镜像仓库。镜像仓库存储
 
 Docker镜像、镜像仓库、容器间关系如下图：
 ![](registry.png)
-    
+## Pods
+
 ## 部署（Deployments）
 
     
 
-## Pods
+
 ## Services
 ## Routes
 ## Backing Services
