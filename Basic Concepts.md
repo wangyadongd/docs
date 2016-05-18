@@ -33,8 +33,6 @@ DataFoundry提供接收及存储Docker镜像的镜像仓库。镜像仓库存储
 当然，除了用DataFoundry提供的构建功能输出的镜像存储在镜像仓库中，镜像仓库也可以存储使用docker构建的其他镜像，将构建的镜像用docker pull的方式存放在镜像仓库中。
 
 Docker镜像、镜像仓库、容器间关系如下图：
-
-    
 ![](registry.png)
     
 ## 部署（Deployments）
