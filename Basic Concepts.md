@@ -36,12 +36,14 @@ Docker镜像、镜像仓库、容器间关系如下图：
 ![](registry.png)
 ## Pods
 
+## Services
+
 ## 部署（Deployments）
 
     
 
 
-## Services
+
 ## Routes
 ## Backing Services
 ## Backing Service Instances
