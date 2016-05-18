@@ -5,10 +5,10 @@
     DataFoundry打造以大数据应用为中心的云计算平台，优化开发运维环节，降低IT成本，提高了大数据应用和变现的效率，使得原本无法支撑的市场能够进入、使得原本无法成立的商业模式能够实现。市场机会在于建立一个大数据的PaaS公有云，并逐步将亚信现有本地实施转换为一套统一的私有云，从而打造应用生态。
     本文提供给平台使用者在应用生命周期中的必要的核心概念。
     
-## 容器（containers）
+## 容器（Containers）
 
     linux容器技术提供轻量级的虚拟化设备，以便隔离进程、文件系统、网络等资源。
-    容器（containers）是DataFoundry平台中定义的最小应用运行单元。
+    容器（Containers）是DataFoundry平台中定义的最小应用运行单元。
     DataFoundry平台是基于Docker容器的，而Docker容器是基于Docker镜像（Images）运行的应用运行单元。
     
 ## 构建（Builds）
@@ -18,9 +18,7 @@
 ## 镜像（Images）
 ## 镜像仓库（Image registry）
 ## 部署（Deployments）
-## 容器（containers）
-    容器（containers）是DataFoundry平台中定义的最小应用运行单元，linux容器技术提供轻量级的虚拟化设备，以便隔离进程、文件系统、网络等资源。
-    DataFoundry平台是基于Docker容器的，而Docker容器是基于Docker镜像运行的应用运行单元。
+
 ## Pods
 ## Services
 ## Routes
