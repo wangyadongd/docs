@@ -54,8 +54,11 @@ Pod的生命周期过程包括：通过配置进行定义，然后分配到一�
 ## 后端支持服务（Backing Services）
 
 DataFoundry作为大数据PaaS平台，以后端支持服务形式给平台使用者提供大数据服务组件，来提供给有状态服务使用。
-所谓后端支持服务是通过网络提供的服务组件，
-这些组件包含数据库组件，如：
+所谓后端支持服务是通过网络提供的服务组件，这些组件包含：
+数据库组件：MySql、Gbase、MongoDB、Postgresql等；
+消息组件：Kafka、RabbitMQ等；
+计算组件：Storm、Spark等；
+
 
 
 ## 后端服务实例（Backing Service Instances）
