@@ -4,11 +4,11 @@
 ## 镜像仓库（Image registry）
 ## 容器（containers）
 ## 部署（Deployments）
-## Pod
-## Service
-## Route
-## Backing Service
-## Backing Service Instance
+## Pods
+## Services
+## Routes
+## Backing Services
+## Backing Service Instances
 ## 模板（templates）
 
 
