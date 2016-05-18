@@ -60,6 +60,8 @@ DataFoundry作为大数据PaaS平台，以后端支持服务形式给平台使�
 计算组件：Storm、Spark等。
 
 ## 后端服务实例（Backing Service Instances）
+
+当平台使用者需要使用后端支持服务时，需要跟服务
 ## 模板（Templates）
 
 
