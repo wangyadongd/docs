@@ -21,7 +21,8 @@
     在DataFoundry中支持代码源以git协议为基础的代码仓库，如Github、GitLab。
     
 ## 镜像仓库（Image registry）
-    DataFoundry
+    
+    DataFoundry提供接收及存储
 ## 部署（Deployments）
 
 ## Pods
