@@ -38,7 +38,8 @@ Docker镜像、镜像仓库、容器间关系如下图：
 ## 服务部署（Deployments）
 
 DataFoundry服务部署是指将一个或多个镜像根据配置部署到平台上，部署过程根据配置创建一个副本控制器（replication controller），副本控制器负责启动Pod，并通过副本控制器的定义来控制启动的Pod的个数。
-DataFoundry服务部署
+DataFoundry服务部署支持自动部署
+
 ## Pods
 
 Pod是继承Kubernetes的概念，Pod是一个或多个容器部署在一起的集合，可以给Pod定义计算资源。
