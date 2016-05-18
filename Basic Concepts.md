@@ -49,7 +49,7 @@ Pod的生命周期过程包括：通过配置进行定义，然后分配到一�
     
 ## 服务
 
-服务是镜像在DataFoundry平台上部署后
+服务是是一组从Docker Image中运行的容器及路由组成的一个逻辑单元
 
 ## 后端服务（Backing Services）
 ## 后端服务实例（Backing Service Instances）
