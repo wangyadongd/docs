@@ -42,7 +42,7 @@ Pod的生命周期过程包括：通过配置进行定义，然后分配到一�
 
 ## 部署（Deployments）
 
-DataFoundry的部署是指将一个或多个镜像根据配置部署到平台上，
+DataFoundry的部署是指将一个或多个镜像根据配置部署到平台上，部署过程通过配置创建一个副本控制器（replication controller），副本控制器（replication controller）负责启动Pods，并通过副本控制器的定义来控制Pod的个数。
     
 ## 服务
 
