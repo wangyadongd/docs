@@ -18,7 +18,7 @@
 ## 镜像（Images）
     
     DataFoundry中镜像指Docker镜像，Docker镜像是Docker容器的基础。Docker镜像是通过dockerfile的定义将应用程序以及依赖打包到一个单独的虚拟容器中。这个容器可以运行在任何linux服务器上。这大大地提高了程序运行的灵活性和可移植性，无论需不需要许可、是在公共云还是私密云、是不是裸机环境等等。
-    在DataFoundry中支持代码源以git协议为基础的代码仓库，如Github、GitLab，
+    在DataFoundry中支持代码源以git协议为基础的代码仓库，如Github、GitLab。
     
 ## 镜像仓库（Image registry）
 ## 部署（Deployments）
