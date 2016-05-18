@@ -4,9 +4,10 @@
     
 ## 镜像（Images）
 ## 镜像仓库（Image registry）
-## 容器（containers）
-    容器（containers）是DataFoundry平台中定义的最小应用运行单元，
 ## 部署（Deployments）
+## 容器（containers）
+    容器（containers）是DataFoundry平台中定义的最小应用运行单元，linux容器技术提供轻量级的虚拟化设备，以便隔离进程、文件系统、网络等资源。
+    在DataFoundry平台使用中，使用者无需与容器直接交互。
 ## Pods
 ## Services
 ## Routes
