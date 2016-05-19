@@ -29,7 +29,8 @@ Storm        asiainfo.io/servicebroker=etcd   true       Active
 ZooKeeper    asiainfo.io/servicebroker=etcd   true       Active
 ```
 
-2. 查询后端支持服务的详细信息及套餐
+2. 查询后端支持服务的详细信息及套餐，以Mongodb为例
+
 
 
 
