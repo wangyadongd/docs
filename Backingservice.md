@@ -2,8 +2,10 @@
 
 后端支持服务为开发者提供即开即用的大数据服务，后端支持服务可以按照开发者的用量需求来申请，在申请后端支持服务数十秒钟后即可得到一个高可用的后端支持服务。
 
-## 查询后端支持服务
-1. 命令行
+
+## 通过命令行申请后端支持服务
+
+登录DataFoundry，执行命令行
 ```
     oc get backingservice -n openshift
 ```
@@ -24,6 +26,9 @@ Spark        asiainfo.io/servicebroker=etcd   true       Active
 Storm        asiainfo.io/servicebroker=etcd   true       Active
 ZooKeeper    asiainfo.io/servicebroker=etcd   true       Active
 ```
+
+## 通过界面申请后端支持服务
+
 
 2. 页面方式
 
