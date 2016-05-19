@@ -33,10 +33,15 @@ ZooKeeper    asiainfo.io/servicebroker=etcd   true       Active
 2. 查询后端支持服务的详细信息及套餐，以Mongodb为例:
 执行命令
 ```
-oc describe backingservice MongoDB -n openshift
+oc describe backingservice NAME -n openshift
 ```
 参数说明：
+NAME：后端支持服务名称
 
+执行命令
+```
+oc describe backingservice MongoDB -n openshift
+```
 
 得到MongoDB后端支持服务的描述：
 
