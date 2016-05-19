@@ -126,6 +126,27 @@ NAME：后端支持服务实例名称
 
 以mongodb-demo为例，执行命令：
 ```
+oc describe backingserviceinstance mongodb-demo
+```
+查询结果：
+```
+Name:			mongodb-demo
+Created:		2 minutes ago
+Labels:			<none>
+Annotations:		<none>
+Status:			Unbound
+DashboardUrl:		http://rockmongo-service-broker-db.app.dataos.io/index.php?action=autologin.index&user=66ac2632a7ec0ea0a9480d513539f773&pass=6ba8f37b0a9c914c0bc0adffb37646a7&instance=a20ad002-1d98-11e6-813a-fa163d0e0615
+BackingServiceName:	MongoDB
+BackingServicePlanName:	ShareandCommon
+BackingServicePlanGuid:	257C6C2B-A376-4551-90E8-82D4E619C852
+Parameters:
+instance_id:	a20ad002-1d98-11e6-813a-fa163d0e0615
+Bound:		0
+Events:
+  FirstSeen	LastSeen	Count	From	SubobjectPath	Type		Reason		Message
+  ---------	--------	-----	----	-------------	--------	------		-------
+  2m		2m		1	{bsi }			Normal		Provisioning	bsi provisioning done, instanceid: a20ad002-1d98-11e6-813a-fa163d0e0615
+
 ```
 
 ## 通过界面申请后端支持服务
