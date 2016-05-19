@@ -190,6 +190,13 @@ oc get backingserviceinstance
 
 执行结果：
 ```
+NAME           SERVICE        PLAN             BOUND     STATUS
+mongodb-demo   MongoDB        ShareandCommon   1         Bound
+my-mongodb     MongoDB        ShareandCommon   3         Bound
+my-test-sql    Mysql          Experimental     0         Unbound
+mysql-inst1    Mysql          Experimental     0         Unbound
+new-mongodb    MongoDB        ShareandCommon   0         Unbound
+spark          Spark-v1.5.2   One_Worker       2         Bound
 ```
 
 
