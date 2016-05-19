@@ -203,6 +203,81 @@ spark          Spark-v1.5.2   One_Worker       2         Bound
 
 执行命令，查看绑定的服务的详情：
 ```
+Name:		rstudio
+Created:	5 weeks ago
+Labels:		run=rstudio
+Annotations:	openshift.io/deployment.cancelled=5
+Latest Version:	9
+Selector:	run=rstudio
+Replicas:	1
+Triggers:	Config
+Strategy:	Rolling
+Template:
+  Labels:	run=rstudio
+  Containers:
+  rstudio:
+    Image:	registry.dataos.io/guestbook/rstudio
+    Port:	
+    QoS Tier:
+      cpu:	BestEffort
+      memory:	BestEffort
+    Environment Variables:
+     VCAP_SERVICES:		{"MongoDB":[{"name":"mongodb-demo","label":"","plan":"ShareandCommon","credentials":{"Host":"dashboard.servicebroker.dataos.io","Name":"a20ad002-1d98-11e6-813a-fa163d0e0615","Password":"382565069e4325e17f7406c61bb69f17","Port":"27017","Uri":"mongodb://c5b787259abb48fc5124e7b87994e4da:382565069e4325e17f7406c61bb69f17@dashboard.servicebroker.dataos.io:27017/a20ad002-1d98-11e6-813a-fa163d0e0615","Username":"c5b787259abb48fc5124e7b87994e4da","Vhost":""}}]}
+      BSI_MONGODBDEMO_PORT:	27017
+      BSI_MONGODBDEMO_VHOST:	
+      BSI_MONGODBDEMO_URI:	mongodb://c5b787259abb48fc5124e7b87994e4da:382565069e4325e17f7406c61bb69f17@dashboard.servicebroker.dataos.io:27017/a20ad002-1d98-11e6-813a-fa163d0e0615
+      BSI_MONGODBDEMO_NAME:	a20ad002-1d98-11e6-813a-fa163d0e0615
+      BSI_MONGODBDEMO_USERNAME:	c5b787259abb48fc5124e7b87994e4da
+      BSI_MONGODBDEMO_PASSWORD:	382565069e4325e17f7406c61bb69f17
+      BSI_MONGODBDEMO_HOST:	dashboard.servicebroker.dataos.io
+  No volumes.
+
+Deployment #9 (latest):
+	Name:		rstudio-9
+	Created:	19 minutes ago
+	Status:		Complete
+	Replicas:	1 current / 1 desired
+	Selector:	deployment=rstudio-9,deploymentconfig=rstudio,run=rstudio
+	Labels:		openshift.io/deployment-config.name=rstudio,run=rstudio
+	Pods Status:	1 Running / 0 Waiting / 0 Succeeded / 0 Failed
+Deployment #8:
+	Created:	11 days ago
+	Status:		Complete
+	Replicas:	0 current / 0 desired
+Deployment #7:
+	Created:	12 days ago
+	Status:		Failed
+	Replicas:	0 current / 0 desired
+Deployment #6:
+	Created:	4 weeks ago
+	Status:		Complete
+	Replicas:	0 current / 0 desired
+Deployment #5:
+	Created:	4 weeks ago
+	Status:		Complete
+	Replicas:	0 current / 0 desired
+Deployment #4:
+	Created:	4 weeks ago
+	Status:		Failed
+	Replicas:	0 current / 0 desired
+Deployment #3:
+	Created:	4 weeks ago
+	Status:		Complete
+	Replicas:	0 current / 0 desired
+Deployment #2:
+	Created:	4 weeks ago
+	Status:		Failed
+	Replicas:	0 current / 0 desired
+Deployment #1:
+	Created:	5 weeks ago
+	Status:		Complete
+	Replicas:	0 current / 0 desired
+
+Events:
+  FirstSeen	LastSeen	Count	From				SubobjectPath	Type		Reason			Message
+  ---------	--------	-----	----				-------------	--------	------			-------
+  19m		19m		1	{deploymentconfig-controller }			Normal		DeploymentCreated	Created new deployment "rstudio-9" for version 9
+  19m		19m		1	{deployment-controller }			Warning		FailedUpdate		Cannot update deployment dangsha/rstudio-9 status to Pending: replicationcontrollers "rstudio-9" cannot be updated: the object has been modified; please apply your changes to the latest version and try again
 ```
 
 
