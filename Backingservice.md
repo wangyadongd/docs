@@ -152,8 +152,8 @@ Events:
 ```
 
 参数说明：
-```
-```
+BackingServiceInstanceName：绑定的后端支持服务实例名称；
+DeployConfigName：
 
 6. 后端支持服务实例与服务解绑定
 
