@@ -183,7 +183,7 @@ DeployConfigName：绑定的服务名称。
 oc bind mongodb-demo rstudio
 ```
 绑定结果查询：
-执行命令：
+执行命令，查看后端支持服务实例：
 ```
 oc get backingserviceinstance
 ```
@@ -201,6 +201,7 @@ spark          Spark-v1.5.2   One_Worker       2         Bound
 
 可看到mongodb-demo已绑定一个服务。
 
+执行命令：
 
 
 7. 后端支持服务实例与服务解绑定
