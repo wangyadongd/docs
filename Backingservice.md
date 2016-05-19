@@ -147,7 +147,6 @@ Events:
   FirstSeen	LastSeen	Count	From	SubobjectPath	Type		Reason		Message
   ---------	--------	-----	----	-------------	--------	------		-------
   2m		2m		1	{bsi }			Normal		Provisioning	bsi provisioning done, instanceid: a20ad002-1d98-11e6-813a-fa163d0e0615
-
 ```
 
 ## 通过界面申请后端支持服务
