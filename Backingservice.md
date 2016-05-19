@@ -113,7 +113,7 @@ planid：订购的后端支持服务套餐id。
 
 以mongodb为例，执行命令：
 ```
-oc new-backingserviceinstance mongodb-demo --backingservice_name=MongoDB --planid=
+oc new-backingserviceinstance mongodb-demo --backingservice_name=MongoDB --planid=257C6C2B-A376-4551-90E8-82D4E619C852
 ```
 
 ## 通过界面申请后端支持服务
