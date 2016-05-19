@@ -29,15 +29,65 @@ Storm        asiainfo.io/servicebroker=etcd   true       Active
 ZooKeeper    asiainfo.io/servicebroker=etcd   true       Active
 ```
 
-2. 查询后端支持服务的详细信息及套餐，以Mongodb为例
+2. 查询后端支持服务的详细信息及套餐，以Mongodb为例:
 执行命令
 ```
 oc describe backingservice MongoDB -n openshift
 ```
-得到MongoDB后端支持服务的描述：
-```
-```
 
+得到MongoDB后端支持服务的描述：
+
+```
+Name:			MongoDB
+Created:		10 days ago
+Labels:			asiainfo.io/servicebroker=rdb
+Annotations:		Class=RDB
+Description:		A MongoDB Instance
+Status:			Active
+Bindable:		true
+Updateable:		false
+documentationUrl:	https://docs.mongodb.org/manual/
+longDescription:	MongoDB unleashes the power of software and data for innovators everywhere
+providerDisplayName:	asiainfoLDP
+supportUrl:		https://www.mongodb.org/
+displayName:		MongoDB
+────────────────────
+Plan:		Experimental
+PlanID:		E28FB3AE-C237-484F-AC9D-FB0A80223F85
+PlanDesc:	share a mongodb database in one instance
+PlanFree:	true
+Bullets:
+  20 GB of Disk
+  20 connections
+PlanCosts:
+  CostUnit:	MONTHLY
+  Amount:
+    eur: 49
+    usd: 99
+  CostUnit:	1GB of messages over 20GB
+  Amount:
+    eur: 0.49
+    usd: 0.99
+────────────────────
+Plan:		ShareandCommon
+PlanID:		257C6C2B-A376-4551-90E8-82D4E619C852
+PlanDesc:	share a mongodb database in one instance,but can select from database aqi_demo
+PlanFree:	false
+Bullets:
+  20 GB of Disk
+  20 connections
+PlanCosts:
+  CostUnit:	MONTHLY
+  Amount:
+    eur: 49
+    usd: 99
+  CostUnit:	1GB of messages over 20GB
+  Amount:
+    eur: 0.49
+    usd: 0.99
+No events.
+```
+3. 查询后端支持服务的详细信息及套餐，以Mongodb为例:
 
 
 ## 通过界面申请后端支持服务
