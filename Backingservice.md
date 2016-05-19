@@ -10,7 +10,7 @@
     oc get backingservice -n openshift
 ```
 
-查询结果如下：
+得到DataFoundry提供的后端支持服务，示例如下：
 ```
 NAME         LABELS                           BINDABLE   STATUS
 Cassandra    asiainfo.io/servicebroker=etcd   true       Active
