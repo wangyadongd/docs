@@ -149,5 +149,6 @@ Events:
   2m		2m		1	{bsi }			Normal		Provisioning	bsi provisioning done, instanceid: a20ad002-1d98-11e6-813a-fa163d0e0615
 ```
 
+后端支持服务实例与服务绑定
 ## 通过界面申请后端支持服务
 
