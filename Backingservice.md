@@ -180,6 +180,7 @@ DeployConfigName：绑定的服务名称。
 以mongodb-demo与Rstudio绑定为例：
 执行命令：
 ```
+oc bind mongodb-demo rstudio
 ```
 
 7. 后端支持服务实例与服务解绑定
