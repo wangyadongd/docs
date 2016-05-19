@@ -11,5 +11,6 @@
 * [服务部署](Deployment.md)
    * [访问私有代码仓库](service_deployment/access_private_code_repos.md)
    * [访问私有镜像库](service_deployment/access_private_image_registry.md)
+   * 配置服务
 * [常见问题](Troubleshooting.md)
 
