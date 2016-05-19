@@ -151,6 +151,9 @@ Events:
   oc bind BackingServiceInstanceName DeployConfigName [options]
 ```
 
+参数说明：
+
+
 6. 后端支持服务实例与服务解绑定
 
 
