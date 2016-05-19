@@ -198,7 +198,7 @@ mysql-inst1    Mysql          Experimental     0         Unbound
 new-mongodb    MongoDB        ShareandCommon   0         Unbound
 spark          Spark-v1.5.2   One_Worker       2         Bound
 ```
-可看到
+可看到绑定
 
 7. 后端支持服务实例与服务解绑定
 
