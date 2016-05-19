@@ -107,6 +107,9 @@ Usage:
   oc new-backingserviceinstance NAME --backingservice_name=BackingServiceName --planid=BackingServicePlanGuid [options]
 ```
 参数说明：
+NAME：后端支持服务实例名称；
+backingservice_name：后端支持服务名称；
+planid：
 
 执行命令：
 ```
