@@ -128,7 +128,8 @@ NAME：后端支持服务实例名称
 ```
 oc describe backingserviceinstance mongodb-demo
 ```
-查询结果：
+
+得到mongodb-demo后端支持服务实例描述：
 ```
 Name:			mongodb-demo
 Created:		2 minutes ago
