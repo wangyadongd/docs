@@ -119,9 +119,16 @@ oc get backingserviceinstance
 ```
 查询结果：
 ```
-
+NAME           SERVICE        PLAN             BOUND     STATUS
+mongodb-demo   MongoDB        ShareandCommon   0         Unbound
+my-mongodb     MongoDB        ShareandCommon   3         Bound
+my-test-sql    Mysql          Experimental     0         Unbound
+mysql-inst1    Mysql          Experimental     0         Unbound
+new-mongodb    MongoDB        ShareandCommon   0         Unbound
+spark          Spark-v1.5.2   One_Worker       2         Bound
 ```
-
+内容说明：
+1、NAME：
 
 5. 查看已申请的后端支持服务实例详情：
 执行命令：
