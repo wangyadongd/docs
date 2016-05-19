@@ -124,7 +124,9 @@ oc describe backingserviceinstance NAME
 参数说明：
 NAME：后端支持服务实例名称
 
-
+以mongodb-demo为例，执行命令：
+```
+```
 
 ## 通过界面申请后端支持服务
 
