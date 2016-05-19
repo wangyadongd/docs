@@ -188,6 +188,9 @@ oc bind mongodb-demo rstudio
 oc get backingserviceinstance
 ```
 
+执行结果：
+```
+```
 
 
 7. 后端支持服务实例与服务解绑定
