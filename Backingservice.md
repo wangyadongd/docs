@@ -5,6 +5,8 @@
 
 ## 通过命令行申请后端支持服务
 
+1. 查看后端支持服务
+
 登录DataFoundry，执行命令行
 ```
     oc get backingservice -n openshift
@@ -27,8 +29,10 @@ Storm        asiainfo.io/servicebroker=etcd   true       Active
 ZooKeeper    asiainfo.io/servicebroker=etcd   true       Active
 ```
 
+2. 查询后端支持服务的详细信息及套餐
+
+
+
+
 ## 通过界面申请后端支持服务
-
-
-2. 页面方式
 
