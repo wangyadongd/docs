@@ -109,7 +109,7 @@ Usage:
 参数说明：
 NAME：后端支持服务实例名称；
 backingservice_name：后端支持服务名称；
-planid：
+planid：订购的后端支持服务套餐id。
 
 执行命令：
 ```
