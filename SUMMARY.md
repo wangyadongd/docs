@@ -9,5 +9,6 @@
 * [镜像仓库](Repository.md)
 * [后端支持服务](Backingservice.md)
 * [服务部署](Deployment.md)
+   * 访问私有代码仓库
 * [常见问题](Troubleshooting.md)
 
