@@ -99,13 +99,9 @@ No events.
 3. 申请后端支持服务实例:
 执行命令：
 ```
-oc new-backingserviceinstance
+oc new-backingserviceinstance NAME --backingservice_name=BackingServiceName --planid=BackingServicePlanGuid [options]
 ```
-命令说明：
-```
-Usage:
-  oc new-backingserviceinstance NAME --backingservice_name=BackingServiceName --planid=BackingServicePlanGuid [options]
-```
+
 参数说明：
 NAME：后端支持服务实例名称；
 backingservice_name：后端支持服务名称；
@@ -152,6 +148,7 @@ Events:
 5. 后端支持服务实例与服务绑定
 执行命令：
 ```
+  oc bind BackingServiceInstanceName DeployConfigName [options]
 ```
 
 6. 后端支持服务实例与服务解绑定
