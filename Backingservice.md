@@ -90,6 +90,16 @@ No events.
 ```
 
 3. 申请后端支持服务实例:
+执行命令：
+```
+oc new-backingserviceinstance
+```
+命令说明：
+```
+Usage:
+  oc new-backingserviceinstance NAME --backingservice_name=BackingServiceName --planid=BackingServicePlanGuid [options]
+```
+参数说明：
 
 执行命令：
 ```
