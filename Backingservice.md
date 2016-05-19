@@ -117,6 +117,13 @@ oc new-backingserviceinstance mongodb-demo --backingservice_name=MongoDB --plani
 ```
 
 4. 查看已申请的后端支持服务实例：
+执行命令：
+```
+oc describe backingserviceinstance NAME
+```
+参数说明：
+NAME：后端支持服务实例名称
+
 
 
 ## 通过界面申请后端支持服务
