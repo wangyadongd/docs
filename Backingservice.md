@@ -155,7 +155,10 @@ Events:
 BackingServiceInstanceName：绑定的后端支持服务实例名称；
 DeployConfigName：绑定的服务名称。
 
-以mongodb-demo与
+以mongodb-demo与Rstudio绑定为例：
+执行命令：
+```
+```
 
 6. 后端支持服务实例与服务解绑定
 
