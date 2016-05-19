@@ -201,7 +201,7 @@ spark          Spark-v1.5.2   One_Worker       2         Bound
 
 可看到mongodb-demo已绑定一个服务。
 
-执行命令，：
+执行命令，查看绑定的服务：
 
 
 7. 后端支持服务实例与服务解绑定
