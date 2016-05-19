@@ -34,7 +34,9 @@ ZooKeeper    asiainfo.io/servicebroker=etcd   true       Active
 ```
 oc describe backingservice MongoDB -n openshift
 ```
-
+得到MongoDB后端支持服务的描述：
+```
+```
 
 
 
