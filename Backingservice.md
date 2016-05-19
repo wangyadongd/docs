@@ -9,7 +9,7 @@
 
 登录DataFoundry，执行命令行
 ```
-    oc get backingservice -n openshift
+oc get backingservice -n openshift
 ```
 
 得到DataFoundry提供的后端支持服务，示例如下：
@@ -30,7 +30,10 @@ ZooKeeper    asiainfo.io/servicebroker=etcd   true       Active
 ```
 
 2. 查询后端支持服务的详细信息及套餐，以Mongodb为例
-
+执行命令
+```
+oc describe backingservice MongoDB -n openshift
+```
 
 
 
