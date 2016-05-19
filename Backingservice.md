@@ -5,5 +5,7 @@
 
 
 ## # 查询后端支持服务
+命令行：
+    oc get backingservice -n openshift
 
-DataFoundry
+查询结果如下：
