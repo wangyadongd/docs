@@ -182,6 +182,7 @@ DeployConfigName：绑定的服务名称。
 ```
 oc bind mongodb-demo rstudio
 ```
+绑定结果查询：
 
 
 7. 后端支持服务实例与服务解绑定
