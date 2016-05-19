@@ -116,5 +116,8 @@ planid：订购的后端支持服务套餐id。
 oc new-backingserviceinstance mongodb-demo --backingservice_name=MongoDB --planid=257C6C2B-A376-4551-90E8-82D4E619C852
 ```
 
+4. 查看已申请的后端支持服务实例：
+
+
 ## 通过界面申请后端支持服务
 
