@@ -279,7 +279,7 @@ Events:
   19m		19m		1	{deploymentconfig-controller }			Normal		DeploymentCreated	Created new deployment "rstudio-9" for version 9
   19m		19m		1	{deployment-controller }			Warning		FailedUpdate		Cannot update deployment dangsha/rstudio-9 status to Pending: replicationcontrollers "rstudio-9" cannot be updated: the object has been modified; please apply your changes to the latest version and try again
 ```
-可看到
+可看到服务的配置信息中，后端支持服务实例环境变量被加入
 
 7. 后端支持服务实例与服务解绑定
 
