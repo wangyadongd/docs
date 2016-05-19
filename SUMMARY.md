@@ -12,5 +12,6 @@
    * [访问私有代码仓库](service_deployment/access_private_code_repos.md)
    * [访问私有镜像库](service_deployment/access_private_image_registry.md)
    * [配置服务](service_deployment/config_service.md)
+   * 让服务支持https协议访问
 * [常见问题](Troubleshooting.md)
 
