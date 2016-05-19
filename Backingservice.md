@@ -115,6 +115,12 @@ oc new-backingserviceinstance mongodb-demo --backingservice_name=MongoDB --plani
 4. 查看已申请的后端支持服务实例：
 执行命令：
 ```
+```
+
+
+5. 查看已申请的后端支持服务实例详情：
+执行命令：
+```
 oc describe backingserviceinstance NAME
 ```
 参数说明：
@@ -145,7 +151,7 @@ Events:
   2m		2m		1	{bsi }			Normal		Provisioning	bsi provisioning done, instanceid: a20ad002-1d98-11e6-813a-fa163d0e0615
 ```
 
-5. 后端支持服务实例与服务绑定
+6. 后端支持服务实例与服务绑定
 执行命令：
 ```
   oc bind BackingServiceInstanceName DeployConfigName [options]
@@ -160,7 +166,7 @@ DeployConfigName：绑定的服务名称。
 ```
 ```
 
-6. 后端支持服务实例与服务解绑定
+7. 后端支持服务实例与服务解绑定
 
 
 ## 通过界面申请后端支持服务
