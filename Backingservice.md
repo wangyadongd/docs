@@ -185,6 +185,7 @@ oc bind mongodb-demo rstudio
 绑定结果查询：
 执行命令：
 ```
+oc get backingserviceinstance
 ```
 
 7. 后端支持服务实例与服务解绑定
