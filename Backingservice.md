@@ -287,7 +287,11 @@ Events:
 7. 后端支持服务实例与服务解绑定
 执行命令：
 ```
+oc unbind BackingServiceInstanceName DeployConfigName
 ```
+参数说明：
+BackingServiceInstanceName：后端支持服务实例名称；
+DeployConfigName：服务名称
 
 ## 通过界面申请后端支持服务
 
