@@ -293,5 +293,8 @@ oc unbind BackingServiceInstanceName DeployConfigName
 BackingServiceInstanceName：后端支持服务实例名称；
 DeployConfigName：服务名称。
 
+以mongodb-demo与Rstudio解绑为例：
+
+
 ## 通过界面申请后端支持服务
 
