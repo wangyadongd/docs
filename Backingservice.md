@@ -298,5 +298,7 @@ DeployConfigName：服务名称。
 oc unbind mongodb-demo rstudio
 ```
 
+可用oc get bsi以及oc describe dc dcname来查询解绑是否成功。
+
 ## 通过界面申请后端支持服务
 
