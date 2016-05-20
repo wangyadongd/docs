@@ -295,6 +295,7 @@ DeployConfigName：服务名称。
 
 以mongodb-demo与Rstudio解绑为例：
 ```
+oc unbind mongodb-demo rstudio
 ```
 
 ## 通过界面申请后端支持服务
