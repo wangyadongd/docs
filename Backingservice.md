@@ -281,7 +281,7 @@ Events:
   19m		19m		1	{deployment-controller }			Warning		FailedUpdate		Cannot update deployment dangsha/rstudio-9 status to Pending: replicationcontrollers "rstudio-9" cannot be updated: the object has been modified; please apply your changes to the latest version and try again
 ```
 
-可看到后端支持服务实例环境变量被加入了服务的配置信息中。
+服务的配置详情中后端支持服务实例环境变量被加入了服务的配置信息中。
 环境变量的命名规则：`BSI_$BSINAME_$ENV`
 
 7. 后端支持服务实例与服务解绑定
