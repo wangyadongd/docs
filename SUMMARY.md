@@ -12,5 +12,10 @@
 * [后端支持服务](Backingservice.md)
 * [服务部署](Deployment.md)
    * [访问私有代码仓库](service_deployment/access_private_code_repos.md)
+   * [访问私有镜像库](service_deployment/access_private_image_registry.md)
+   * [配置服务](service_deployment/config_service.md)
+   * [让服务支持https协议访问](service_deployment/router_configuration.md)
+   * [通过service完成服务发现](service_deployment/service_discovery.md)
+   * [配置自动部署触发器](service_deployment/config_deploy_trigger.md)
 * [常见问题](Troubleshooting.md)
 
