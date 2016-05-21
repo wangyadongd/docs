@@ -10,7 +10,7 @@
    * [构建策略为docker的构建过程](docker strategy.md)
 * [镜像仓库](Repository.md)
 * [后端支持服务](Backingservice.md)
-* [服务部署]
+* 服务部署
    * [访问私有代码仓库](service_deployment/access_private_code_repos.md)
    * [访问私有镜像库](service_deployment/access_private_image_registry.md)
    * [配置服务](service_deployment/config_service.md)
