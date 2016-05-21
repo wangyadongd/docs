@@ -12,7 +12,6 @@ if [ "$MYSQL_PORT_3306_TCP_ADDR" ]; then
 	sed -i  's/^jdbc_username=.*$/jdbc_username='$MYSQL_ENV_MYSQL_USER'/g' /usr/local/tomcat/webapps/Datahub-1.0-SNAPSHOT/WEB-INF/classes/config.properties
 	sed -i 's/^jdbc_password=.*$/jdbc_password='$MYSQL_ENV_MYSQL_PASSWORD'/g' /usr/local/tomcat/webapps/Datahub-1.0-SNAPSHOT/WEB-INF/classes/config.properties
 fi
-
 catalina.sh run  
 ``` 
 　　有时调试正则表达式是一件非常痛苦的事情，我们可以通过模板生成器来讲环境变量值写入到配置文件中，例如python的envtpl工具，模板工具不但可以减轻调试正则表达式的工作量，可能提供默认值、条件取值等更有价值的功能。
