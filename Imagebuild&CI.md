@@ -29,7 +29,9 @@ Run 'oc logs -f bc/datahubwordpress' to stream the build progress.
     * 可以通过oc logs -f bc/datahubwordpress查看构建日志     
 
     查看构建的配置文件：   
+    ```
     oc export bc datahubwordpress
+    ```
 
 配置文件如下：
 
