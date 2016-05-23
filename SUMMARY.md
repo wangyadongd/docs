@@ -1,6 +1,6 @@
 # Summary
 
-* [Introduction](README.md)
+* [简介](README.md)
 * [核心概念](Basic Concepts.md)
 * 快速开始
    * [hello wordpress](quick_start/01_deploy.md)
