@@ -1,49 +1,35 @@
-1 构建镜像
+1. 构建镜像   
+  2.   构建策略为docker的构建过程    
+以下以代码托管在github上举例说明。    
+     *  代码仓库为公开    
+       使用以下命令创建一个构建：  
+        ```
+        oc new-build https://github.com/asiainfoLDP/datahub_wordpress.git#master
+        ```  
+运行结果如下：  
+```
+--> Found Docker image a913b48 (5 days old) from Docker Hub for "wordpress"
+ An image stream will be created as "wordpress:latest" that will track the source image
+ A Docker build using source code from https://github.com/asiainfoLDP/datahub_wordpress.git#master will be created
+ The resulting image will be pushed to image stream "datahubwordpress:latest"
+ Every time "wordpress:latest" changes a new build will be triggered
+Creating resources with label build=datahubwordpress ...
+imagestream "wordpress" created
+imagestream "datahubwordpress" created
+buildconfig "datahubwordpress" created
+Success
+Build configuration "datahubwordpress" created and build triggered.
+Run 'oc logs -f bc/datahubwordpress' to stream the build progress.
+```
+     * 根据代码库中dockerfile中的from wordpress，将为wordpress:latest创建image stream，存放wordpress:latest镜像
 
-1.1 构建策略为docker的构建过程   
-以下以代码托管在github上举例说明。  
-1.1.1 代码仓库为公开  
+    * 创建基于代码库`https://github.com/asiainfoLDP/datahub_wordpress.git#master`的构建
+    * 创建用来存放构建完成后的镜像的imagestream:datahubwordpress
+    * 当from的基础镜像发生改变时，将触发自动构建
+    * 可以通过oc logs -f bc/datahubwordpress查看构建日志     
 
-使用以下命令创建一个构建：  
-oc new-build https://github.com/asiainfoLDP/datahub_wordpress.git#master
-运行结果如下：
-
-	--> Found Docker image a913b48 (5 days old) from Docker Hub for "wordpress"
-	
-	    * An image stream will be created as "wordpress:latest" that will track the source image
-	    * A Docker build using source code from https://github.com/asiainfoLDP/datahub_wordpress.git#master will be created
-	      * The resulting image will be pushed to image stream "datahubwordpress:latest"
-	      * Every time "wordpress:latest" changes a new build will be triggered
-	
-	--> Creating resources with label build=datahubwordpress ...
-	    imagestream "wordpress" created
-	    imagestream "datahubwordpress" created
-	    buildconfig "datahubwordpress" created
-
-	--> Success
-	    Build configuration "datahubwordpress" created and build triggered.
-	    Run 'oc logs -f bc/datahubwordpress' to stream the build progress.
-
-
-	1.根据代码库中dockerfile中的from wordpress，将为wordpress:latest创建image stream，存放wordpress:latest镜像
-	
-	
-	2.创建基于代码库https://github.com/asiainfoLDP/datahub_wordpress.git#master的构建
-	
-	
-	3.创建用来存放构建完成后的镜像的imagestream:datahubwordpress
-	
-	
-	4.当from的基础镜像发生改变时，将触发自动构建
-	
-	
-	5.可以通过oc logs -f bc/datahubwordpress查看构建日志
-
-
-
-查看构建的配置文件：
-
-	oc export bc datahubwordpress
+    查看构建的配置文件：   
+    oc export bc datahubwordpress
 
 配置文件如下：
 
