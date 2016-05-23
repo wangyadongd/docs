@@ -1,23 +1,12 @@
 1 构建镜像
 
-1.1 构建策略为docker的构建过程
+1.1 构建策略为docker的构建过程   
+以下以代码托管在github上举例说明。  
+1.1.1 代码仓库为公开  
 
-
-以下以代码托管在github上举例说明。
-
-
-1.1.1 代码仓库为公开
-
-
-使用以下命令创建一个构建：
-
-
+使用以下命令创建一个构建：  
 oc new-build https://github.com/asiainfoLDP/datahub_wordpress.git#master
-
-
 运行结果如下：
-
-
 
 	--> Found Docker image a913b48 (5 days old) from Docker Hub for "wordpress"
 	
