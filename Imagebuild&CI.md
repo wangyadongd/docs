@@ -26,12 +26,11 @@ Run 'oc logs -f bc/datahubwordpress' to stream the build progress.
      创建用来存放构建完成后的镜像的imagestream:datahubwordpress  
      当from的基础镜像发生改变时，将触发自动构建  
      可以通过oc logs -f bc/datahubwordpress查看构建日志       
-
     查看构建的配置文件：    
     ```  
     oc export bc datahubwordpress
     ```
-配置文件如下：
+    配置文件如下：
 ```
 	apiVersion: v1
 	kind: BuildConfig
