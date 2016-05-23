@@ -135,7 +135,7 @@ Run 'oc logs -f bc/datahubwordpress' to stream the build progress.
         ```
 可以看到git段中的secret部分添加了secret，new-build的时候还会提示输入用户名和密码，bc中的secret在start-build的构建过程中起作用，会带着认证信息去git clone私有仓库的代码   
     * 在构建中使用私有镜像仓库   
-当dockerfile中from的是私有镜像，或者构建镜像要推送到私有镜像仓库时，使用以下方法提供私有镜像仓库的认证信息。
+当dockerfile中from的是私有镜像，或者构建镜像要推送到私有镜像仓库时，使用以下方法提供私有镜像仓库的认证信息。  
 第一步：创建secret
 
 
