@@ -21,15 +21,15 @@ Success
 Build configuration "datahubwordpress" created and build triggered.
 Run 'oc logs -f bc/datahubwordpress' to stream the build progress.
 ```
-     * 根据代码库中dockerfile中的from wordpress，将为wordpress:latest创建image stream，存放wordpress:latest镜像
+      根据代码库中dockerfile中的from wordpress，将为wordpress:latest创建image stream，存放wordpress:latest镜像  
 
-    * 创建基于代码库`https://github.com/asiainfoLDP/datahub_wordpress.git#master`的构建
-    * 创建用来存放构建完成后的镜像的imagestream:datahubwordpress
-    * 当from的基础镜像发生改变时，将触发自动构建
-    * 可以通过oc logs -f bc/datahubwordpress查看构建日志     
+     创建基于代码库`https://github.com/asiainfoLDP/datahub_wordpress.git#master`的构建
+     创建用来存放构建完成后的镜像的imagestream:datahubwordpress  
+     当from的基础镜像发生改变时，将触发自动构建  
+     可以通过oc logs -f bc/datahubwordpress查看构建日志       
 
-    查看构建的配置文件：   
-    ```
+    查看构建的配置文件：    
+    ```  
     oc export bc datahubwordpress
     ```
 配置文件如下：
@@ -75,14 +75,11 @@ Run 'oc logs -f bc/datahubwordpress' to stream the build progress.
 	status:
 	  lastVersion: 0
 ```
-
-
-1.1.2 代码仓库为私有
-
+* 代码仓库为私有  
 第一步：创建secret，用来存储用户名和密码
-
+```
 	oc secrets new-basicauth secretname --username=github用户名 --password=github密码
-	
+```	
 	secretname为自己取的名字
 
 
