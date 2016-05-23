@@ -89,7 +89,7 @@ Run 'oc logs -f bc/datahubwordpress' to stream the build progress.
 	oc new-build https://github.com/asiainfoLDP/datahub_wordpress.git#master --build-secret=secretname
 ```
 查看构建的配置文件：
-
+```
 	apiVersion: v1
 	kind: BuildConfig
 	metadata:
@@ -132,7 +132,7 @@ Run 'oc logs -f bc/datahubwordpress' to stream the build progress.
 	    type: ImageChange
 	status:
 	  lastVersion: 0
-
+```
 
 	可以看到git段中的secret部分添加了secret，new-build的时候还会提示输入用户名和密码，bc中的secret在start-build的构建过程中起作用，会带着认证信息去git clone私有仓库的代码
 
