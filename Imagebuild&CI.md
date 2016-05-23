@@ -75,7 +75,7 @@ Run 'oc logs -f bc/datahubwordpress' to stream the build progress.
 	status:
 	  lastVersion: 0
 ```
-* 代码仓库为私有  
+    * 代码仓库为私有  
 第一步：创建secret，用来存储用户名和密码
 ```
 	oc secrets new-basicauth secretname --username=github用户名 --password=github密码
