@@ -6,3 +6,4 @@ DataFoundry作为一个大数据PaaS平台，不仅为开发者提供了即开�
 
 ![](CICD.png)
 
+在DataFoundry上开发、持续集成、持续部署整体分为几个部分：
