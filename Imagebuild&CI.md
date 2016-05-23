@@ -1,5 +1,5 @@
 1. 构建镜像   
-  2.   构建策略为docker的构建过程    
+  1.   构建策略为docker的构建过程    
 以下以代码托管在github上举例说明。    
      *  代码仓库为公开    
        使用以下命令创建一个构建：  
@@ -32,9 +32,8 @@ Run 'oc logs -f bc/datahubwordpress' to stream the build progress.
     ```
     oc export bc datahubwordpress
     ```
-
 配置文件如下：
-
+```
 	apiVersion: v1
 	kind: BuildConfig
 	metadata:
@@ -75,7 +74,7 @@ Run 'oc logs -f bc/datahubwordpress' to stream the build progress.
 	    type: ImageChange
 	status:
 	  lastVersion: 0
-
+```
 
 
 1.1.2 代码仓库为私有
