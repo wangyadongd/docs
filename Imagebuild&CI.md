@@ -137,11 +137,9 @@ Run 'oc logs -f bc/datahubwordpress' to stream the build progress.
     * 在构建中使用私有镜像仓库   
 当dockerfile中from的是私有镜像，或者构建镜像要推送到私有镜像仓库时，使用以下方法提供私有镜像仓库的认证信息。  
 第一步：创建secret
-
-
+```
 	oc secret new registry /root/.docker/config.json
-
-
+```
 第二步：添加secret到serviceaccount/builder
 
 
