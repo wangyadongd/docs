@@ -31,62 +31,59 @@ Run 'oc logs -f bc/datahubwordpress' to stream the build progress.
     oc export bc datahubwordpress
     ```
     配置文件如下：
-```
-	apiVersion: v1
-	kind: BuildConfig
-	metadata:
-	  annotations:
-	    openshift.io/generated-by: OpenShiftNewBuild
-	  creationTimestamp: null
-	  labels:
-	    build: datahubwordpress
-	  name: datahubwordpress
-	spec:
-	  output:
-	    to:
-	      kind: ImageStreamTag
-	      name: datahubwordpress:latest
-	  postCommit: {}
-	  resources: {}
-	  source:
-	    git:
-	      ref: master
-	      uri: https://github.com/asiainfoLDP/datahub_wordpress.git
-	    secrets: []
-	    type: Git
-	  strategy:
-	    dockerStrategy:
-	      from:
-	        kind: ImageStreamTag
-	        name: wordpress:latest
-	    type: Docker
-	  triggers:
-	  - github:
-	      secret: wvnIqmIoLu_5HiMqQVsM
-	    type: GitHub
-	  - generic:
-	      secret: mlEnK8yxlHUr9jdadyWJ
-	    type: Generic
-	  - type: ConfigChange
-	  - imageChange: {}
-	    type: ImageChange
-	status:
-	  lastVersion: 0
-```
+    ```
+        apiVersion: v1
+        kind: BuildConfig
+        metadata:
+          annotations:
+            openshift.io/generated-by: OpenShiftNewBuild
+          creationTimestamp: null
+          labels:
+            build: datahubwordpress
+          name: datahubwordpress
+        spec:
+          output:
+            to:
+              kind: ImageStreamTag
+              name: datahubwordpress:latest
+          postCommit: {}
+          resources: {}
+          source:
+            git:
+              ref: master
+              uri: https://github.com/asiainfoLDP/datahub_wordpress.git
+            secrets: []
+            type: Git
+          strategy:
+            dockerStrategy:
+              from:
+                kind: ImageStreamTag
+                name: wordpress:latest
+            type: Docker
+          triggers:
+          - github:
+              secret: wvnIqmIoLu_5HiMqQVsM
+            type: GitHub
+          - generic:
+              secret: mlEnK8yxlHUr9jdadyWJ
+            type: Generic
+          - type: ConfigChange
+          - imageChange: {}
+            type: ImageChange
+        status:
+          lastVersion: 0
+    ```
     * 代码仓库为私有  
 第一步：创建secret，用来存储用户名和密码
 ```
 	oc secrets new-basicauth secretname --username=github用户名 --password=github密码
-```	
-	secretname为自己取的名字
-
-
+```	  
+	secretname为自己取的名字   
 第二步： 将secret加入serviceaccount/builder
-
+```
 	oc secrets add serviceaccount/builder secret/secretname
-
+```
 	由于构建过程默认使用serviceaccount/builder，所以只需将secret加入serviceaccount/builder即可
-
 第三步： 
 
 
