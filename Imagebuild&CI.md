@@ -141,14 +141,11 @@ Run 'oc logs -f bc/datahubwordpress' to stream the build progress.
 	oc secret new registry /root/.docker/config.json
 ```
 第二步：添加secret到serviceaccount/builder
-
-
+```
 	oc secrets add serviceaccount/builder secrets/registry --for=pull
-
-
+```
 第三步：或者直接在bc中添加pull和push的secret：
-	
-	
+```	
 	apiVersion: v1
 	kind: BuildConfig
 	metadata:
@@ -190,7 +187,7 @@ Run 'oc logs -f bc/datahubwordpress' to stream the build progress.
 	  - type: ConfigChange
 	status:
 	  lastVersion: 0
-
+```
 
 2. 持续集成
 
