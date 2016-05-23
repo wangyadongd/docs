@@ -8,4 +8,4 @@ DataFoundry作为一个大数据PaaS平台，不仅为开发者提供了即开�
 
 在DataFoundry上开发、持续集成、持续部署整体分为几个部分：
 1、在代码仓库建立develop、release、master三个分支，现阶段我们支持GitHub及GitLab代码仓库；
-2、
+2、提交代码到代码仓库；
