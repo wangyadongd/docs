@@ -5,7 +5,7 @@
   ```  
 1. 　　然后我们通过一个简单的命令来完成wordpress应用的镜像构建和发布以及内部服务的生成  
   ```  
-  oc new-app https://github.com/datafoundry/wordpress.git --context-dir=apache
+  oc new-app https://github.com/datafoundry/wordpress.git  
  Found Docker image 10e778c (12 days old) from Docker Hub for "library/php:5.6-apache"
 
     * An image stream will be created as "php:5.6-apache" that will track the source image
