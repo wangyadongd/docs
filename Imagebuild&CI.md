@@ -145,51 +145,51 @@ Run 'oc logs -f bc/datahubwordpress' to stream the build progress.
 	oc secrets add serviceaccount/builder secrets/registry --for=pull
 ```
 第三步：或者直接在bc中添加pull和push的secret：
-```	
-	apiVersion: v1
-	kind: BuildConfig
-	metadata:
-	  annotations:
-	    openshift.io/generated-by: OpenShiftNewBuild
-	  creationTimestamp: null
-	  labels:
-	    build: datahubwordpress
-	  name: datahubwordpress
-	spec:
-	  output:
-	    pushSecret:
-	      name: registry
-	    to:
-	      kind: DockerImage
-	      name: registry.dataos.io/harbor/test:test
-	  postCommit: {}
-	  resources: {}
-	  source:
-	    git:
-	      uri: https://github.com/cherry4477/datahub_wordpress.git
-	    secrets: []
-	    type: Git
-	  strategy:
-	    dockerStrategy:
-	      from:
-	        kind: DockerImage
-	        name: registry.dataos.io/harbor/harbor-ui:latest
-	      pullSecret:
-	        name: registry
-	    type: Docker
-	  triggers:
-	  - github:
-	      secret: spEagYnckgpU2_aQ0mKM
-	    type: GitHub
-	  - generic:
-	      secret: 8vDO0nMFXfPOdRgT2I43
-	    type: Generic
-	  - type: ConfigChange
-	status:
-	  lastVersion: 0
-```
+      ```	
+          apiVersion: v1
+          kind: BuildConfig
+          metadata:
+            annotations:
+              openshift.io/generated-by: OpenShiftNewBuild
+            creationTimestamp: null
+            labels:
+              build: datahubwordpress
+            name: datahubwordpress
+          spec:
+            output:
+              pushSecret:
+                name: registry
+              to:
+                kind: DockerImage
+                name: registry.dataos.io/harbor/test:test
+            postCommit: {}
+            resources: {}
+            source:
+              git:
+                uri: https://github.com/cherry4477/datahub_wordpress.git
+              secrets: []
+              type: Git
+            strategy:
+              dockerStrategy:
+                from:
+                  kind: DockerImage
+                  name: registry.dataos.io/harbor/harbor-ui:latest
+                pullSecret:
+                  name: registry
+              type: Docker
+            triggers:
+            - github:
+                secret: spEagYnckgpU2_aQ0mKM
+              type: GitHub
+            - generic:
+                secret: 8vDO0nMFXfPOdRgT2I43
+              type: Generic
+            - type: ConfigChange
+          status:
+            lastVersion: 0
+      ```
 
-2. 持续集成
+1. 持续集成
 
 
 有三种方式触发自动构建的持续集成：Webhook，Image change和Configuration change。三种方式可以同时使用。
