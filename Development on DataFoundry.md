@@ -4,3 +4,5 @@ DataFoundry作为一个大数据PaaS平台，不仅为开发者提供了即开�
 
 在DataFoundry为了践行敏捷开发、提高应用交付效率，可根据Gitflow流程在在DataFoundry上构建一个稳定高效的持续集成持续部署体系。
 
+![](CICD.png)
+
