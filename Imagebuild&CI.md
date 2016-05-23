@@ -83,12 +83,11 @@ Run 'oc logs -f bc/datahubwordpress' to stream the build progress.
 ```
 	oc secrets add serviceaccount/builder secret/secretname
 ```
-	由于构建过程默认使用serviceaccount/builder，所以只需将secret加入serviceaccount/builder即可
+	由于构建过程默认使用serviceaccount/builder，所以只需将secret加入serviceaccount/builder即可   
 第三步： 
-
-
+```
 	oc new-build https://github.com/asiainfoLDP/datahub_wordpress.git#master --build-secret=secretname
-
+```
 查看构建的配置文件：
 
 	apiVersion: v1
