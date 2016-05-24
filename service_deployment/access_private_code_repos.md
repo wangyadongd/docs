@@ -16,7 +16,7 @@ oc secrets new-basicauth <basicsecret> \
 ``` 
  oc secrets add serviceaccount/builder secrets/<basicsecret>
 ``` 
-1.  在buildconfig中指定secrets,
+###    在buildconfig中指定secrets,
 ``` 
 apiVersion: "v1"
 kind: "BuildConfig"
