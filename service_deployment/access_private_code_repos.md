@@ -1,7 +1,7 @@
 ##  第一节 访问私有代码仓库
 　　为了让datafoundry平台在构建镜像时访问私有代码，我们需要在datafoundry平台中创建secrets资源，并把secrets绑定到平台中。  
 　　具体过程如下：  
-###  创建访问私有代码库secrets
+###  　　创建访问私有代码库secrets
 ``` 
 oc secrets new-basicauth <basicsecret> \
 --username=<USERNAME> \
@@ -12,11 +12,11 @@ oc secrets new-basicauth <basicsecret> \
     USERNAME是登陆代码库的用户名  
     PASSWORD是登陆代码库的用户密码  
 
-###    绑定secrets到平台默认的镜像构建账户中
+###    　　绑定secrets到平台默认的镜像构建账户中
 ``` 
  oc secrets add serviceaccount/builder secrets/<basicsecret>
 ``` 
-###    在buildconfig中指定secrets,
+###    　　在buildconfig中指定secrets,
 ``` 
 apiVersion: "v1"
 kind: "BuildConfig"
