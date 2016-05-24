@@ -14,7 +14,7 @@ wordpress-1-hfzhs    0/1       CrashLoopBackOff   3          1m
   ```   
   oc get bs -n openshift  
   ```
-  　　注意：   
+  注意：   
 > 后端服务是datafoundry特有功能，所以必须要使用datafoundry客户端连接datafoundry服务端后查看;    
 在查看datafoundry平台已集成的后端时要添加后端服务默认的集成命名空间openshift;  
 
