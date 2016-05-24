@@ -12,7 +12,7 @@
 　　[第三节 配置服务](service_deployment/config_service.md)   
 　　本节完成MySql后端服务的订购和与WordPress应用的绑定 
     
-　　[第二节 访问私有镜像库](service_deployment/access_private_image_registry.md)   
+　　[第四节 让服务支持https协议访问](service_deployment/router_configuration.md)   
 　　本节完成MySql后端服务的订购和与WordPress应用的绑定   
     
 　　[第二节 访问私有镜像库](service_deployment/access_private_image_registry.md)   
