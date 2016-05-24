@@ -9,7 +9,7 @@ wordpress-1-deploy   1/1       Running            0          1m
 wordpress-1-hfzhs    0/1       CrashLoopBackOff   3          1m
   ``` 
 我们现在来创建mysql backingservice     
-###  1. 　查看datafoundry后端服务列表  
+###   　查看datafoundry后端服务列表  
   　　在通过datafoundry平台生成一个MySQL的后端服务之前我们可以先查看一下目前datafoundry平台已经集成的后端服务  
   ```   
  $ oc get bs -n openshift  
@@ -31,7 +31,7 @@ wordpress-1-hfzhs    0/1       CrashLoopBackOff   3          1m
 > 后端服务是datafoundry特有功能，所以必须要使用datafoundry客户端连接datafoundry服务端后查看;    
 在查看datafoundry平台已集成的后端时要添加后端服务默认的集成命名空间openshift;  
 
-### 2.  创建后端服务实例  
+###   创建后端服务实例  
 　　在创建实例之前，我们要先通过`oc describe bs <backingservcie-name> `获取应用所需的后端服务计划（plan），例如我们获取mysql后端服务的服务计划为：
   ```   
  $ oc describe bs Mysql -n openshift
@@ -100,7 +100,7 @@ Events:
   ---------	--------	-----	----	-------------	--------	------		-------
   5m		5m		1	{bsi }			Normal		Provisioning	bsi provisioning done, instanceid: 340082e4-1734-11e6-a653-fa163edcfb45
   ```
-### 3.  绑定后端服务实例
+###   绑定后端服务实例
   　　以上服务实例创建完成，我们继续把mysql backingservice绑定到workdpress应用中
   ```
    oc bind mysql-inst1 wordpress
