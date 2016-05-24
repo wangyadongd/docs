@@ -4,7 +4,7 @@
 　　本节介绍如何在服务镜像构建过程中访问私有镜像库 
     
 　　[第二节 访问私有镜像库](service_deployment/access_private_image_registry.md)   
-　　本节完成MySql后端服务的订购和与WordPress应用的绑定  
+　　本节介绍如何在服务部署过程中访问私有镜像仓库  
 
 　　[第三节 配置服务](service_deployment/config_service.md)   
 　　本节完成MySql后端服务的订购和与WordPress应用的绑定 
