@@ -1,6 +1,6 @@
 # 第四章 镜像构建及持续集成
 
-# 构建镜像 
+## 构建镜像 
 
 构建策略为docker的构建过程,以下以代码托管在github上举例说明。 
 
@@ -195,7 +195,7 @@ Run 'oc logs -f bc/datahubwordpress' to stream the build progress.
 	  lastVersion: 0
 ```
 
-# 持续集成
+## 持续集成
 
 有三种方式触发自动构建的持续集成：Webhook，Image change和Configuration change。三种方式可以同时使用。
 
