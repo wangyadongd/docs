@@ -4,5 +4,5 @@
 　　[第一节   hello WordPress](quick_start/01_deploy.md)  
 　　本节完成WordPress容器镜像的构建和部署 
     
-　　[第二节   hello WordPress](quick_start/02_bind_backingservice.md)   
+　　[第二节   集成后端服务](quick_start/02_bind_backingservice.md)   
 　　本节完成MySql后端服务的订购和与WordPress应用的绑定  
