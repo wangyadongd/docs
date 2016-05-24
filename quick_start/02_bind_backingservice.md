@@ -8,15 +8,17 @@ wordpress-1-build    0/1       Completed          0          3m
 wordpress-1-deploy   1/1       Running            0          1m
 wordpress-1-hfzhs    0/1       CrashLoopBackOff   3          1m
   ``` 
-，我们现在来创建mysql backingservice     
+我们现在来创建mysql backingservice     
 1. 　查看datafoundry后端服务列表  
   　　在通过datafoundry平台生成一个MySQL的后端服务之前我们可以先查看一下目前datafoundry平台已经集成的后端服务  
   ```   
   oc get bs -n openshift  
   ```
   　　注意：   
-    * 后端服务是datafoundry特有功能，所以必须要使用datafoundry客户端连接datafoundry服务端后查看;
-    * 在查看datafoundry平台已集成的后端时要添加后端服务默认的集成命名空间openshift;    
+> 后端服务是datafoundry特有功能，所以必须要使用datafoundry客户端连接datafoundry服务端后查看;    
+在查看datafoundry平台已集成的后端时要添加后端服务默认的集成命名空间openshift;  
+
+  
 　　以上命令输出结果为：  
   ```   
   NAME         LABELS                           BINDABLE   STATUS
