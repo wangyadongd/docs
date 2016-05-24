@@ -7,7 +7,7 @@
 　　本节介绍如何在服务部署过程中访问私有镜像仓库  
 
 　　[第三节 配置服务](service_deployment/config_service.md)   
-　　本节完成MySql后端服务的订购和与WordPress应用的绑定 
+　　本节介绍如何在服务部署过程完成服务参数配置 
     
 　　[第四节 让服务支持https协议访问](service_deployment/router_configuration.md)   
 　　本节完成MySql后端服务的订购和与WordPress应用的绑定   
