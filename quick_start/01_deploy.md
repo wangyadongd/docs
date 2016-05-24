@@ -57,7 +57,7 @@ $ oc new-app https://github.com/datafoundry/wordpress.git
   oc describe service <service-name>  
   oc describe imagestream <imagestream-name>  
   ```  
-###　　修改基础要素的详情   
+###　修改基础要素详情   
   ```  
   oc edit buildconfig <buildconfig-name>  
   oc edit deployconfig <deployconfig-name>  
