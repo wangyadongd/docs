@@ -16,4 +16,4 @@
 　　本节介绍如果通过service进行服务间的相互访问   
     
 　　[第六节 配置自动部署触发器](service_deployment/config_deploy_trigger.md)   
-　　本节完成MySql后端服务的订购和与WordPress应用的绑定     
+　　本节介绍如何配置自动化服务部署     
