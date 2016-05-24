@@ -11,6 +11,7 @@
 >　　NAME参数是route的名字  
 　　SERVICE参数是route所对应的service名称，这是为了通过service获取需通过route分发流量的POD IP和端口信息  
 　　HOSTNAME参数是route对外提供的域名信息    
+  
 ###  服务本身还没有使用https协议  
 　　这种情况可以需要先为服务申请签名证书，然后可以通过如下命令创建使用https协议的route
 ```
