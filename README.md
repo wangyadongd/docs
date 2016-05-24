@@ -28,7 +28,7 @@
 
 [第三章   在DataFoundry应用开发](Development on DataFoundry.md)
 
-第四章   镜像构建及持续集成
+[第四章   镜像构建及持续集成](Imagebuild&CI.md)
 
 第五章   镜像仓库
 
