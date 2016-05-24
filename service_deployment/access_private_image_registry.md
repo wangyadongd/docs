@@ -21,4 +21,4 @@ oc secrets new-dockercfg <dockerpullsecret> \
 oc secrets add serviceaccount/<default> secrets/<dockerpullsecret>
 ```   
 　　其中：
-  1.  default是datafoundry默认的镜像部署系统账户，用户也可以指定需要的系统账户
+ >   　　default是datafoundry默认的镜像部署系统账户，用户也可以指定需要的系统账户
