@@ -50,7 +50,7 @@ $ oc new-app https://github.com/datafoundry/wordpress.git
   oc get service <service-name>
   oc get imagestream <imagestream-name>
   ```  
-### 　　基础要素的详情查询  
+### 　　查询基础要素详情  
   ```  
   oc describe buildconfig <buildconfig-name>  
   oc describe deployconfig <deployconfig-name>  
