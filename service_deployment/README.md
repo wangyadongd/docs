@@ -15,5 +15,5 @@
 　　[第五节 通过service完成服务发现](service_deployment/service_discovery.md)   
 　　本节完成MySql后端服务的订购和与WordPress应用的绑定   
     
-　　[第二节 访问私有镜像库](service_deployment/access_private_image_registry.md)   
+　　[第六节 配置自动部署触发器](service_deployment/config_deploy_trigger.md)   
 　　本节完成MySql后端服务的订购和与WordPress应用的绑定     
