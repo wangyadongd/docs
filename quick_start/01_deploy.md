@@ -5,7 +5,7 @@
   ```  
 ### 2.　　创建WordPress部署任务  
   ```  
-  oc new-app https://github.com/datafoundry/wordpress.git  
+ $ oc new-app https://github.com/datafoundry/wordpress.git  
  Found Docker image 10e778c (12 days old) from Docker Hub for "library/php:5.6-apache"
 
     * An image stream will be created as "php:5.6-apache" that will track the source image
