@@ -10,7 +10,7 @@
 　　本节介绍几种适用于服务以容器方式部署时对服务进行参数配置的方法 
     
 　　[第四节 让服务支持https协议访问](service_deployment/router_configuration.md)   
-　　本节完成MySql后端服务的订购和与WordPress应用的绑定   
+　　本节介绍如何通过datafoundry平台让服务支持https访问协议   
     
 　　[第五节 通过service完成服务发现](service_deployment/service_discovery.md)   
 　　本节完成MySql后端服务的订购和与WordPress应用的绑定   
