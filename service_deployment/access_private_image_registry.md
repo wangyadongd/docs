@@ -1,7 +1,7 @@
 ##  第二节 访问私有镜像库
 　　有时我们需要部署已经上传到私有镜像仓库里的容器镜像，这时也需要给datafoundry平台配置相关secrets来保证datafoundry平台对私有镜像仓库有足够的访问权限
 　　具体过程如下
-1. 创建访问私有镜像库secrets   
+### 创建访问私有镜像库secrets   
 ``` 
 oc secrets new-dockercfg <dockerpullsecret> \
 --docker-server=<registry_server> \
