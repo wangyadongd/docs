@@ -1,4 +1,4 @@
-##  配置自动部署触发器
+##  第六节 配置自动部署触发器
 　　在很多时候我希望在镜像构建完成以后可以自动完成镜像的部署，这时可以使用datafoundry平台提供的基于镜像变化的自动化部署触发机制，具体使用方法如下：
 ```
 oc set triggers dc/<deploymentconfig_name>  --from-image=<image_name> --container=<container_name>
