@@ -10,7 +10,7 @@ oc secrets new-dockercfg <dockerpullsecret> \
 --docker-email=<EMAIL>
 ``` 
 　　其中：
-  1.  dockerpullsecret是给secrets起的一个可以识别的名字
+>  1.  dockerpullsecret是给secrets起的一个可以识别的名字
   2.  registry_server是需要datafoundry登陆的私有镜像仓库地址，例如registry.dataos.io
   1.  USERNAME是登陆镜像库的用户名
   1.  PASSWORD是登陆镜像库的用户密码
