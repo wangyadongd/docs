@@ -35,7 +35,7 @@ wordpress-1-hfzhs    0/1       CrashLoopBackOff   3          1m
 1.  创建后端服务实例  
 　　在创建实例之前，我们要先通过`oc describe bs <backingservcie-name> `获取应用所需的后端服务计划（plan），例如我们获取mysql后端服务的服务计划为：
   ```   
-  oc describe bs Mysql -n openshift
+ $ oc describe bs Mysql -n openshift
   Name:			Mysql
 Created:		21 hours ago
 Labels:			asiainfo.io/servicebroker=rdb
