@@ -2,7 +2,7 @@
 ##  第二节   集成后端服务   
 在集成后端服务之前，我们先查看上一节wordpress部署结果  
   ```
-oc get pods
+$ oc get pods
 NAME                 READY     STATUS             RESTARTS   AGE
 wordpress-1-build    0/1       Completed          0          3m
 wordpress-1-deploy   1/1       Running            0          1m
@@ -13,14 +13,6 @@ wordpress-1-hfzhs    0/1       CrashLoopBackOff   3          1m
   　　在通过datafoundry平台生成一个MySQL的后端服务之前我们可以先查看一下目前datafoundry平台已经集成的后端服务  
   ```   
   oc get bs -n openshift  
-  ```
-  注意：   
-> 后端服务是datafoundry特有功能，所以必须要使用datafoundry客户端连接datafoundry服务端后查看;    
-在查看datafoundry平台已集成的后端时要添加后端服务默认的集成命名空间openshift;  
-
-  
-　　以上命令输出结果为：  
-  ```   
   NAME         LABELS                           BINDABLE   STATUS
   Cassandra    asiainfo.io/servicebroker=etcd   true       Active
   ETCD         asiainfo.io/servicebroker=etcd   true       Active
@@ -34,6 +26,15 @@ wordpress-1-hfzhs    0/1       CrashLoopBackOff   3          1m
   Spark        asiainfo.io/servicebroker=etcd   true       Active
   Storm        asiainfo.io/servicebroker=etcd   true       Active
   ZooKeeper    asiainfo.io/servicebroker=etcd   true       Active
+  ```
+  注意：   
+> 后端服务是datafoundry特有功能，所以必须要使用datafoundry客户端连接datafoundry服务端后查看;    
+在查看datafoundry平台已集成的后端时要添加后端服务默认的集成命名空间openshift;  
+
+  
+　　以上命令输出结果为：  
+  ```   
+  
   ```   
 　　可以看到datafoundry平台已经集成非常丰富的后端服务组件，下面我们创建一个Mysql后端服务实例  
   
