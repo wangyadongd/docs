@@ -34,6 +34,6 @@
 
 [第六章   后端支持服务](Backingservice.md)
 
-第七章   服务部署
+[第七章   服务部署](service_deployment/README.md)
 
 第八章   常见问题
