@@ -16,7 +16,7 @@ oc secrets new-dockercfg <dockerpullsecret> \
     　　PASSWORD是登陆镜像库的用户密码  
     　　EMAIL是登陆镜像库的email地址   
     
-###  绑定secrets到平台默认的镜像部署系统账户中
+###  　　绑定secrets到平台默认的镜像部署系统账户中
 ``` 
 oc secrets add serviceaccount/<default> secrets/<dockerpullsecret>
 ```   
