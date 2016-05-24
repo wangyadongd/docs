@@ -57,7 +57,7 @@ $ oc new-app https://github.com/datafoundry/wordpress.git
   oc describe service <service-name>  
   oc describe imagestream <imagestream-name>  
   ```  
-1.  　　还可以通过如下命令修改基础要素的配置,具体修改的方式和内容讲在后续针对每个基础要素的专题介绍中展开  
+　　基础要素的详情修改   
   ```  
   oc edit buildconfig <buildconfig-name>  
   oc edit deployconfig <deployconfig-name>  
