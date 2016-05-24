@@ -7,7 +7,7 @@
    * [集成后端服务](quick_start/02_bind_backingservice.md)
 * [在DataFoundry应用开发](Development on DataFoundry.md)
 * [镜像构建及持续集成](Imagebuild&CI.md)
-* [镜像仓库](Repository.md)
+* [镜像仓库](Registry.md)
 * [后端支持服务](Backingservice.md)
 * [服务部署](service_deployment/README.md)
    * [访问私有代码仓库](service_deployment/access_private_code_repos.md)
