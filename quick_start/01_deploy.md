@@ -1,6 +1,5 @@
 ##  第一节  hello wordpress  
-###  1. 　　
-登录datafoundry平台  
+###  1.　　登录datafoundry平台  
   ```  
   $  oc login https://datafoundry-endpoint.xxx.xxx -u username -p password  
   ```  
