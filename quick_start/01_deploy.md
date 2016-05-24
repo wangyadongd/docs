@@ -43,21 +43,21 @@ $ oc new-app https://github.com/datafoundry/wordpress.git
 　　  `service`，简写为svc,是平台提供应用高可用和服务发现功能的入口  
 　　`imagestream`，简写为is,是平台显示私有仓库镜像信息的入口，通过他也是平台CD功能的触发入口  
 
-　　基础要素信息的查询：  
+###　　基础要素信息的查询：  
   ```  
   oc get buildconfig <buildconfig-name>
   oc get deployconfig <deployconfig-name>
   oc get service <service-name>
   oc get imagestream <imagestream-name>
   ```  
- 　　基础要素的详情查询  
+### 　　基础要素的详情查询  
   ```  
   oc describe buildconfig <buildconfig-name>  
   oc describe deployconfig <deployconfig-name>  
   oc describe service <service-name>  
   oc describe imagestream <imagestream-name>  
   ```  
-　　基础要素的详情修改   
+###　　基础要素的详情修改   
   ```  
   oc edit buildconfig <buildconfig-name>  
   oc edit deployconfig <deployconfig-name>  
@@ -68,7 +68,7 @@ $ oc new-app https://github.com/datafoundry/wordpress.git
   　　不过也有可能出现`oc new-app`命令本身就执行失败或部分失败的问题，大体上有如下几种可能性：  
   * 　　代码仓库不可达，因为网络问题或者仓库地址错误或者私有代码仓库密码错误，导致oc命令不能正确clone代码仓库内容  
   * 　　关键基础要素名称重复，如果平台中已经存在相同名称的基础要素，那么对该基础要的创建工作就会失败，当然基础要素创建的失败并不代表整个应用发布过程的失败，如果旧的基础要素信息满足要求的话是可以继续使用的而不用在意执行`new-app`过程中出现的错误提示，但是如果旧的基础要素信息不符合应用或者服务发布的要求，那么需要删除这些基础要素，基础要素的名称可以通过`new-app`的错误提示确定，也可以通过相关要素的查询命令进行查询。   
-　　删除这些基础要素的命令是：  
+###　　删除这些基础要素的命令是：  
 
     ```   
   oc delete buildconfig <buildconfig-name>  
