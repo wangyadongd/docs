@@ -8,9 +8,9 @@ oc secrets new-basicauth <basicsecret> \
 --password=<PASSWORD>
 ``` 
 　　其中：
->  1.  basicsecret是给secrets起的一个可以识别的名字
-  1.  USERNAME是登陆代码库的用户名
-  1.  PASSWORD是登陆代码库的用户密码
+>    basicsecret是给secrets起的一个可以识别的名字
+    USERNAME是登陆代码库的用户名
+    PASSWORD是登陆代码库的用户密码
 
 ###    绑定secrets到平台默认的镜像构建账户中
 ``` 
