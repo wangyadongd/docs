@@ -3,7 +3,7 @@
   ```  
   $  oc login https://datafoundry-endpoint.xxx.xxx -u username -p password  
   ```  
-###  1. 　　然后我们通过一个简单的命令来完成wordpress应用的镜像构建和发布以及内部服务的生成  
+###  2. 　　然后我们通过一个简单的命令来完成wordpress应用的镜像构建和发布以及内部服务的生成  
   ```  
   oc new-app https://github.com/datafoundry/wordpress.git  
  Found Docker image 10e778c (12 days old) from Docker Hub for "library/php:5.6-apache"
