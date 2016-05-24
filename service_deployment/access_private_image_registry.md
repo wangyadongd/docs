@@ -10,11 +10,11 @@ oc secrets new-dockercfg <dockerpullsecret> \
 --docker-email=<EMAIL>
 ``` 
 　　其中：
->  1.  dockerpullsecret是给secrets起的一个可以识别的名字
-  2.  registry_server是需要datafoundry登陆的私有镜像仓库地址，例如registry.dataos.io
-  1.  USERNAME是登陆镜像库的用户名
-  1.  PASSWORD是登陆镜像库的用户密码
-  2.  EMAIL是登陆镜像库的email地址
+>   dockerpullsecret是给secrets起的一个可以识别的名字
+    registry_server是需要datafoundry登陆的私有镜像仓库地址，例如registry.dataos.io
+    USERNAME是登陆镜像库的用户名
+    PASSWORD是登陆镜像库的用户密码
+    EMAIL是登陆镜像库的email地址
 1.  绑定secrets到平台默认的镜像部署系统账户中
 ``` 
 oc secrets add serviceaccount/<default> secrets/<dockerpullsecret>
