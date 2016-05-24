@@ -28,8 +28,8 @@
     Run 'oc status' to view your app.
   ``` 
 其中：  
-  * 　　`oc` 是datafoundry平台的命令行控制工具，他提供了对datafoundry平台的所有控制功能  
-  * 　　`new-app`是datafoundry平台的操作命令，它可以通过后续指定的若干参数完成一个应用的构建和发布  
+  　　`oc` 是datafoundry平台的命令行控制工具，他提供了对datafoundry平台的所有控制功能  
+  　　`new-app`是datafoundry平台的操作命令，它可以通过后续指定的若干参数完成一个应用的构建和发布  
   * 　　`https://github.com/datafoundry/wordpress.git` 是一个git代码仓库，它是我们要在datafoundry平台发布的第一个应用  
   * 　　输入命令并点击回车后，命令行会等待一段时间，等待时间长短与代码仓库的代码量，以及命令执行位置与github的网络条件有关，这段等待时间中oc会先clone代码仓库到本地，对代码仓库中的dockerfile进行解析，主要是获取基础镜像信息
     
