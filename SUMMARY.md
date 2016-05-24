@@ -2,7 +2,7 @@
 
 * [简介](README.md)
 * [核心概念](Basic Concepts.md)
-* [快速开始](quick_start/README.MD)
+* [快速开始](quick_start/README.md)
    * [hello wordpress](quick_start/01_deploy.md)
    * [集成后端服务](quick_start/02_bind_backingservice.md)
 * [在DataFoundry应用开发](Development on DataFoundry.md)
