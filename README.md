@@ -24,9 +24,9 @@
 
 [第一章   核心概念](Basic Concepts.md)
 
-第二章   快速开始
+[第二章   快速开始](quick_start/README.MD)
 
-第三章   在DataFoundry应用开发
+[第三章   在DataFoundry应用开发](Development on DataFoundry.md)
 
 第四章   镜像构建及持续集成
 
