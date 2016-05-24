@@ -100,7 +100,7 @@ Events:
   ---------	--------	-----	----	-------------	--------	------		-------
   5m		5m		1	{bsi }			Normal		Provisioning	bsi provisioning done, instanceid: 340082e4-1734-11e6-a653-fa163edcfb45
   ```
-  ### 2.  创建后端服务实例
+### 2.  创建后端服务实例
   　　以上服务实例创建完成，我们继续把mysql backingservice绑定到workdpress应用中
   ```
    oc bind mysql-inst1 wordpress
