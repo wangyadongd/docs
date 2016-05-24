@@ -9,7 +9,7 @@ wordpress-1-deploy   1/1       Running            0          1m
 wordpress-1-hfzhs    0/1       CrashLoopBackOff   3          1m
   ``` 
 我们现在来创建mysql backingservice     
-1. 　查看datafoundry后端服务列表  
+### 1. 　查看datafoundry后端服务列表  
   　　在通过datafoundry平台生成一个MySQL的后端服务之前我们可以先查看一下目前datafoundry平台已经集成的后端服务  
   ```   
  $ oc get bs -n openshift  
