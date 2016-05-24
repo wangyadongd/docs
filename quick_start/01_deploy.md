@@ -42,8 +42,7 @@ $ oc new-app https://github.com/datafoundry/wordpress.git
 　　 `deployconfig`，简写为dc，用来存储镜像部署所需的配置信息，  
 　　  `service`，简写为svc,是平台提供应用高可用和服务发现功能的入口  
 　　`imagestream`，简写为is,是平台显示私有仓库镜像信息的入口，通过他也是平台CD功能的触发入口  
-
-基础要素信息可以通过如下的命令进行查询：  
+基础要素信息的查询：  
   ```  
   oc get buildconfig <buildconfig-name>
   oc get deployconfig <deployconfig-name>
