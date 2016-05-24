@@ -21,5 +21,5 @@
  --cert=example-test.crt
 ```   
 其中：  
-　　NAME、SERVICE、HOSTNAME的含义之前已经介绍过  
+>　　NAME、SERVICE、HOSTNAME的含义之前已经介绍过    
 　　key、cert参数是从签名机构申请回来的证书文件目录    
