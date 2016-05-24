@@ -3,5 +3,5 @@
  　　 [第一节 访问私有代码仓库](service_deployment/access_private_code_repos.md)  
 　　本节介绍如何在服务镜像构建过程中访问私有镜像库 
     
-　　[第二节   hello WordPress](quick_start/02_bind_backingservice.md)   
+　　[第二节 访问私有镜像库](service_deployment/access_private_image_registry.md)   
 　　本节完成MySql后端服务的订购和与WordPress应用的绑定 
