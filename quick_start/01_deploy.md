@@ -38,10 +38,10 @@ $ oc new-app https://github.com/datafoundry/wordpress.git
 　　输入命令并点击回车后，命令行会等待一段时间，等待时间长短与代码仓库的代码量，以及命令执行位置与github的网络条件有关，这段等待时间中oc会先clone代码仓库到本地，对代码仓库中的dockerfile进行解析，主要是获取基础镜像信息
     
 ###　　datafoundry平台的常见基本要素  
-  `buildconfig`，可以简写为bc,用来存储镜像构建所需的配置信息，包括最基本的代码仓库地址，构建分支、tag、commit-id信息，dockerfile位置，镜像构建输出位置及名称，在相对高级的应用场景下还包含ci出发器，github webhock、私有git仓库登录信息等  
-  `deployconfig`，简写为dc，用来存储镜像部署所需的配置信息，  
-  `service`，简写为svc,是平台提供应用高可用和服务发现功能的入口  
-  * 　　`imagestream`，简写为is,是平台显示私有仓库镜像信息的入口，通过他也是平台CD功能的触发入口  
+　　`buildconfig`，可以简写为bc,用来存储镜像构建所需的配置信息，包括最基本的代码仓库地址，构建分支、tag、commit-id信息，dockerfile位置，镜像构建输出位置及名称，在相对高级的应用场景下还包含ci出发器，github webhock、私有git仓库登录信息等  
+　　 `deployconfig`，简写为dc，用来存储镜像部署所需的配置信息，  
+　　  `service`，简写为svc,是平台提供应用高可用和服务发现功能的入口  
+　　`imagestream`，简写为is,是平台显示私有仓库镜像信息的入口，通过他也是平台CD功能的触发入口  
 
 *  　　这些基础要素的信息可以通过如下的命令进行查询：  
   ```  
