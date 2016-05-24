@@ -1,9 +1,9 @@
 ##  第一节  hello wordpress  
-###  　　1. 登录datafoundry平台  
+###　　1. 登录datafoundry平台  
   ```  
   $  oc login https://datafoundry-endpoint.xxx.xxx -u username -p password  
   ```  
-### 　　 2. 创建WordPress部署任务  
+### 　　2. 创建WordPress部署任务  
   ```  
   oc new-app https://github.com/datafoundry/wordpress.git  
  Found Docker image 10e778c (12 days old) from Docker Hub for "library/php:5.6-apache"
