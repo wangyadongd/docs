@@ -43,7 +43,7 @@ $ oc new-app https://github.com/datafoundry/wordpress.git
 　　  `service`，简写为svc,是平台提供应用高可用和服务发现功能的入口  
 　　`imagestream`，简写为is,是平台显示私有仓库镜像信息的入口，通过他也是平台CD功能的触发入口  
 
-###　　查询基础要素信息：  
+###　　查询基础要素信息  
   ```  
   oc get buildconfig <buildconfig-name>
   oc get deployconfig <deployconfig-name>
