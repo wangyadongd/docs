@@ -12,7 +12,7 @@ wordpress-1-hfzhs    0/1       CrashLoopBackOff   3          1m
 1. 　查看datafoundry后端服务列表  
   　　在通过datafoundry平台生成一个MySQL的后端服务之前我们可以先查看一下目前datafoundry平台已经集成的后端服务  
   ```   
-  oc get bs -n openshift  
+ $ oc get bs -n openshift  
   NAME         LABELS                           BINDABLE   STATUS
   Cassandra    asiainfo.io/servicebroker=etcd   true       Active
   ETCD         asiainfo.io/servicebroker=etcd   true       Active
