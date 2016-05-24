@@ -1,10 +1,11 @@
 # 第四章 镜像构建及持续集成
 
-1. 构建镜像   
-  1.   构建策略为docker的构建过程    
-以下以代码托管在github上举例说明。    
-     *  代码仓库为公开    
-       使用以下命令创建一个构建：  
+# 构建镜像 
+
+构建策略为docker的构建过程,以下以代码托管在github上举例说明。 
+
+1. 代码仓库为公开,使用以下命令创建一个构建：  
+       
         ```
         oc new-build https://github.com/asiainfoLDP/datahub_wordpress.git#master
         ```  
@@ -75,7 +76,8 @@ Run 'oc logs -f bc/datahubwordpress' to stream the build progress.
         status:
           lastVersion: 0
     ```
-    * 代码仓库为私有  
+    
+2. 代码仓库为私有  
 第一步：创建secret，用来存储用户名和密码
 ```
 	oc secrets new-basicauth secretname --username=github用户名 --password=github密码
@@ -135,8 +137,10 @@ Run 'oc logs -f bc/datahubwordpress' to stream the build progress.
         status:
           lastVersion: 0
         ```
-可以看到git段中的secret部分添加了secret，new-build的时候还会提示输入用户名和密码，bc中的secret在start-build的构建过程中起作用，会带着认证信息去git clone私有仓库的代码   
-    * 在构建中使用私有镜像仓库   
+可以看到git段中的secret部分添加了secret，new-build的时候还会提示输入用户名和密码，bc中的secret在start-build的构建过程中起作用，会带着认证信息去git clone私有仓库的代码 。
+
+3. 在构建中使用私有镜像仓库  
+
 当dockerfile中from的是私有镜像，或者构建镜像要推送到私有镜像仓库时，使用以下方法提供私有镜像仓库的认证信息。  
 第一步：创建secret
 ```
@@ -191,8 +195,7 @@ Run 'oc logs -f bc/datahubwordpress' to stream the build progress.
 	  lastVersion: 0
 ```
 
-2. 持续集成
-
+# 持续集成
 
 有三种方式触发自动构建的持续集成：Webhook，Image change和Configuration change。三种方式可以同时使用。
 
