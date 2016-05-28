@@ -1,7 +1,7 @@
 # Summary
 
 * [简介](README.md)
-* [核心概念](Basic_Concepts.md)
+* [核心概念](BasicConcepts.md)
 * [快速开始](quick_start/README.md)
    * [hello wordpress](quick_start/01_deploy.md)
    * [集成后端服务](quick_start/02_bind_backingservice.md)
