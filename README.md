@@ -21,11 +21,11 @@
 
 我们的教程将按照以下章节帮助您更好的了解和学习铸数工坊：
 
-[第一章   核心概念](Basic Concepts.md)
+[第一章   核心概念](BasicConcepts.md)
 
 [第二章   快速开始](quick_start/README.MD)
 
-[第三章   在DataFoundry应用开发](Development on DataFoundry.md)
+[第三章   在DataFoundry应用开发](DevelopmentonDataFoundry.md)
 
 [第四章   镜像构建及持续集成](Imagebuild&CI.md)
 
