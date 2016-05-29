@@ -23,7 +23,7 @@
 
 [第一章   核心概念](BasicConcepts.md)
 
-[第二章   快速开始](quick_start/README.MD)
+[第二章   快速开始](quick_start/README.md)
 
 [第三章   在DataFoundry应用开发](DevelopmentonDataFoundry.md)
 
