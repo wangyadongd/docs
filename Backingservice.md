@@ -312,10 +312,9 @@ oc describe bs TensorFlow -n openshift
 ```
 oc new-backingserviceinstance tensortest --backingservice_name='TensorFlow' --planid=BE1CAAF2-CAB7-4B56-AEB4-2A3111225D50
 ```
-其中，tensortest为实例名称，--planid为第一步输出中的planid
-
-3. 使用以下命令查看创建的tensorflow实例：
+3. 使用以下命令查看创建的tensorflow实例
 ```
 oc describe bsi tensortest
 ```
+## 为juper绑定tensorflow实例
 
