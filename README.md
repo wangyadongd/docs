@@ -1,6 +1,5 @@
 
-
-![](logo.png)
+![](banner.png)
 
 铸数工坊（DataFoundry）是亚信定义的大数据操作系统。https://lab.dataos.io
 
