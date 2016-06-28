@@ -1,20 +1,21 @@
-
 # 第六章 后端支持服务
 
-后端支持服务为开发者提供即开即用的大数据服务，后端支持服务可以按照开发者的用量需求来申请，在申请后端支持服务数十秒钟后即可得到一个高可用的后端支持服务。
+后端支持服务为开发者提供即买即用的大数据服务，后端支持服务可以按照开发者的用量需求来申请，数十秒钟内即可得到一个高可用的后端支持服务。
 
-使用后端支持服务，需要按需申请后端支持服务实例，
+使用后端支持服务，需要按需申请后端支持服务实例。
 
 ## 通过命令行申请后端支持服务
 
-1. 查看后端支持服务
+### 1. 查看后端支持服务
 
-登录DataFoundry，执行命令行
+登录 DataFoundry，执行命令行
+
 ```
 oc get backingservice -n openshift
 ```
 
-得到DataFoundry提供的后端支持服务，示例如下：
+得到 DataFoundry 提供的后端支持服务，示例如下：
+
 ```
 NAME         LABELS                           BINDABLE   STATUS
 Cassandra    asiainfo.io/servicebroker=etcd   true       Active
@@ -31,20 +32,23 @@ Storm        asiainfo.io/servicebroker=etcd   true       Active
 ZooKeeper    asiainfo.io/servicebroker=etcd   true       Active
 ```
 
-2. 查询后端支持服务的详细信息及套餐，以Mongodb为例:
-执行命令
+### 2. 查询后端支持服务的详细信息及套餐
+
+以 MongoDB 为例，执行命令：
+
 ```
 oc describe backingservice NAME -n openshift
 ```
 参数说明：
-NAME：后端支持服务名称
+- `NAME` ：后端支持服务名称
 
-执行命令
+执行命令：
+
 ```
 oc describe backingservice MongoDB -n openshift
 ```
 
-得到MongoDB后端支持服务的描述：
+得到 MongoDB 后端支持服务的描述：
 
 ```
 Name:			MongoDB
@@ -97,28 +101,35 @@ PlanCosts:
 No events.
 ```
 
-3. 申请后端支持服务实例:
+### 3. 申请后端支持服务实例
+
 执行命令：
+
 ```
 oc new-backingserviceinstance NAME --backingservice_name=BackingServiceName --planid=BackingServicePlanGuid [options]
 ```
 
 参数说明：
-NAME：后端支持服务实例名称；
-backingservice_name：后端支持服务名称；
-planid：订购的后端支持服务套餐id。
+- `NAME`：后端支持服务实例名称；
+- `backingservice_name`：后端支持服务名称；
+- `planid`：订购的后端支持服务套餐 id。
 
-以mongodb为例，执行命令：
+以 MongoDB 为例，执行命令：
+
 ```
 oc new-backingserviceinstance mongodb-demo --backingservice_name=MongoDB --planid=257C6C2B-A376-4551-90E8-82D4E619C852
 ```
 
-4. 查看已申请的后端支持服务实例：
+### 4. 查看已申请的后端支持服务实例
+
 执行命令：
+
 ```
 oc get backingserviceinstance
 ```
+
 查询结果：
+
 ```
 NAME           SERVICE        PLAN             BOUND     STATUS
 mongodb-demo   MongoDB        ShareandCommon   0         Unbound
@@ -128,27 +139,31 @@ mysql-inst1    Mysql          Experimental     0         Unbound
 new-mongodb    MongoDB        ShareandCommon   0         Unbound
 spark          Spark-v1.5.2   One_Worker       2         Bound
 ```
-内容说明：
-1、NAME：已申请的后端支持服务实例名称；
-2、SERVICE：后端支持服务实例所属的后端支持服务名称；
-3、PLAN：申请的后端支持服务实例所选套餐名称；
-4、BOUND：绑定服务的个数；
-5、STATUS：后端支持服务实例状态，可能的状态为：创建中、未绑定、已绑定、删除中；
 
-5. 查看已申请的后端支持服务实例详情：
+内容说明：
+- `NAME`：已申请的后端支持服务实例名称；
+- `SERVICE`：后端支持服务实例所属的后端支持服务名称；
+- `PLAN`：申请的后端支持服务实例所选套餐名称；
+- `BOUND`：绑定服务的个数；
+- `STATUS`：后端支持服务实例状态，可能的状态为：创建中、未绑定、已绑定、删除中。
+
+### 5. 查看已申请的后端支持服务实例详情
+
 执行命令：
 ```
 oc describe backingserviceinstance NAME
 ```
 参数说明：
-NAME：后端支持服务实例名称
+- `NAME`：后端支持服务实例名称。
 
-以mongodb-demo为例，执行命令：
+以 mongodb-demo 为例，执行命令：
+
 ```
 oc describe backingserviceinstance mongodb-demo
 ```
 
-得到mongodb-demo后端支持服务实例描述：
+得到 mongodb-demo 后端支持服务实例描述：
+
 ```
 Name:			mongodb-demo
 Created:		2 minutes ago
@@ -168,28 +183,32 @@ Events:
   2m		2m		1	{bsi }			Normal		Provisioning	bsi provisioning done, instanceid: a20ad002-1d98-11e6-813a-fa163d0e0615
 ```
 
-6. 后端支持服务实例与服务绑定
+### 6. 后端支持服务实例与服务绑定
+
 执行命令：
 ```
   oc bind BackingServiceInstanceName DeployConfigName [options]
 ```
 
 参数说明：
-BackingServiceInstanceName：绑定的后端支持服务实例名称；
-DeployConfigName：绑定的服务名称。
+- `BackingServiceInstanceName`：绑定的后端支持服务实例名称；
+- `DeployConfigName`：绑定的服务名称。
 
-以mongodb-demo与Rstudio绑定为例：
+以 mongodb-demo 与 RStudio 绑定为例：
+
 执行命令：
 ```
 oc bind mongodb-demo rstudio
 ```
-绑定结果查询：
+
 执行命令，查看后端支持服务实例：
+
 ```
 oc get backingserviceinstance
 ```
 
 执行结果：
+
 ```
 NAME           SERVICE        PLAN             BOUND     STATUS
 mongodb-demo   MongoDB        ShareandCommon   1         Bound
@@ -200,9 +219,10 @@ new-mongodb    MongoDB        ShareandCommon   0         Unbound
 spark          Spark-v1.5.2   One_Worker       2         Bound
 ```
 
-可看到mongodb-demo已绑定一个服务。
+可看到 mongodb-demo 已绑定一个服务。
 
 执行命令，查看绑定的服务的详情：
+
 ```
 Name:		rstudio
 Created:	5 weeks ago
@@ -281,24 +301,28 @@ Events:
   19m		19m		1	{deployment-controller }			Warning		FailedUpdate		Cannot update deployment dangsha/rstudio-9 status to Pending: replicationcontrollers "rstudio-9" cannot be updated: the object has been modified; please apply your changes to the latest version and try again
 ```
 
-服务的配置详情中后端支持服务实例环境变量被加入了服务的配置信息中。
+服务的配置详情中，后端支持服务实例环境变量被加入了服务的配置信息中。
+
 环境变量的命名规则：`BSI_$BSINAME_$ENV`
 
-7. 后端支持服务实例与服务解绑定
+### 7. 后端支持服务实例与服务解绑定
+
 执行命令：
+
 ```
 oc unbind BackingServiceInstanceName DeployConfigName
 ```
-参数说明：
-BackingServiceInstanceName：后端支持服务实例名称；
-DeployConfigName：服务名称。
 
-以mongodb-demo与Rstudio解绑为例：
+参数说明：
+- `BackingServiceInstanceName`：后端支持服务实例名称；
+- `DeployConfigName`：服务名称。
+
+以 mongodb-demo 与 RStudio 解绑为例：
+
 ```
 oc unbind mongodb-demo rstudio
 ```
 
-可用oc get bsi以及oc describe dc dcname来查询解绑是否成功。
+可用 `oc get bsi` 以及 `oc describe dc dcname` 来查询解绑是否成功。
 
 ## 通过界面申请后端支持服务
-

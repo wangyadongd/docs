@@ -1,40 +1,49 @@
 # 第四章 镜像构建及持续集成
 
-## 构建镜像 
+## 镜像构建 
 
-构建策略为docker的构建过程,以下以代码托管在github上举例说明。 
+构建策略为 Docker 的构建过程，以下以代码托管在 GitHub 上举例说明。 
 
-1. 代码仓库为公开,使用以下命令创建一个构建：  
+* 代码仓库为公开
+
+使用以下命令创建一个构建：  
        
-        ```
-        oc new-build https://github.com/asiainfoLDP/datahub_wordpress.git#master
-        ```  
+```
+oc new-build https://github.com/asiainfoLDP/datahub_wordpress.git#master
+```  
+
 运行结果如下：  
+
 ```
 --> Found Docker image a913b48 (5 days old) from Docker Hub for "wordpress"
- An image stream will be created as "wordpress:latest" that will track the source image
- A Docker build using source code from https://github.com/asiainfoLDP/datahub_wordpress.git#master will be created
- The resulting image will be pushed to image stream "datahubwordpress:latest"
- Every time "wordpress:latest" changes a new build will be triggered
-Creating resources with label build=datahubwordpress ...
-imagestream "wordpress" created
-imagestream "datahubwordpress" created
-buildconfig "datahubwordpress" created
-Success
-Build configuration "datahubwordpress" created and build triggered.
-Run 'oc logs -f bc/datahubwordpress' to stream the build progress.
+  An image stream will be created as "wordpress:latest" that will track the source image
+  A Docker build using source code from https://github.com/asiainfoLDP/datahub_wordpress.git#master will be created
+  The resulting image will be pushed to image stream "datahubwordpress:latest"
+  Every time "wordpress:latest" changes a new build will be triggered
+  Creating resources with label build=datahubwordpress ...
+  imagestream "wordpress" created
+  imagestream "datahubwordpress" created
+  buildconfig "datahubwordpress" created
+  Success
+  Build configuration "datahubwordpress" created and build triggered.
+  Run 'oc logs -f bc/datahubwordpress' to stream the build progress.
 ```
-      根据代码库中dockerfile中的from wordpress，将为wordpress:latest创建image stream，存放wordpress:latest镜像  
-     创建基于代码库`https://github.com/asiainfoLDP/datahub_wordpress.git#master`的构建
-     创建用来存放构建完成后的镜像的imagestream:datahubwordpress  
-     当from的基础镜像发生改变时，将触发自动构建  
-     可以通过oc logs -f bc/datahubwordpress查看构建日志       
-    查看构建的配置文件：    
-    ```  
-    oc export bc datahubwordpress
-    ```
-    配置文件如下：
-    ```
+
+- 根据 Dockerfile 中的 `from wordpress`，将为 `wordpress:latest` 创建 imagestream，存放 `wordpress:latest` 镜像。
+- 创建基于代码库 `https://github.com/asiainfoLDP/datahub_wordpress.git#master` 的构建。
+- 创建用来存放构建完成后的镜像的 `imagestream:datahubwordpress` 。
+- 当 from 的基础镜像发生改变时，将触发自动构建。
+- 可以通过 `oc logs -f bc/datahubwordpress` 查看构建日志。
+
+查看构建的配置文件：
+
+```  
+oc export bc datahubwordpress
+```
+
+配置文件如下：
+
+```
         apiVersion: v1
         kind: BuildConfig
         metadata:
@@ -75,24 +84,33 @@ Run 'oc logs -f bc/datahubwordpress' to stream the build progress.
             type: ImageChange
         status:
           lastVersion: 0
-    ```
-    * 代码仓库为私有  
-第一步：创建secret，用来存储用户名和密码
 ```
-	oc secrets new-basicauth secretname --username=github用户名 --password=github密码
+
+* 代码仓库为私有  
+
+第一步：创建 secret，用来存储用户名和密码
+
+```
+oc secrets new-basicauth secretname --username=github 用户名 --password=github 密码
 ```	  
-	secretname为自己取的名字   
-第二步： 将secret加入serviceaccount/builder
+secretname 为自己取的名字。
+
+第二步： 将 secret 加入 `serviceaccount/builder`
+
 ```
-	oc secrets add serviceaccount/builder secret/secretname
+oc secrets add serviceaccount/builder secret/secretname
 ```
-	由于构建过程默认使用serviceaccount/builder，所以只需将secret加入serviceaccount/builder即可   
+由于构建过程默认使用 `serviceaccount/builder`，所以只需将 secret 加入 `serviceaccount/builder` 即可。
+
 第三步： 
+
 ```
-	oc new-build https://github.com/asiainfoLDP/datahub_wordpress.git#master --build-secret=secretname
+oc new-build https://github.com/asiainfoLDP/datahub_wordpress.git#master --build-secret=secretname
 ```
-查看构建的配置文件：   
-        ```   
+
+查看构建的配置文件：
+
+```   
         apiVersion: v1
         kind: BuildConfig
         metadata:
@@ -135,20 +153,29 @@ Run 'oc logs -f bc/datahubwordpress' to stream the build progress.
             type: ImageChange
         status:
           lastVersion: 0
-        ```
-可以看到git段中的secret部分添加了secret，new-build的时候还会提示输入用户名和密码，bc中的secret在start-build的构建过程中起作用，会带着认证信息去git clone私有仓库的代码   
-    * 在构建中使用私有镜像仓库   
-当dockerfile中from的是私有镜像，或者构建镜像要推送到私有镜像仓库时，使用以下方法提供私有镜像仓库的认证信息。  
-第一步：创建secret
 ```
-	oc secret new registry /root/.docker/config.json
+
+可以看到 Git 段中的 secret 部分添加了 secret，new-build 的时候还会提示输入用户名和密码，bc 中的secret 在 start-build 的构建过程中起作用，会带着认证信息去 git clone 私有仓库的代码。
+
+* 在构建中使用私有镜像仓库   
+
+当 Dockerfile 中 from 的是私有镜像，或者构建镜像要推送到私有镜像仓库时，使用以下方法提供私有镜像仓库的认证信息。  
+
+第一步：创建 secret
+
 ```
-第二步：添加secret到serviceaccount/builder
+oc secret new registry /root/.docker/config.json
 ```
-	oc secrets add serviceaccount/builder secrets/registry --for=pull
+
+第二步：添加 secret 到 `serviceaccount/builder`
+
 ```
-第三步：或者直接在bc中添加pull和push的secret：
-      ```	
+oc secrets add serviceaccount/builder secrets/registry --for=pull
+```
+
+第三步：或者直接在 bc 中添加 pull 和 push 的 secret：
+
+```	
           apiVersion: v1
           kind: BuildConfig
           metadata:
@@ -190,32 +217,16 @@ Run 'oc logs -f bc/datahubwordpress' to stream the build progress.
             - type: ConfigChange
           status:
             lastVersion: 0
-      ```
+```
 
-1. 持续集成
+## 持续集成
 
+有三种方式触发自动构建的持续集成：Webhook、Image Change 和 Configuration Change。三种方式可以同时使用。
 
-有三种方式触发自动构建的持续集成：Webhook，Image change和Configuration change。三种方式可以同时使用。
+一般在 bc 生成时，会自动加上 trigger 。Webhook 需要先去页面获取到，然后配到代码仓库的Webhook 中：
 
-一般在bc生成时，会自动加上trigger。webhook需要先去页面获取到，然后配到代码仓库的webhook中：
+第一步：登录平台页面，点击浏览 builds，获取到 Github Webhook
 
-第一步：登录平台页面，点击浏览-builds,获取到githubwebhook
-
-第二步：将webhook配置到github
+第二步：将 Webhook 配置到 Github
 
 配置完成后，当代码发生任何改变，都将触发自动构建。
-
-
-
-
-
-
-	
-
-
-
-
-
-
-
-
