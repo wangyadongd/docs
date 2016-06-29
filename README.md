@@ -21,7 +21,7 @@ DataFoundry 是亚信定义的大数据操作系统，我们为您提供：
 
 [第一章   核心概念](Basic_Concepts.md)
 
-[第二章   快速开始](Quick_Start/README.MD)
+[第二章   快速开始](Quick_Start/README.md)
 
 [第三章   在 DataFoundry 开发](Development_on_DataFoundry.md)
 
