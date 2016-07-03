@@ -17,4 +17,5 @@
    * [通过 service 完成服务发现](Service_Deployment/05_Service_Discovery.md)
    * [配置自动部署触发器](Service_Deployment/06_Config_Deploy_Trigger.md)
 * [常见问题](Trouble_Shooting.md)
+* [文案写作规范](Writing_Norms.md)
 
