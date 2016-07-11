@@ -9,7 +9,8 @@
         "epub": "styles/epub.css"
     },
     "plugins": [
-        "highlight"
+        "highlight",
+        "search"
     ],
     "pluginsConfig": {}
 }
