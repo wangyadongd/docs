@@ -11,7 +11,7 @@
     "plugins": [
         "highlight",
         "search",
-        "fontsettings"
+        "-fontsettings"
     ],
     "pluginsConfig": {}
 }
