@@ -13,5 +13,11 @@
         "search-pro",
         "highlight"
     ],
-    "pluginsConfig": {}
+    "pluginsConfig": {
+        "fontsettings": {
+            "theme": "white",
+            "family": "sans",
+            "size": "2"
+        }
+    }
 }
