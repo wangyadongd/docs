@@ -9,7 +9,6 @@
         "epub": "styles/epub.css"
     },
     "plugins": [
-        "-highlight",
         "-search",
         "-fontsettings",
         "search-jieba",
