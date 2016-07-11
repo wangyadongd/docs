@@ -1,6 +1,6 @@
 FROM registry.dataos.io/library/tobegit-gitbook:latest
 MAINTAINER tobe tobeg3oogle@gmail.com
-ENV 3.1.1
+ENV VERSION=3.1.1
 ADD . "/gitbook"
 RUN echo "registry=https://registry.npm.taobao.org" > ~/.npmrc
 #RUN cd /gitbook/docs && mv * /github
