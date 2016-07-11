@@ -10,7 +10,7 @@
     },
     "plugins": [
         "highlight",
-        "search",
+        "-search",
         "-fontsettings",
         "search-jieba",
         "search-pro"
