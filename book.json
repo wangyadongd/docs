@@ -8,6 +8,8 @@
         "mobi": "styles/mobi.css",
         "epub": "styles/epub.css"
     },
-    "plugins": [],
+    "plugins": [
+        "fontsettings"
+    ],
     "pluginsConfig": {}
 }
