@@ -12,7 +12,8 @@
         "highlight",
         "search",
         "fontsettings",
-        "search-jieba"
+        "search-jieba",
+        "search-pro"
     ],
     "pluginsConfig": {}
 }
