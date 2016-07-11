@@ -8,8 +8,6 @@
         "mobi": "styles/mobi.css",
         "epub": "styles/epub.css"
     },
-    "plugins": [
-        "search-jieba"
-    ],
+    "plugins": [],
     "pluginsConfig": {}
 }
