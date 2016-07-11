@@ -11,7 +11,8 @@
     "plugins": [
         "highlight",
         "search",
-        "fontsettings"
+        "fontsettings",
+        "search-jieba"
     ],
     "pluginsConfig": {}
 }
