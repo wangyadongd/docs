@@ -13,7 +13,7 @@
         "-search",
         "-fontsettings",
         "search-jieba",
-        "search-pro"
+        "-search-pro"
     ],
     "pluginsConfig": {}
 }
