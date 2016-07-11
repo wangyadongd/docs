@@ -10,8 +10,7 @@
     },
     "plugins": [
         "fontsettings",
-        "search-pro",
-        "search"
+        "search-pro"
     ],
     "pluginsConfig": {}
 }
