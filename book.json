@@ -10,7 +10,8 @@
     },
     "plugins": [
         "highlight",
-        "search"
+        "search",
+        "fontsettings"
     ],
     "pluginsConfig": {}
 }
