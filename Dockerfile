@@ -1,3 +1,4 @@
 FROM registry.dataos.io/guestbook/gitbook
 ADD . "/gitbook"
-RUN cd /gitbook && gitbook init  && gitbook server
+RUN cd /gitbook && gitbook init
+CMD gitbook serve
