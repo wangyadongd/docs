@@ -10,8 +10,14 @@
         "epub": "styles/epub.css"
     },
     "plugins": [
+        "-search",
         "fontsettings",
         "search-pro",
         "highlight"
-    ]
+    ],
+    "pluginsConfig": {
+        "search-pro": {
+            "cutWordLib": "nodejieba",
+            "defineWord" : ["Gitbook Use"]
+    }
 }
