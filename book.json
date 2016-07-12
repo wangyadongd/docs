@@ -8,10 +8,5 @@
         "pdf": "styles/pdf.css",
         "mobi": "styles/mobi.css",
         "epub": "styles/epub.css"
-    },
-    "plugins": [
-        "fontsettings",
-        "search-pro",
-        "highlight"
-    ]
+    }
 }
