@@ -1,4 +1,4 @@
-##  第四节 让服务支持 https 协议访问  
+## 第四节 让服务支持 https 协议访问  
 
 https 服务现在已经非常普及了，在 DataFoundry 上也可以支持。具体使用上可分两种情况，服务本身已使用 https 和服务本身未使用 https。
    
@@ -13,9 +13,9 @@ https 服务现在已经非常普及了，在 DataFoundry 上也可以支持。�
 ``` 
 
 其中：  
-- `NAME` 参数是 route 的名字；
-- `SERVICE` 参数是 route 所对应的 service 名称，这是为了通过 service 获取需通过 route 分发流量的 POD IP 和端口信息；
-- `HOSTNAME` 参数是 route 对外提供的域名信息。    
+- **NAME**：是 route 的名字；
+- **SERVICE**：是 route 所对应的 service 名称，这是为了通过 service 获取需通过 route 分发流量的 Pod IP 和端口信息；
+- **HOSTNAME**：是 route 对外提供的域名信息。    
   
 ###  服务本身未使用 https 协议  
 
@@ -29,6 +29,7 @@ oc create route edge [NAME] \
 --cert=example-test.crt
 ```   
 
-其中：  
-- `NAME`、`SERVICE`、`HOSTNAME` 的含义之前已经介绍过；
-- `key`、`cert` 参数是从签名机构申请回来的证书文件目录。
+其中： 
+
+- NAME、SERVICE、HOSTNAME 的含义之前已经介绍过；
+- key、cert 参数是从签名机构申请回来的证书文件目录。

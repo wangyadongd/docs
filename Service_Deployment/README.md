@@ -16,7 +16,7 @@
     
 ## [第四节 让服务支持 https 协议访问](04_Router_Configuration.md)   
 
-本节介绍如何通过DataFoundry 让服务支持 https 访问协议。
+本节介绍如何通过 DataFoundry 让服务支持 https 访问协议。
     
 ## [第五节 通过 service 完成服务发现](05_Service_Discovery.md)   
 

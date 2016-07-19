@@ -1,13 +1,13 @@
-##  第二节   集成后端服务   
+## 第二节 集成后端服务   
 
 在集成后端服务之前，我们先查看上一节 WordPress 的部署结果  
 
 ```
 $ oc get pods
-NAME                 READY     STATUS             RESTARTS   AGE
-wordpress-1-build    0/1       Completed          0          3m
-wordpress-1-deploy   1/1       Running            0          1m
-wordpress-1-hfzhs    0/1       CrashLoopBackOff   3          1m
+  NAME                 READY     STATUS             RESTARTS   AGE
+  wordpress-1-build    0/1       Completed          0          3m
+  wordpress-1-deploy   1/1       Running            0          1m
+  wordpress-1-hfzhs    0/1       CrashLoopBackOff   3          1m
 ``` 
 
 我们现在来创建 MySQL Backing Service
@@ -37,44 +37,43 @@ $ oc get bs -n openshift
 > 后端服务是 DataFoundry 特有功能，所以必须使用 DataFoundry 客户端连接 DataFoundry 服务端后查看
 在查看 DataFoundry 平台已集成的后端服务时，要添加后端服务默认的集成命名空间 openshift
 
-### 创建后端服务实例  
-　　
+### 创建后端服务实例
+
 在创建实例之前，我们要先通过 `oc describe bs <backingservcie-name> ` 获取应用所需的后端服务计划（plan），例如我们获取 MySQL 后端服务的服务计划为：
 
 ```   
 $ oc describe bs Mysql -n openshift
-  Name:			Mysql
-Created:		21 hours ago
-Labels:			asiainfo.io/servicebroker=rdb
-Annotations:		<none>
-Description:		A MYSQL DataBase
-Status:			Active
-Bindable:		true
-Updateable:		false
-documentationUrl:	http://docs.mysql.com
-longDescription:	OpenSoure RDMBS Mysql
-providerDisplayName:	asiainfoLDP
-supportUrl:		http://www.mysql.com
-displayName:		Mysql
+  Name:					Mysql
+  Created:				21 hours ago
+  Labels:				asiainfo.io/servicebroker=rdb
+  Annotations:			<none>
+  Description:			A MYSQL DataBase
+  Status:				Active
+  Bindable:				true
+  Updateable:			false
+  documentationUrl:		http://docs.mysql.com
+  longDescription:		OpenSoure RDMBS Mysql
+  providerDisplayName:	asiainfoLDP
+  supportUrl:			http://www.mysql.com
+  displayName:			Mysql
 ────────────────────
-Plan:		Experimental
-PlanID:		56660431-6032-43D0-A114-FFA3BF521B66
-PlanDesc:	share a mysql database in one instance
-PlanFree:	true
-Bullets:
-  20 GB of Disk
-  20 connections
-PlanCosts:
-  CostUnit:	MONTHLY
-  Amount:
-    eur: 49
-    usd: 99
-  CostUnit:	1GB of messages over 20GB
-  Amount:
-    eur: 0.49
-    usd: 0.99
-
-  ```
+  Plan:					Experimental
+  PlanID:				56660431-6032-43D0-A114-FFA3BF521B66
+  PlanDesc:				share a mysql database in one instance
+  PlanFree:				true
+  Bullets:
+    20 GB of Disk
+    20 connections
+  PlanCosts:
+    CostUnit:			MONTHLY
+    Amount:
+      eur: 49
+      usd: 99
+    CostUnit:			1GB of messages over 20GB
+    Amount:
+      eur: 0.49
+      usd: 0.99
+```
 
 我们选取 Experimental 计划创建 MySQL 后端实例
 
@@ -116,12 +115,12 @@ Events:
 
 ### 绑定后端服务实例
 
-以上服务实例创建完成，我们继续把mysql backingservice绑定到workdpress应用中
+以上服务实例创建完成，我们继续把 mysql backing service 绑定到 workdpress 应用中
 ```
 oc bind mysql-inst1 wordpress
 oc env dc/wordpress MYSQLBSI=MYSQLINST1
 ```  
-查看部署结果,POD已正常启动，给wordpress生成一个route地址后就可以访问了
+查看部署结果，Pod 已正常启动，给 wordpress 生成一个 route 地址后就可以访问了
 
 ```
 oc get pods
@@ -140,7 +139,7 @@ wordpress-2-55q5a   1/1       Running     0          41s
 1. 后端服务创建完成后，可以显示创建后端服务详细信息
 ![](../img/Screenshot from 2016-05-12 18-41-36.png)
 
-1. 回到“后端服务”，点击“我的后端服务实例”Tab 页，在这里可以看到所有已创建的后端服务实例
+1. 回到“后端服务”，点击“我的后端服务实例” Tab 页，在这里可以看到所有已创建的后端服务实例
 ![](../img/Screenshot from 2016-05-16 18-37-04.png)
 
 1. 点击“服务绑定”按钮，在窗口中点击“新增绑定”

@@ -1,4 +1,4 @@
-##  第一节  Hello WordPress  
+## 第一节 Hello WordPress  
 ### 登录 DataFoundry 平台 
 
 ```  
@@ -33,18 +33,18 @@ $ oc new-app https://github.com/datafoundry/wordpress.git
 
 其中：  
 
-- `imagestream`，是平台显示私有仓库镜像信息的入口，同时也是平台 CD （持续交付）功能的触发入口；
-- `oc` 是 DataFoundry 的命令行控制工具，它提供了对 DataFoundry 的所有控制功能；
-- `new-app` 是 DataFoundry 的操作命令，它可以通过后续指定的若干参数完成一个应用的构建和发布；
-- `https://github.com/datafoundry/wordpress.git` 是一个 Git 代码仓库，它是我们要在 DataFoundry 发布的第一个应用。
+- **imagestream**，是平台显示私有仓库镜像信息的入口，同时也是平台 CD （持续交付）功能的触发入口；
+- **oc** 是 DataFoundry 的命令行控制工具，它提供了对 DataFoundry 的所有控制功能；
+- **new-app** 是 DataFoundry 的操作命令，它可以通过后续指定的若干参数完成一个应用的构建和发布；
+- **https://github.com/datafoundry/wordpress.git** 是一个 Git 代码仓库，它是我们要在 DataFoundry 发布的第一个应用。
 
 输入命令并点击回车后，命令行会等待一段时间，等待时间的长短与代码仓库的代码量，命令执行位置及 Github 的网络条件有关，这段时间内 oc 会先 clone 代码仓库到本地，对代码仓库中的 Dockerfile 进行解析，主要是获取基础镜像信息。
     
 ### DataFoundry 的常见基本要素
-- `buildconfig`，简写为 bc，用来存储镜像构建所需的配置信息，包括最基本的代码仓库地址、构建分支、Tag、Commit-ID 信息、Dockerfile 位置、镜像构建输出位置及名称，在相对高级的应用场景下还包含 CI （持续集成）出发器，Github Webhook、私有 Git 仓库登录信息等；
-- `deployconfig`，简写为 dc，用来存储镜像部署所需的配置信息；
-- `service`，简写为svc，是平台提供应用高可用和服务发现功能的入口；
-- `imagestream`，简写为is，是平台显示私有仓库镜像信息的入口，同时也是平台 CD 功能的触发入口。  
+- **buildconfig**，简写为 bc，用来存储镜像构建所需的配置信息，包括最基本的代码仓库地址、构建分支、Tag、Commit-ID 信息、Dockerfile 位置、镜像构建输出位置及名称，在相对高级的应用场景下还包含 CI（持续集成）出发器，Github Webhook、私有 Git 仓库登录信息等；
+- **deployconfig**，简写为 dc，用来存储镜像部署所需的配置信息；
+- **service**，简写为 svc，是平台提供应用高可用和服务发现功能的入口；
+- **imagestream**，简写为 is，是平台显示私有仓库镜像信息的入口，同时也是平台 CD 功能的触发入口。  
 
 ### 查询基础要素信息  
 
@@ -54,7 +54,7 @@ oc get deployconfig <deployconfig-name>
 oc get service <service-name>
 oc get imagestream <imagestream-name>
 ```  
-### 　　查询基础要素详情  
+### 查询基础要素详情  
 
 ```  
 oc describe buildconfig <buildconfig-name>  
@@ -62,7 +62,7 @@ oc describe deployconfig <deployconfig-name>
 oc describe service <service-name>  
 oc describe imagestream <imagestream-name>  
 ```  
-###　　修改基础要素详情   
+### 修改基础要素详情   
 
 ```  
 oc edit buildconfig <buildconfig-name>  
@@ -75,7 +75,7 @@ oc edit imagestream <imagestream-name>
 
 不过也有可能出现 `oc new-app` 命令本身就执行失败或部分失败的问题，大体上有如下几种可能：
 
-* **代码仓库不可达**：因为网络问题或者仓库地址错误或者私有代码仓库密码错误，导致oc命令不能正确clone代码仓库内容  
+* **代码仓库不可达**：因为网络问题或者仓库地址错误或者私有代码仓库密码错误，导致 oc 命令不能正确 clone 代码仓库内容  
 * **关键基础要素名称重复**：如果平台中已存在相名的基础要素，那么对该基础要素的创建就会失败，当然基础要素创建失败并不代表整个应用发布过程的失败，如果旧的基础要素信息满足要求，则可以继续使用而不用在意执行 `new-app` 过程中出现的错误提示，但如果旧的基础要素信息不符合应用或者服务发布的要求，那么需要删除这些基础要素，基础要素的名称可以通过 `new-app` 的错误提示确定，也可以通过相关要素的查询命令进行查询。
 
 ### 删除基础要素

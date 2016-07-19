@@ -69,7 +69,7 @@ metadata:
   uid: d65739c1-fbbb-11e5-8a72-68f728db1985
 ```  
 
-创建一个名为 `redis-pod.yaml` 的 POD 定义文件并通过 `oc create -f redis-pod.yaml` 命令创建这个 POD：
+创建一个名为 `redis-pod.yaml` 的 Pod 定义文件并通过 `oc create -f redis-pod.yaml` 命令创建这个 Pod：
 
 ```
 apiVersion: v1
@@ -104,7 +104,7 @@ spec:
           path: redis.conf
 ```  
 
-查看POD启动情况：
+查看 pod 启动情况：
 
 ```  
 $ oc exec -it redis redis-cli
