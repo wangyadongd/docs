@@ -1,7 +1,9 @@
 {
-    "gitbook": "2.x.x",
-    "title": "DataFoundry 帮助文档",
-    "description": "DataFoundry 帮助文档",
+    "plugins": [
+        "search",
+        "fontsettings",
+        "highlight"
+    ],
     "styles": {
         "website": "styles/website.css",
         "ebook": "styles/ebook.css",
@@ -9,16 +11,7 @@
         "mobi": "styles/mobi.css",
         "epub": "styles/epub.css"
     },
-    "plugins": [
-        "-search",
-        "fontsettings",
-        "search-pro",
-        "highlight"
-    ],
-    "pluginsConfig": {
-        "search-pro": {
-            "cutWordLib": "nodejieba",
-            "defineWord" : ["Gitbook Use"]
-        }
-    }
+    "title": "DataFoundry 帮助文档",
+    "gitbook": "2.x.x",
+    "description": "DataFoundry 帮助文档"
 }
