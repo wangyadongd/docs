@@ -1,4 +1,8 @@
 {
+ "title": "DataFoundry 帮助文档",
+ "gitbook": "2.x.x",
+ "description": "DataFoundry 帮助文档"
+
     "plugins": [
         "-search",
         "fontsettings",
@@ -20,7 +24,4 @@
             ]
         }
     },
-    "title": "DataFoundry 帮助文档",
-    "gitbook": "2.x.x",
-    "description": "DataFoundry 帮助文档"
 }
