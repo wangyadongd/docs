@@ -248,4 +248,4 @@ oc secrets add serviceaccount/builder secrets/registry --for=pull
 1. 构建完成后可以镜像仓库中查看本次构建的镜像，鼠标移动到镜像仓库上后，可以点击“部署最新版本”来部署该镜像
  ![](../img/Screenshot from 2016-05-17 12-21-24.png)
 
-1. 完成
+1. 完成镜像构建。
