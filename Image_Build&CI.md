@@ -233,3 +233,10 @@ oc secrets add serviceaccount/builder secrets/registry --for=pull
 
 ## 通过界面构建镜像
 
+1.  登录平台  
+  ![](../img/Login.png)
+  
+1.  在左侧菜单中点击“代码构建”  
+
+
+
