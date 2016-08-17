@@ -237,6 +237,15 @@ oc secrets add serviceaccount/builder secrets/registry --for=pull
   ![](../img/Login.png)
   
 1.  在左侧菜单中点击“代码构建”  
+ ![](../img/Screenshot from 2016-05-17 12-10-38.png)  
 
+1. 点击“新建构建”
+  ![](../img/Screenshot from 2016-05-12 18-16-17.png)
 
+1. 输入“构建名称”、“代码 URL ”后，点击“开始构建”
+  ![](../img/Screenshot from 2016-05-17 12-11-09.png)
 
+1. 在状态页中可以查看构建状态，构建完成后可以镜像仓库中查看本次构建的镜像，鼠标移动到镜像仓库上后，可以点击“部署最新版本”来部署该镜像
+ ![](../img/Screenshot from 2016-05-17 12-21-24.png)
+
+1. 完成
