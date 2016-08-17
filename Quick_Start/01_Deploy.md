@@ -90,7 +90,8 @@ oc delete imagestream <imagestream-name>
 ## 通过界面部署 WordPress
 
 1.  登录平台  
-  ![](../img/Screenshot from 2016-05-12 18-14-31.png)
+  ![](../img/Login.png)
+  
   
 1. 在左侧菜单中点击“代码构建”  
  ![](../img/Screenshot from 2016-05-17 12-10-38.png)  
