@@ -92,8 +92,7 @@ oc delete imagestream <imagestream-name>
 1.  登录平台  
   ![](../img/Login.png)
   
-  
-1. 在左侧菜单中点击“代码构建”  
+1.  在左侧菜单中点击“代码构建”  
  ![](../img/Screenshot from 2016-05-17 12-10-38.png)  
 
 1. 点击“新建构建”
