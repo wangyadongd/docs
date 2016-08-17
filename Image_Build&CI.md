@@ -230,3 +230,6 @@ oc secrets add serviceaccount/builder secrets/registry --for=pull
 第二步：将 Webhook 配置到 Github
 
 配置完成后，当代码发生任何改变，都将触发自动构建。
+
+## 通过界面构建镜像
+
