@@ -18,16 +18,5 @@ DataFoundry支持三种镜像仓库：
 （3）镜像中心：镜像中心包含DataFoundry官方镜像、Docker官方镜像的镜像。
 
 
-{% raw %}
-<video id="my-video" class="video-js" controls preload="auto" width="100%" 
-poster="http://zhangjikai.com/resource/poster.jpg" data-setup='{"aspectRatio":"16:9"}'>
-  <source src="http://zhangjikai.com/resource/demo.mp4" type='video/mp4' >
-  <p class="vjs-no-js">
-    To view this video please enable JavaScript, and consider upgrading to a web browser that
-    <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-  </p>
-</video>
-{% endraw %}
-
 
 
