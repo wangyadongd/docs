@@ -13,8 +13,7 @@
         "-search",
         "fontsettings",
         "search-pro",
-        "highlight",
-        "local-video"
+        "highlight"
     ],
     "pluginsConfig": {
         "search-pro": {
