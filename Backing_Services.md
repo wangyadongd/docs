@@ -339,6 +339,8 @@ oc unbind mongodb-demo rstudio
 
 ![](../img/BackingServices.png)
 
-### 2. 查看后端支持服务
+### 2. 申请后端支持服务实例
+
+
 
 
