@@ -6,6 +6,8 @@
 
 由于镜像仓库与 LDAP 对接，所以登录镜像仓库需要输入 LDAP 的用户名和密码。
 
+![](../img/Registry.png)
+
 命令行登录镜像仓库：
 
     sudo docker login registry.dataos.io
