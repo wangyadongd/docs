@@ -248,4 +248,8 @@ oc secrets add serviceaccount/builder secrets/registry --for=pull
 1. 构建完成后可以镜像仓库中查看本次构建的镜像，鼠标移动到镜像仓库上后，可以点击“部署最新版本”来部署该镜像
  ![](../img/Screenshot from 2016-05-17 12-21-24.png)
 
-1. 构建完成后可以配置持续集成，当Git代码发生变化时
+1. 构建完成后可以配置持续集成，当Git代码发生变化时自动触发构建。可以从“构建配置”选择“自动构建”，系统会自动在代码仓库添加Webhook触发自动构建。
+
+![](../img/CI.png)
+
+
