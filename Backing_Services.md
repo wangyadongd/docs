@@ -330,4 +330,15 @@ oc unbind mongodb-demo rstudio
 
 可用 `oc get bsi` 以及 `oc describe dc dcname` 来查询解绑是否成功。
 
+
 ## 通过界面申请后端支持服务
+
+### 1. 查看后端支持服务
+
+登录DataFoundry，点击“后端支持服务”，查看后端支持服务。
+
+![](../img/BackingServices.png)
+
+### 2. 查看后端支持服务
+
+
