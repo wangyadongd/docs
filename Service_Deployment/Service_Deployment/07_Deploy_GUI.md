@@ -18,5 +18,3 @@ DataFoundry支持三种镜像仓库：
 （3）镜像中心：镜像中心包含DataFoundry官方镜像、Docker官方镜像的镜像。
 
 
-
-
