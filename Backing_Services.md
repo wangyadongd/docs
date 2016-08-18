@@ -347,6 +347,8 @@ oc unbind mongodb-demo rstudio
 
 ### 3. 查看已申请的后端支持服务实例
 
+![](../img/BackingServiceInstanceList.png)
+
 
 
 
