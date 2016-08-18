@@ -343,6 +343,11 @@ oc unbind mongodb-demo rstudio
 
 点击“申请实例”，输入后端支持服务实例名称，选择服务套餐，点击创建。
 
+![](../img/BackingServiceInstance.png)
+
+### 3. 查看已申请的后端支持服务实例
+
+
 
 
 
