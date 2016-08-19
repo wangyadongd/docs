@@ -11,11 +11,11 @@
 1. 支持的镜像仓库
 DataFoundry支持三种镜像仓库：
 
-（1）用户内置镜像仓库：通过DataFoundry平台构建的镜像；
+ - 用户内置镜像仓库：通过DataFoundry平台构建的镜像；
 
-（2）仓库镜像：registry.dataos.io中用户自己私有的镜像；
+ - 仓库镜像：registry.dataos.io中用户自己私有的镜像；
 
-（3）镜像中心：镜像中心包含DataFoundry官方镜像、Docker官方镜像的镜像。
+ - 镜像中心：镜像中心包含DataFoundry官方镜像、Docker官方镜像的镜像。
 
 ![](../../img/Deployment-Registry.png)
 
