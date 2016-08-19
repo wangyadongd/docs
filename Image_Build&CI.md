@@ -1,18 +1,18 @@
 # 第四章 镜像构建及持续集成
 
-## 镜像构建 
+## 镜像构建
 
-构建策略为 Docker 的构建过程，以下以代码托管在 GitHub 上举例说明。 
+构建策略为 Docker 的构建过程，以下以代码托管在 GitHub 上举例说明。
 
 * 代码仓库为公开
 
-使用以下命令创建一个构建：  
-       
-```
-oc new-build https://github.com/asiainfoLDP/datahub_wordpress.git#master
-```  
+使用以下命令创建一个构建：
 
-运行结果如下：  
+```
+$ oc new-build https://github.com/asiainfoLDP/datahub_wordpress.git#master
+```
+
+运行结果如下：
 
 ```
 --> Found Docker image a913b48 (5 days old) from Docker Hub for "wordpress"
@@ -29,16 +29,16 @@ oc new-build https://github.com/asiainfoLDP/datahub_wordpress.git#master
     Run 'oc logs -f bc/datahubwordpress' to stream the build progress.
 ```
 
-- 根据 Dockerfile 中的 `from wordpress`，将为 wordpress:latest 创建 imagestream，存放 wordpress:latest 镜像。
-- 创建基于代码库 https://github.com/asiainfoLDP/datahub_wordpress.git#master 的构建。
-- 创建用来存放构建完成后的镜像的 imagestream:datahubwordpress。
-- 当 from 的基础镜像发生改变时，将触发自动构建。
-- 可以通过 `oc logs -f bc/datahubwordpress` 查看构建日志。
+* 根据 Dockerfile 中的 `from wordpress`，将为 wordpress:latest 创建 imagestream，存放 wordpress:latest 镜像。
+* 创建基于代码库 [https:\/\/github.com\/asiainfoLDP\/datahub\_wordpress.git\#master](https://github.com/asiainfoLDP/datahub_wordpress.git#master) 的构建。
+* 创建用来存放构建完成后的镜像的 imagestream:datahubwordpress。
+* 当 from 的基础镜像发生改变时，将触发自动构建。
+* 可以通过 `oc logs -f bc/datahubwordpress` 查看构建日志。
 
 查看构建的配置文件：
 
-```  
-oc export bc datahubwordpress
+```
+$ oc export bc datahubwordpress
 ```
 
 配置文件如下：
@@ -91,26 +91,28 @@ oc export bc datahubwordpress
 第一步：创建 secret，用来存储用户名和密码
 
 ```
-oc secrets new-basicauth secretname --username=github 用户名 --password=github 密码
-```	  
+$ oc secrets new-basicauth secretname --username=github 用户名 --password=github 密码
+```
+
 secretname 为自己取的名字。
 
-第二步： 将 secret 加入 serviceaccount/builder
+第二步： 将 secret 加入 serviceaccount\/builder
 
 ```
-oc secrets add serviceaccount/builder secret/secretname
+$ oc secrets add serviceaccount/builder secret/secretname
 ```
-由于构建过程默认使用 serviceaccount/builder，所以只需将 secret 加入 serviceaccount/builder 即可。
 
-第三步： 
+由于构建过程默认使用 serviceaccount\/builder，所以只需将 secret 加入 serviceaccount\/builder 即可。
+
+第三步：
 
 ```
-oc new-build https://github.com/asiainfoLDP/datahub_wordpress.git#master --build-secret=secretname
+$ oc new-build https://github.com/asiainfoLDP/datahub_wordpress.git#master --build-secret=secretname
 ```
 
 查看构建的配置文件：
 
-```   
+```
         apiVersion: v1
         kind: BuildConfig
         metadata:
@@ -159,23 +161,23 @@ oc new-build https://github.com/asiainfoLDP/datahub_wordpress.git#master --build
 
 * 在构建中使用私有镜像仓库   
 
-当 Dockerfile 中 from 的是私有镜像，或者构建镜像要推送到私有镜像仓库时，使用以下方法提供私有镜像仓库的认证信息。  
+当 Dockerfile 中 from 的是私有镜像，或者构建镜像要推送到私有镜像仓库时，使用以下方法提供私有镜像仓库的认证信息。
 
 第一步：创建 secret
 
 ```
-oc secret new registry /root/.docker/config.json
+$ oc secret new registry /root/.docker/config.json
 ```
 
-第二步：添加 secret 到 serviceaccount/builder
+第二步：添加 secret 到 serviceaccount\/builder
 
 ```
-oc secrets add serviceaccount/builder secrets/registry --for=pull
+$ oc secrets add serviceaccount/builder secrets/registry --for=pull
 ```
 
 第三步：或者直接在 bc 中添加 pull 和 push 的 secret：
 
-```	
+```
           apiVersion: v1
           kind: BuildConfig
           metadata:
@@ -233,23 +235,21 @@ oc secrets add serviceaccount/builder secrets/registry --for=pull
 
 ## 通过界面构建镜像
 
-1.  登录平台  
-  ![](../img/Login.png)
-  
-1.  在左侧菜单中点击“代码构建”  
- ![](../img/Screenshot from 2016-05-17 12-10-38.png)  
+1. 登录平台
+![](img/Login.png)
 
-1. 点击“新建构建”，输入“构建名称”、选择代码仓库后，点击“开始构建”
-  ![](../img/Build-GUI.png)
+2. 在左侧菜单中点击“代码构建”
+![](img/Screenshot from 2016-05-17 12-10-38.png)
 
-1. 在状态页中可以查看构建状态
-  ![](../img/Screenshot from 2016-05-17 12-11-09.png)
+3. 点击“新建构建”，输入“构建名称”、选择代码仓库后，点击“开始构建”
+![](img/Build-GUI.png)
 
-1. 构建完成后可以镜像仓库中查看本次构建的镜像，鼠标移动到镜像仓库上后，可以点击“部署最新版本”来部署该镜像
- ![](../img/Screenshot from 2016-05-17 12-21-24.png)
+4. 在状态页中可以查看构建状态
+![](img/Screenshot from 2016-05-17 12-11-09.png)
 
-1. 构建完成后可以配置持续集成，当Git代码发生变化时自动触发构建。可以从“构建配置”选择“自动构建”，系统会自动在代码仓库添加Webhook触发自动构建。
+5. 构建完成后可以镜像仓库中查看本次构建的镜像，鼠标移动到镜像仓库上后，可以点击“部署最新版本”来部署该镜像
+![](img/Screenshot from 2016-05-17 12-21-24.png)
 
-![](../img/CI.png)
-
+6. 构建完成后可以配置持续集成，当Git代码发生变化时自动触发构建。可以从“构建配置”选择“自动构建”，系统会自动在代码仓库添加 Webhook 触发自动构建。
+![](img/CI.png)
 
