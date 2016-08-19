@@ -8,14 +8,9 @@
 ![](../../img/Deployment2.png)
 配置服务副本数量、重启策略、路由、选择要绑定的后端服务、配置环境变量。点击创建服务。
 
-1. 支持的镜像仓库
-DataFoundry支持三种镜像仓库：
-
+1. DataFoundry支持三种镜像仓库：
  - 用户内置镜像仓库：通过DataFoundry平台构建的镜像；
-
  - 仓库镜像：registry.dataos.io中用户自己私有的镜像；
-
  - 镜像中心：镜像中心包含DataFoundry官方镜像、Docker官方镜像的镜像。
-
 ![](../../img/Deployment-Registry.png)
-
+1. 配置自动部署
