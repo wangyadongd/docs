@@ -16,7 +16,7 @@
    * [让服务支持 https 协议访问](Service_Deployment/04_Router_Configuration.md)
    * [通过 service 完成服务发现](Service_Deployment/05_Service_Discovery.md)
    * [配置自动部署触发器](Service_Deployment/06_Config_Deploy_Trigger.md)
-   * [通过界面部署服务](Service_Deployment/Service_Deployment/07_Deploy_GUI.md)
+   * [通过界面部署服务](Service_Deployment/07_Deploy_GUI.md)
 * [常见问题](Trouble_Shooting.md)
 * [文案写作规范](Writing_Norms.md)
 
