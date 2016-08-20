@@ -4,7 +4,7 @@
 在之前的案例中，我们用最快的方式创建了 Docker-2048 和 WordPress 应用，但实际生产过程中的应用服务部署过程远比这些复杂。为了提高服务的灵活性，通常都会使用配置文件或者配置数据库来分离随环境而变的信息，采用这种方式部署的服务通常都需要在服务启动前配置相应的环境变量。但是，在将服务打包成容器镜像后，我们就没有机会手工配置环境变量了。另外由于容器的不可变性，也非常不推荐在容器启动后对容器进行修改和配置，因此就需要在服务打包成容器镜像前预留出所有的环境变量，在容器启动时直接将所需的环境变量传递给服务，例如下面是一个 mysql 服务的启动命令。
 
 ```    
-oc run mysql --image mysql --env MYSQL_ROOT_PASSWORD=my-secret-pw  
+$ oc run mysql --image mysql --env MYSQL_ROOT_PASSWORD=my-secret-pw  
 ``` 
 这个命令是通过环境变量直接初始化服务，很多情况下配置是存储在特定配置文件中的，例如 spring 框架配置的连接池，我们可以通过正则表达式把环境变量值替换到配置文件中，然后再启动 tomcat。
 
@@ -33,7 +33,7 @@ configmap 功能可以将服务所需的配置文件以卷的形式挂载到容�
 下面我们来看看如何创建一个 configmap，创建 configmap 的命令如下：
 
 ``` 
-oc create configmap <configmap_name> [options]
+$ oc create configmap <configmap_name> [options]
 ``` 
 
 我们创建一个 redis 服务，通过 configmap 传递 redis 启动参数，redis 配置文件 `redis-config` 内容如下：
@@ -46,74 +46,74 @@ maxmemory-policy allkeys-lru
 先创建 configmap：
 
 ``` 
-oc create configmap example-redis-config --from-file=redis-config
+$ oc create configmap example-redis-config --from-file=redis-config
 ```  
 
 查看创建结果：
 
 ``` 
-oc get configmap example-redis-config -o yaml
+$ oc get configmap example-redis-config -o yaml
 
-apiVersion: v1
-data:
-  redis-config: |
-    maxmemory 2mb
-    maxmemory-policy allkeys-lru
-kind: ConfigMap
-metadata:
-  creationTimestamp: 2016-04-06T05:53:07Z
-  name: example-redis-config
-  namespace: default
-  resourceVersion: "2985"
-  selfLink: /api/v1/namespaces/default/configmaps/example-redis-config
-  uid: d65739c1-fbbb-11e5-8a72-68f728db1985
+  apiVersion: v1
+  data:
+    redis-config: |
+      maxmemory 2mb
+      maxmemory-policy allkeys-lru
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: 2016-04-06T05:53:07Z
+    name: example-redis-config
+    namespace: default
+    resourceVersion: "2985"
+    selfLink: /api/v1/namespaces/default/configmaps/example-redis-config
+    uid: d65739c1-fbbb-11e5-8a72-68f728db1985
 ```  
 
 创建一个名为 `redis-pod.yaml` 的 Pod 定义文件并通过 `oc create -f redis-pod.yaml` 命令创建这个 Pod：
 
 ```
-apiVersion: v1
-kind: Pod
-metadata:
-  name: redis
-spec:
-  containers:
-  - name: redis
-    image: kubernetes/redis:v1
-    env:
-    - name: MASTER
-      value: "true"
-    ports:
-    - containerPort: 6379
-    resources:
-      limits:
-        cpu: "0.1"
-    volumeMounts:
-    - mountPath: /redis-master-data
-      name: data
-    - mountPath: /redis-master
-      name: config
-  volumes:
-    - name: data
-      emptyDir: {}
-    - name: config
-      configMap:
-        name: example-redis-config
-        items:
-        - key: redis-config
-          path: redis.conf
+  apiVersion: v1
+  kind: Pod
+  metadata:
+    name: redis
+  spec:
+    containers:
+    - name: redis
+      image: kubernetes/redis:v1
+      env:
+      - name: MASTER
+        value: "true"
+      ports:
+      - containerPort: 6379
+      resources:
+        limits:
+          cpu: "0.1"
+      volumeMounts:
+      - mountPath: /redis-master-data
+        name: data
+      - mountPath: /redis-master
+        name: config
+    volumes:
+      - name: data
+        emptyDir: {}
+      - name: config
+        configMap:
+          name: example-redis-config
+          items:
+          - key: redis-config
+            path: redis.conf
 ```  
 
 查看 pod 启动情况：
 
 ```  
 $ oc exec -it redis redis-cli
-127.0.0.1:6379> CONFIG GET maxmemory
-1) "maxmemory"
-2) "2097152"
-127.0.0.1:6379> CONFIG GET maxmemory-policy
-1) "maxmemory-policy"
-2) "allkeys-lru"
+  127.0.0.1:6379> CONFIG GET maxmemory
+  1) "maxmemory"
+  2) "2097152"
+  127.0.0.1:6379> CONFIG GET maxmemory-policy
+  1) "maxmemory-policy"
+  2) "allkeys-lru"
 ```  
 
 使用 configmap 这种方式来传递服务配置的好处是不需要再为传递服务参数而准备容器镜像和服务配置模板，这样我们就可以更方便地使用公共镜像，而不用在公共镜像基础之上创建自定义镜像。
