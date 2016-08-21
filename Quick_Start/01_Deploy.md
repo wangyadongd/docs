@@ -1,13 +1,14 @@
-## 第一节 Hello WordPress  
-### 登录 DataFoundry 平台 
+## 第一节 Hello WordPress
 
-```  
+### 登录 DataFoundry 平台
+
+```
 $  oc login https://datafoundry-endpoint.xxx.xxx -u username -p password  
-```  
+```
 
-### 创建 WordPress 部署任务  
- 
-```  
+### 创建 WordPress 部署任务
+
+```
 $ oc new-app https://github.com/datafoundry/wordpress.git  
   Found Docker image 10e778c (12 days old) from Docker Hub for "library/php:5.6-apache"
 
@@ -29,46 +30,49 @@ $ oc new-app https://github.com/datafoundry/wordpress.git
   Success
     Build scheduled, use 'oc logs -f bc/wordpress' to track its progress.
     Run 'oc status' to view your app.
-  ``` 
+```
 
-其中：  
+其中：
 
-- **imagestream**，是平台显示私有仓库镜像信息的入口，同时也是平台 CD （持续交付）功能的触发入口；
-- **oc** 是 DataFoundry 的命令行控制工具，它提供了对 DataFoundry 的所有控制功能；
-- **new-app** 是 DataFoundry 的操作命令，它可以通过后续指定的若干参数完成一个应用的构建和发布；
-- **https://github.com/datafoundry/wordpress.git** 是一个 Git 代码仓库，它是我们要在 DataFoundry 发布的第一个应用。
+* **imagestream**，是平台显示私有仓库镜像信息的入口，同时也是平台 CD （持续交付）功能的触发入口；
+* **oc** 是 DataFoundry 的命令行控制工具，它提供了对 DataFoundry 的所有控制功能；
+* **new-app** 是 DataFoundry 的操作命令，它可以通过后续指定的若干参数完成一个应用的构建和发布；
+* [**https:\/\/github.com\/datafoundry\/wordpress.git**](https://github.com/datafoundry/wordpress.git) 是一个 Git 代码仓库，它是我们要在 DataFoundry 发布的第一个应用。
 
 输入命令并点击回车后，命令行会等待一段时间，等待时间的长短与代码仓库的代码量，命令执行位置及 Github 的网络条件有关，这段时间内 oc 会先 clone 代码仓库到本地，对代码仓库中的 Dockerfile 进行解析，主要是获取基础镜像信息。
-    
+
 ### DataFoundry 的常见基本要素
-- **buildconfig**，简写为 bc，用来存储镜像构建所需的配置信息，包括最基本的代码仓库地址、构建分支、Tag、Commit-ID 信息、Dockerfile 位置、镜像构建输出位置及名称，在相对高级的应用场景下还包含 CI（持续集成）出发器，Github Webhook、私有 Git 仓库登录信息等；
-- **deployconfig**，简写为 dc，用来存储镜像部署所需的配置信息；
-- **service**，简写为 svc，是平台提供应用高可用和服务发现功能的入口；
-- **imagestream**，简写为 is，是平台显示私有仓库镜像信息的入口，同时也是平台 CD 功能的触发入口。  
 
-### 查询基础要素信息  
+* **buildconfig**，简写为 bc，用来存储镜像构建所需的配置信息，包括最基本的代码仓库地址、构建分支、Tag、Commit-ID 信息、Dockerfile 位置、镜像构建输出位置及名称，在相对高级的应用场景下还包含 CI（持续集成）出发器，Github Webhook、私有 Git 仓库登录信息等；
+* **deployconfig**，简写为 dc，用来存储镜像部署所需的配置信息；
+* **service**，简写为 svc，是平台提供应用高可用和服务发现功能的入口；
+* **imagestream**，简写为 is，是平台显示私有仓库镜像信息的入口，同时也是平台 CD 功能的触发入口。  
 
-```  
+### 查询基础要素信息
+
+```
 oc get buildconfig <buildconfig-name>
 oc get deployconfig <deployconfig-name>
 oc get service <service-name>
 oc get imagestream <imagestream-name>
-```  
-### 查询基础要素详情  
+```
 
-```  
-oc describe buildconfig <buildconfig-name>  
-oc describe deployconfig <deployconfig-name>  
-oc describe service <service-name>  
-oc describe imagestream <imagestream-name>  
-```  
-### 修改基础要素详情   
+### 查询基础要素详情
 
-```  
-oc edit buildconfig <buildconfig-name>  
-oc edit deployconfig <deployconfig-name>  
-oc edit service <service-name>  
-oc edit imagestream <imagestream-name>  
+```
+$ oc describe buildconfig <buildconfig-name>  
+$ oc describe deployconfig <deployconfig-name>  
+$ oc describe service <service-name>  
+$ oc describe imagestream <imagestream-name>  
+```
+
+### 修改基础要素详情
+
+```
+$ oc edit buildconfig <buildconfig-name>  
+$ oc edit deployconfig <deployconfig-name>  
+$ oc edit service <service-name>  
+$ oc edit imagestream <imagestream-name>  
 ```
 
 在简单了解了 DataFoundry 的基本要素后，我们来看看命令执行的结果，这里要特别强调的是 DataFoundry 的命令是异步设计的。绝大多数命令的返回结果仅仅代表系统已经接受到了请求，并不表示相关操作已经完成，也就是说 `oc new-app` 执行成功后只是个开始，我们需要逐个确认每个基本要素的执行情况，只有当所有的基本要素全部完成之后才表示一个应用真正发布成功。
@@ -80,38 +84,40 @@ oc edit imagestream <imagestream-name>
 
 ### 删除基础要素
 
-```   
-oc delete buildconfig <buildconfig-name>  
-oc delete deployconfig <deployconfig-name>  
-oc delete service <service-name>  
-oc delete imagestream <imagestream-name>  
-```  
-    
+```
+$ oc delete buildconfig <buildconfig-name>  
+$ oc delete deployconfig <deployconfig-name>  
+$ oc delete service <service-name>  
+$ oc delete imagestream <imagestream-name>  
+```
+
 ## 通过界面部署 WordPress
 
 1. 登录平台
-![](../img/Login.png)
-  
-1. 在左侧菜单中点击“代码构建”
-![](../img/Screenshot from 2016-05-17 12-10-38.png)  
+  ![](../img/Login.png)
 
-1. 点击“新建构建”
-![](../img/Screenshot from 2016-05-12 18-16-17.png)
+2. 在左侧菜单中点击“代码构建”
+  ![](../img/Code_Build.png)
 
-1. 输入“构建名称”、“代码 URL ”后，点击“开始构建”
-![](../img/Screenshot from 2016-05-17 12-11-09.png)
+3. 点击“新建构建”
+  ![](../img/New_Build.png)
 
-1. 在状态页中可以查看构建状态，构建完成后可以镜像仓库中查看本次构建的镜像，鼠标移动到镜像仓库上后，可以点击“部署最新版本”来部署该镜像
-![](../img/Screenshot from 2016-05-17 12-21-24.png)
+4. 输入“构建名称”、“代码 URL ”后，点击“开始构建”
+  ![](../img/Build_Detail.png)
 
-1. 在部署容器镜像时，可填写“服务名称”、“容器名称”、容器启动时占用的端口和对应服务的端口，点击“创建服务”
-![](../img/Screenshot from 2016-05-17 12-23-18.png)  
+5. 在状态页中可以查看构建状态，构建完成后可以镜像仓库中查看本次构建的镜像，鼠标移动到镜像仓库上后，可以点击“部署最新版本”来部署该镜像
+  ![](../img/Build_Latest.png)
 
-1. 点击“创建服务”后，界面进入“服务详情”页，点击”启动“来触发容器启动
-![](../img/Screenshot from 2016-05-17 12-24-07.png) 
+6. 在部署容器镜像时，可填写“服务名称”、“容器名称”、容器启动时占用的端口和对应服务的端口，点击“创建服务”
+  ![](../img/Create_Service.png)
 
-1. 在“服务详情”页的“高级配置”区域，可以看到“路由设置”开关，在这里可以为服务配置 route 信息       
-![](../img/Screenshot from 2016-05-17 12-25-11.png)
+7. 点击“创建服务”后，界面进入“服务详情”页，点击”启动“来触发容器启动
+  ![](../img/Service_Detail.png)
 
-1. 配置完成后，点击“更新”，保存已修改的服务配置
-![](../img/Screenshot from 2016-05-17 12-28-18.png)
+8. 在“服务详情”页的“高级配置”区域，可以看到“路由设置”开关，在这里可以为服务配置 route 信息
+  ![](../img/Route.png)
+
+9. 配置完成后，点击“更新”，保存已修改的服务配置
+  ![](../img/Update.png)
+
+
