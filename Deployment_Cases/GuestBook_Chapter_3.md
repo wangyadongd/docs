@@ -1,4 +1,4 @@
-# 第三节：进行 CI/CD - 2048
+# 第三节：进行 CI\/CD - 2048
 
 > 本教程基于 DataFoundry 经典界面编写，考虑到产品的快速演进，部分步骤和图示可能已经改变。
 
@@ -6,7 +6,7 @@
 
 在第三节，我们将学会：
 
-- 对部署的应用进行 CI/CD 配置
+* 对部署的应用进行 CI\/CD 配置
 
 ## 2 关于 2048 应用
 
@@ -18,21 +18,21 @@
 
 对于图形界面操作，你还需要以下浏览器之一：
 
-- Firefox 15 或以上
-- Chrome 21 或以上
-- Internet Explorer 10 或以上
-- Safari 7 或以上
+* Firefox 15 或以上
+* Chrome 21 或以上
+* Internet Explorer 10 或以上
+* Safari 7 或以上
 
 对于命令行操作，你还需要下载 OpenShift 客户端：
 
-- [Linux 32bit](https://s3.cn-north-1.amazonaws.com.cn/datafoundry/client/linux-32bit.tar.gz)
-- [Linux 64bit](https://s3.cn-north-1.amazonaws.com.cn/datafoundry/client/linux-64bit.tar.gz)
-- [Mac](https://s3.cn-north-1.amazonaws.com.cn/datafoundry/client/mac.zip)
-- [Windows](https://s3.cn-north-1.amazonaws.com.cn/datafoundry/client/windows.zip)
+* [Linux 32bit](https://s3.cn-north-1.amazonaws.com.cn/datafoundry/client/linux-32bit.tar.gz)
+* [Linux 64bit](https://s3.cn-north-1.amazonaws.com.cn/datafoundry/client/linux-64bit.tar.gz)
+* [Mac](https://s3.cn-north-1.amazonaws.com.cn/datafoundry/client/mac.zip)
+* [Windows](https://s3.cn-north-1.amazonaws.com.cn/datafoundry/client/windows.zip)
 
 Fork 2048 源码到自己的代码仓库：
 
-- 官方版（含 dockerfile），[https://github.com/alexwhen/docker-2048](https://github.com/alexwhen/docker-2048)
+* 官方版（含 dockerfile），[https:\/\/github.com\/alexwhen\/docker-2048](https://github.com/alexwhen/docker-2048)
 
 ## 4 Step by Step 详细操作
 
@@ -41,6 +41,7 @@ Fork 2048 源码到自己的代码仓库：
 ### 4.1 图形界面操作
 
 #### Step 1：代码构建
+
 1）登录平台：
 ![](img/login.png)
 
@@ -54,25 +55,27 @@ Fork 2048 源码到自己的代码仓库：
 ![](img/start_build_2.png)
 
 #### Step 2：服务部署
+
 1）在左侧菜单中点击“服务部署”，选择相应镜像，并填写“服务名称”、“容器名称”、容器启动时占用的端口和对应服务的端口，点击创建服务：
 ![](img/service_deployment_2.png)
 
 2）在“服务详情”页的“高级配置”区域，可以看到“路由设置”开关，在这里可以为服务配置 route 信息：
 ![](img/route3.png)
 
-3）在“自动部署”区域，进行 CI/CD 选项配置，勾选“镜像变化触发自动部署”、“配置变化触发自动部署”：
+3）在“自动部署”区域，进行 CI\/CD 选项配置，勾选“镜像变化触发自动部署”、“配置变化触发自动部署”：
 ![](img/auto_deployment.png)
 
 注：
 
-- 勾选“镜像变化触发自动部署”后，当容器所基于的镜像发生改变时，就会触发服务基于新的镜像重新部署；
-- 勾选“配置变化触发自动部署”后，当服务的配置信息发生改变时，就会触发服务基于新的配置重新部署。
+* 勾选“镜像变化触发自动部署”后，当容器所基于的镜像发生改变时，就会触发服务基于新的镜像重新部署；
+* 勾选“配置变化触发自动部署”后，当服务的配置信息发生改变时，就会触发服务基于新的配置重新部署。
 
 4）配置完成后，点击“创建服务”，数十秒内即可完成服务部署。部署完成后，点击“路由 URL”下方的URL，即可访问你所部署的服务：
 ![](img/deployment_1.png)
 ![](img/2048_1.png)
 
 #### Step 3:通过镜像变化触发自动部署
+
 1）在 GitHub 上，修改 docker-2048 页面源代码，保存并记录 commit id：
 ![](img/edit_code.png)
 
@@ -86,6 +89,7 @@ Fork 2048 源码到自己的代码仓库：
 ![](img/2048_2.png)
 
 #### Step 4：通过配置变化触发自动部署
+
 1）进入“服务部署”，点击 docker-2048，进入“配置信息” Tab 页：
 ![](img/config.png)
 
@@ -95,14 +99,14 @@ Fork 2048 源码到自己的代码仓库：
 3）部署完成后，即可访问新部署的服务，此处可以看到域名前缀已变为“docker-2049”：
 ![](img/2048_3.png)
 
-
 ### 4.2 命令行操作
 
-我们可以通过命令对 dc，bc 和 rc 的 triggers 进行操作来触发 CI/CD，这里的 triggers 即一些能够引起触发的条件。
+我们可以通过命令对 dc，bc 和 rc 的 triggers 进行操作来触发 CI\/CD，这里的 triggers 即一些能够引起触发的条件。
 
-DataFoundry 中包括两种 triggers，一种是代码构建处的“自动构建“(由代码变化触发)，另一种是服务部署处的“镜像变化触发自动部署”和“配置变化触发自动部署”。
+DataFoundry 中包括两种 triggers，一种是代码构建处的“自动构建“\(由代码变化触发\)，另一种是服务部署处的“镜像变化触发自动部署”和“配置变化触发自动部署”。
 
 #### 4.2.1 自动构建
+
 “自动构建”需要用到 bc 中的 Webhook，可通过以下命令查看：
 
 ```
@@ -134,27 +138,28 @@ $ oc describe bc docker-2048
 ```
 $ oc set triggers dc/docker-2048
 ```
+
 会得到以下结果：
 
 ```
-  NAME								TYPE	VALUE								AUTO
-  deploymentconfigs/docker-2048		config	                              		true
-  deploymentconfigs/docker-2048		image	docker-2048:master (docker-2048)	true
+  NAME                                TYPE    VALUE                                AUTO
+  deploymentconfigs/docker-2048       config                                       true
+  deploymentconfigs/docker-2048       image   docker-2048:master (docker-2048)     true
 ```
 
 我们可以看到以上结果中列出了两个 triggers 条件，分别为 dc 配置文件发生改变时触发自动部署和 docker-2048:master 这个镜像发生改变时触发自动部署。
 
 2）删除 triggers
 
-- 删除所有 triggers：
+* 删除所有 triggers：
 
 ```
 $ oc set triggers dc/docker-2048 --remove-all
 ```
 
-再次查看 dc/docker-2048 的 triggers 时，我们会发现没有任何 trigger 条件了。
+再次查看 dc\/docker-2048 的 triggers 时，我们会发现没有任何 trigger 条件了。
 
-- 删除单个 trigger：
+* 删除单个 trigger：
 
 ```
 $ oc set triggers dc/docker-2048 --from-config --remove
@@ -166,7 +171,7 @@ $ oc set triggers dc/docker-2048 --from-config --remove
 
 下面我们来逐步为它增加 triggers，以此来熟悉增加 trigger 的命令。
 
-- 增加镜像发生改变时触发部署的 trigger：
+* 增加镜像发生改变时触发部署的 trigger：
 
 ```
 $ oc set triggers  dc/docker-2048 --from-image=docker-2048:master --containers=docker-2048
@@ -174,7 +179,7 @@ $ oc set triggers  dc/docker-2048 --from-image=docker-2048:master --containers=d
 
 这条命令中，需要指定`--containers`，否则会报错。`--containers`内容为 pod 配置文件中 Containers 字段下的容器名字。
 
-- 增加 dc 配置文件发生改变时触发部署的 trigger：
+* 增加 dc 配置文件发生改变时触发部署的 trigger：
 
 ```
 $ oc set triggers  dc/docker-2048 --from-config=true
