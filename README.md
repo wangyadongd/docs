@@ -33,8 +33,8 @@ DataFoundry 是亚信定义的大数据操作系统，我们为您提供：
 
 [第七章  服务部署](Service_Deployment/README.md)
 
-[第八章  部署案例](Deployment_Cases.md)
+[第八章  部署案例](Deployment_Cases/README.md)
 
-[第九章  应用案例](Application_Cases.md)
+[第九章  应用案例](Application_Cases/README.md)
 
 [第十章  常见问题](FAQ.md)
