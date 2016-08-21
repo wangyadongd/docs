@@ -240,18 +240,15 @@ $ oc secrets add serviceaccount/builder secrets/registry --for=pull
 
 2. 在左侧菜单中点击“代码构建”
 ![](img/Code_Build.png)
-![](img/Screenshot from 2016-05-17 12-10-38.png)
 
 3. 点击“新建构建”，输入“构建名称”、选择代码仓库后，点击“开始构建”
 ![](img/Build-GUI.png)
 
 4. 在状态页中可以查看构建状态
 ![](img/Build_Status.png)
-![](img/Screenshot from 2016-05-17 12-11-09.png)
 
 5. 构建完成后可以镜像仓库中查看本次构建的镜像，鼠标移动到镜像仓库上后，可以点击“部署最新版本”来部署该镜像
 ![](img/Build_Latest.png)
-![](img/Screenshot from 2016-05-17 12-21-24.png)
 
 6. 构建完成后可以配置持续集成，当Git代码发生变化时自动触发构建。可以从“构建配置”选择“自动构建”，系统会自动在代码仓库添加 Webhook 触发自动构建。
 ![](img/CI.png)
