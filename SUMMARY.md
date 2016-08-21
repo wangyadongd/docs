@@ -17,6 +17,14 @@
     * [通过 service 完成服务发现](Service_Deployment/05_Service_Discovery.md)
     * [配置自动部署触发器](Service_Deployment/06_Config_Deploy_Trigger.md)
     * [通过界面部署服务](Service_Deployment/07_Deploy_GUI.md)
+* [部署案例](Deployment_Cases/README.md)
+    * [第一个应用 - TensorFlow Playground](GuestBook_Chapter_1.md)
+    * [使用后端服务 - WordPress](GuestBook_Chapter_2.md)
+    * [进行 CI/CD](GuestBook_Chapter_3.md)
+    * [使用 User Provided Service](GuestBook_Chapter_4.md)
+* [应用案例](Application_Cases/README.md)
+    * [TensorFlow](Application_Cases/TensorFlow/README.md)
+        
 * [常见问题](Trouble_Shooting.md)
 * [文案写作规范](Writing_Norms.md)
 
