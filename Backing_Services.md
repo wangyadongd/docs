@@ -342,23 +342,23 @@ oc unbind mongodb-demo rstudio
 
 登录 DataFoundry，点击“后端支持服务”，查看后端支持服务。
 
-![](img/BackingServices.png)
+![](img/Backing_Services.png)
 
 ### 2. 申请后端支持服务实例
 
 点击“申请实例”，输入后端支持服务实例名称，选择服务套餐，点击创建。
 
-![](img/BackingServiceInstance.png)
+![](img/Backing_Service_Instance.png)
 
 ### 3. 查看已申请的后端支持服务实例
 
 点击“我的后端服务实例”，查看已申请的后端支持服务实例。
 
-![](img/BackingServiceInstanceList.png)
+![](img/Backing_Service_Instance_List.png)
 
 ### 4. 绑定后端支持服务实例
 
 点击“我的后端服务实例”，点击“服务绑定”、“新增绑定”，从服务列表中，选择要绑定的服务。
 
-![](img/BindBackingServiceInstance.png)
+![](img/Bind_Backing_Service_Instance.png)
 
