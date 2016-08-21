@@ -242,7 +242,7 @@ $ oc secrets add serviceaccount/builder secrets/registry --for=pull
 ![](img/Code_Build.png)
 
 3. 点击“新建构建”，输入“构建名称”、选择代码仓库后，点击“开始构建”
-![](img/Build-GUI.png)
+![](img/Build_GUI.png)
 
 4. 在状态页中可以查看构建状态
 ![](img/Build_Status.png)
