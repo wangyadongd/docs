@@ -2,10 +2,10 @@
 ### [Get_Started：用平面拟合三维数据](Get_Started.md)
 本节从一段用 Python API 撰写的 TensorFlow 示例代码起步，让你对将要学习的内容有初步的印象。
 
-### [MNIST_Simple：MNIST 的简单实现](MNIST_Simple.md)
+### [MNIST_Simple：MNIST 的简单实现](MNIST.md)
 本节讲述一个经典的手写数字识别 (MNIST) 问题，并提供了简单实现。
 
-### [MNIST_CNN：MNIST 的卷积神经网络实现](MNIST_CNN.md)
+### [MNIST_CNN：MNIST 的卷积神经网络实现](MNIST.md)
 卷积神经网络是为图像识别量身定做的一个模型，本节提供了 MNIST 的卷积神经网络实现。
 
 ### [Word2Vec：单词的向量表示](Word2Vec.md)
