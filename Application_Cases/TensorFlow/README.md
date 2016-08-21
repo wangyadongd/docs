@@ -5,20 +5,20 @@
 
 ### Step 1：
 登录 DataFoundry。如果你还没有账号，请点击注册。
-![image](img/login.png)
+![](img/login.png)
 
 ### Step 2：
 登录后的页面如下所示，点击“后端服务”，进行实例申请。
-![image](img/backing_service_apply.png)
+![](img/backing_service_apply.png)
 
 ### Step 3：
 创建 TensorFlow 服务的实例，输入服务名称后点击“创建”。
-![image](img/create_instance.png)
+![](img/create_instance.png)
 
 ### Step 4：
-在我的后端实例中找到 TensorFlow 实例，点击 Dashboard 图标，进入 jupytet notebook 进行实例编辑。
-![image](img/dashboard.png)
-![image](img/notebook.png)
+在我的后端实例中找到 TensorFlow 实例，点击 Dashboard 图标，进入 jupyter notebook 进行实例编辑。
+![](img/dashboard.png)
+![](img/notebook.png)
 
 ### Step 5:
 进入后，你可以选择运行已有文件，或点击右上方“new”新建自己的文件。
