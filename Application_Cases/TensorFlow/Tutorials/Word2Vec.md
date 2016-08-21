@@ -25,6 +25,7 @@ the quick brown fox jumped over the lazy dog
 Skip-Gram 模型为了避免这种情况发生，使用一个二分类器（逻辑回归）在同一个上下文环境里从 *k* 虚构的 ![](../img/rw5.png) (噪声) 单词区分出真正的目标单词 ![](../img/vr1.png)。
 
 从源词汇预测目标词汇模型如图：
+
  <img src="../img/nce-nplm.png" width = "400"/>
 
 假设用 t 表示上面这个例子中 quick 来预测 the 的训练的单个循环。用 `num_noise` 定义从噪声分布中挑选出来的噪声（相反的）单词的个数，通常使用一元分布，P(w)。为了简单起见，我们就定 `num_noise=1`，用 sheep 选作噪声词。接下来就可以计算每一对观察值和噪声值的损失函数了，每一个执行步骤就可表示为：
