@@ -47,7 +47,6 @@
 
 
 
-```
 {% raw %}
 <video id="my-video" class="video-js" controls preload="auto" width="100%" 
 poster="http://zhangjikai.com/resource/poster.jpg" data-setup='{"aspectRatio":"16:9"}'>
@@ -58,5 +57,4 @@ poster="http://zhangjikai.com/resource/poster.jpg" data-setup='{"aspectRatio":"1
   </p>
 </video>
 {% endraw %}
-```
 
