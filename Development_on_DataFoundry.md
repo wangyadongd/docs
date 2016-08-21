@@ -4,7 +4,7 @@ DataFoundry 作为一个大数据 PaaS 平台，不仅为开发者提供了即�
 
 为了践行敏捷开发、提高应用交付效率，可根据 Gitflow 流程在 DataFoundry 上构建一个稳定高效的持续集成、持续部署体系。
 
-![](CICD.png)
+![](img/CICD.png)
 
 在 DataFoundry 上开发、持续集成、持续部署整体分为以下几个部分：
 

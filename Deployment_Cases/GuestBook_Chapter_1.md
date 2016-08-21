@@ -82,5 +82,5 @@ Fork TensorFLow Playground 源码到自己的代码仓库：
 9）通过路由访问应用：
 ![](img/route.png)
 
-10) 大功告成：
+10）大功告成：
 ![](img/deep_playground.png)

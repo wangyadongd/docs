@@ -33,7 +33,7 @@ DataFoundry 的镜像指 Docker 镜像，它是 Docker 容器的基础。Docker 
 当然，镜像仓库除了可以存储用 DataFoundry 提供的构建功能输出的镜像外，也可以存储使用 Docker 构建的其他镜像，这些镜像以 Docker Pull 的方式存放在镜像仓库中。
 
 Docker 镜像、镜像仓库和容器间的关系如下图所示：
-![](registry.png)
+![](img/registry.png)
 
 
 ## 服务部署（Deployments）

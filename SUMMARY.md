@@ -20,7 +20,7 @@
 * [部署案例](Deployment_Cases/README.md)
     * [第一个应用 - TensorFlow Playground](Deployment_Cases/GuestBook_Chapter_1.md)
     * [使用后端服务 - WordPress](Deployment_Cases/GuestBook_Chapter_2.md)
-    * [进行 CI\/CD - 2048](Deployment_Cases/GuestBook_Chapter_3.md)
+    * [进行 CI/CD - 2048](Deployment_Cases/GuestBook_Chapter_3.md)
     * [使用 User Provided Service - RStudio](Deployment_Cases/GuestBook_Chapter_4.md)
 * [应用案例](Application_Cases/README.md)
     * [TensorFlow](Application_Cases/TensorFlow/README.md)
