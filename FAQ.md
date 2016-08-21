@@ -48,8 +48,7 @@
 
 
 {% raw %}
-<video id="my-video" class="video-js" controls preload="auto" width="100%" 
-poster="http://zhangjikai.com/resource/poster.jpg" data-setup='{"aspectRatio":"16:9"}'>
+<video id="my-video" class="video-js" controls preload="auto" width="100%" data-setup='{"aspectRatio":"16:9"}'>
   <source src="https://s3.cn-north-1.amazonaws.com.cn/shipingjiaoben/ldp-video.mp4" type='video/mp4' >
   <p class="vjs-no-js">
     To view this video please enable JavaScript, and consider upgrading to a web browser that
