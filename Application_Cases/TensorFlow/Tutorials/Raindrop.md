@@ -124,7 +124,7 @@ DisplayArray(u_init, rng=[-0.1, 0.1])
 
 ```
 
-![](img/pde_output_1.jpg)
+![](../img/pde_output_1.jpg)
 
 现在，让我们来指定该微分方程的一些详细参数。
 
@@ -190,7 +190,7 @@ for i in range(1000):
 
 ```
 
-![](img/pde_output_2.jpg)
+![](../img/pde_output_2.jpg)
 
 看！！ 雨点落在池塘中，和现实中一样的泛起了涟漪。
 

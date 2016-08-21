@@ -24,7 +24,7 @@
 * [应用案例](Application_Cases/README.md)
   * [TensorFlow](Application_Cases/TensorFlow/README.md)
     * [参考示例](Application_Cases/TensorFlow/Tutorials/README.md)
-      * [Get\_Started](Application_Cases/TensorFlow/Tutorials/Get_Started.md)
+      * [Get Started](Application_Cases/TensorFlow/Tutorials/Get_Started.md)
       * [MNIST](Application_Cases/TensorFlow/Tutorials/MNIST.md)
       * [Raindrop](Application_Cases/TensorFlow/Tutorials/Raindrop.md)
       * [Word2Vec](Application_Cases/TensorFlow/Tutorials/Word2Vec.md)
