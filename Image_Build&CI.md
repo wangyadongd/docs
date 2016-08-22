@@ -30,7 +30,7 @@ $ oc new-build https://github.com/asiainfoLDP/datahub_wordpress.git#master
 ```
 
 * 根据 Dockerfile 中的 `from wordpress`，将为 wordpress:latest 创建 imagestream，存放 wordpress:latest 镜像。
-* 创建基于代码库 [https:\/\/github.com\/asiainfoLDP\/datahub\_wordpress.git\#master](https://github.com/asiainfoLDP/datahub_wordpress.git#master) 的构建。
+* 创建基于代码库 [https://github.com/asiainfoLDP/datahub_wordpress.git#master](https://github.com/asiainfoLDP/datahub_wordpress.git#master) 的构建。
 * 创建用来存放构建完成后的镜像的 imagestream:datahubwordpress。
 * 当 from 的基础镜像发生改变时，将触发自动构建。
 * 可以通过 `oc logs -f bc/datahubwordpress` 查看构建日志。
@@ -96,13 +96,13 @@ $ oc secrets new-basicauth secretname --username=github 用户名 --password=git
 
 secretname 为自己取的名字。
 
-第二步： 将 secret 加入 serviceaccount\/builder
+第二步： 将 secret 加入 serviceaccount/builder
 
 ```
 $ oc secrets add serviceaccount/builder secret/secretname
 ```
 
-由于构建过程默认使用 serviceaccount\/builder，所以只需将 secret 加入 serviceaccount\/builder 即可。
+由于构建过程默认使用 serviceaccount/builder，所以只需将 secret 加入 serviceaccount/builder 即可。
 
 第三步：
 
@@ -169,7 +169,7 @@ $ oc new-build https://github.com/asiainfoLDP/datahub_wordpress.git#master --bui
 $ oc secret new registry /root/.docker/config.json
 ```
 
-第二步：添加 secret 到 serviceaccount\/builder
+第二步：添加 secret 到 serviceaccount/builder
 
 ```
 $ oc secrets add serviceaccount/builder secrets/registry --for=pull

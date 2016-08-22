@@ -37,7 +37,7 @@ $ oc new-app https://github.com/datafoundry/wordpress.git
 * **imagestream**，是平台显示私有仓库镜像信息的入口，同时也是平台 CD （持续交付）功能的触发入口；
 * **oc** 是 DataFoundry 的命令行控制工具，它提供了对 DataFoundry 的所有控制功能；
 * **new-app** 是 DataFoundry 的操作命令，它可以通过后续指定的若干参数完成一个应用的构建和发布；
-* [**https:\/\/github.com\/datafoundry\/wordpress.git**](https://github.com/datafoundry/wordpress.git) 是一个 Git 代码仓库，它是我们要在 DataFoundry 发布的第一个应用。
+* **[https://github.com/datafoundry/wordpress.git](https://github.com/datafoundry/wordpress.git)** 是一个 Git 代码仓库，它是我们要在 DataFoundry 发布的第一个应用。
 
 输入命令并点击回车后，命令行会等待一段时间，等待时间的长短与代码仓库的代码量，命令执行位置及 Github 的网络条件有关，这段时间内 oc 会先 clone 代码仓库到本地，对代码仓库中的 Dockerfile 进行解析，主要是获取基础镜像信息。
 
@@ -51,10 +51,10 @@ $ oc new-app https://github.com/datafoundry/wordpress.git
 ### 查询基础要素信息
 
 ```
-oc get buildconfig <buildconfig-name>
-oc get deployconfig <deployconfig-name>
-oc get service <service-name>
-oc get imagestream <imagestream-name>
+$ oc get buildconfig <buildconfig-name>
+$ oc get deployconfig <deployconfig-name>
+$ oc get service <service-name>
+$ oc get imagestream <imagestream-name>
 ```
 
 ### 查询基础要素详情

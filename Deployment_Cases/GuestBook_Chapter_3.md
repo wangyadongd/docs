@@ -1,4 +1,4 @@
-# 第三节：进行 CI\/CD - 2048
+# 第三节：进行 CI/CD - 2048
 
 > 本教程基于 DataFoundry 经典界面编写，考虑到产品的快速演进，部分步骤和图示可能已经改变。
 
@@ -17,7 +17,7 @@
 
 在第三节，我们将学会：
 
-* 对部署的应用进行 CI\/CD 配置
+* 对部署的应用进行 CI/CD 配置
 
 ## 2 关于 2048 应用
 
@@ -43,7 +43,7 @@
 
 Fork 2048 源码到自己的代码仓库：
 
-* 官方版（含 dockerfile），[https:\/\/github.com\/alexwhen\/docker-2048](https://github.com/alexwhen/docker-2048)
+* 官方版（含 dockerfile），[https://github.com/alexwhen/docker-2048](https://github.com/alexwhen/docker-2048)
 
 ## 4 Step by Step 详细操作
 
@@ -73,7 +73,7 @@ Fork 2048 源码到自己的代码仓库：
 2）在“服务详情”页的“高级配置”区域，可以看到“路由设置”开关，在这里可以为服务配置 route 信息：
 ![](img/route3.png)
 
-3）在“自动部署”区域，进行 CI\/CD 选项配置，勾选“镜像变化触发自动部署”、“配置变化触发自动部署”：
+3）在“自动部署”区域，进行 CI/CD 选项配置，勾选“镜像变化触发自动部署”、“配置变化触发自动部署”：
 ![](img/auto_deployment.png)
 
 注：
@@ -112,7 +112,7 @@ Fork 2048 源码到自己的代码仓库：
 
 ### 4.2 命令行操作
 
-我们可以通过命令对 dc，bc 和 rc 的 triggers 进行操作来触发 CI\/CD，这里的 triggers 即一些能够引起触发的条件。
+我们可以通过命令对 dc，bc 和 rc 的 triggers 进行操作来触发 CI/CD，这里的 triggers 即一些能够引起触发的条件。
 
 DataFoundry 中包括两种 triggers，一种是代码构建处的“自动构建“\(由代码变化触发\)，另一种是服务部署处的“镜像变化触发自动部署”和“配置变化触发自动部署”。
 
@@ -168,7 +168,7 @@ $ oc set triggers dc/docker-2048
 $ oc set triggers dc/docker-2048 --remove-all
 ```
 
-再次查看 dc\/docker-2048 的 triggers 时，我们会发现没有任何 trigger 条件了。
+再次查看 dc/docker-2048 的 triggers 时，我们会发现没有任何 trigger 条件了。
 
 * 删除单个 trigger：
 

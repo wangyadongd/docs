@@ -48,7 +48,7 @@ WordPress 是一种使用 PHP 语言开发的博客平台，用户可以在支�
 
 Fork WordPress 源码到自己的代码仓库：
 
-* 预置 dockerfile 版，[https:\/\/github.com\/DataFoundry\/wordpress](https://github.com/DataFoundry/wordpress)
+* 预置 dockerfile 版，[https://github.com/DataFoundry/wordpress](https://github.com/DataFoundry/wordpress)
 
 ## 4 Step by Step 详细操作
 
