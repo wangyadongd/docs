@@ -1,6 +1,6 @@
-# 第二节 镜像构建及持续集成
+## 第二节 镜像构建及持续集成
 
-## 镜像构建
+### 镜像构建
 
 构建策略为 Docker 的构建过程，以下以代码托管在 GitHub 上举例说明。
 
@@ -221,7 +221,7 @@ $ oc secrets add serviceaccount/builder secrets/registry --for=pull
             lastVersion: 0
 ```
 
-## 持续集成
+### 持续集成
 
 有三种方式触发自动构建的持续集成：Webhook、Image Change 和 Configuration Change。三种方式可以同时使用。
 

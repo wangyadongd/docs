@@ -1,12 +1,12 @@
-# 第四节 后端支持服务
+## 第四节 后端支持服务
 
 后端支持服务为开发者提供即买即用的大数据服务，后端支持服务可以按照开发者的用量需求来申请，数十秒钟内即可得到一个高可用的后端支持服务。
 
 使用后端支持服务，需要按需申请后端支持服务实例。
 
-## 通过命令行申请后端支持服务
+### 通过命令行申请后端支持服务
 
-### 1. 查看后端支持服务
+#### 1. 查看后端支持服务
 
 登录 DataFoundry，执行命令行：
 
@@ -32,7 +32,7 @@ $ oc get backingservice -n openshift
   ZooKeeper    asiainfo.io/servicebroker=etcd   true       Active
 ```
 
-### 2. 查询后端支持服务的详细信息及套餐
+#### 2. 查询后端支持服务的详细信息及套餐
 
 以 MongoDB 为例，执行命令：
 
@@ -103,7 +103,7 @@ $ oc describe backingservice MongoDB -n openshift
   No events.
 ```
 
-### 3. 申请后端支持服务实例
+#### 3. 申请后端支持服务实例
 
 执行命令：
 
@@ -123,7 +123,7 @@ $ oc new-backingserviceinstance NAME --backingservice_name=BackingServiceName --
 $ oc new-backingserviceinstance mongodb-demo --backingservice_name=MongoDB --planid=257C6C2B-A376-4551-90E8-82D4E619C852
 ```
 
-### 4. 查看已申请的后端支持服务实例
+#### 4. 查看已申请的后端支持服务实例
 
 执行命令：
 
@@ -315,7 +315,7 @@ $ oc get backingserviceinstance
 
 环境变量的命名规则：`BSI_$BSINAME_$ENV`
 
-### 7. 后端支持服务实例与服务解绑定
+#### 7. 后端支持服务实例与服务解绑定
 
 执行命令：
 
@@ -336,27 +336,27 @@ oc unbind mongodb-demo rstudio
 
 可用 `oc get bsi` 以及 `oc describe dc dcname` 来查询解绑是否成功。
 
-## 通过界面申请后端支持服务
+### 通过界面申请后端支持服务
 
-### 1. 查看后端支持服务
+#### 1. 查看后端支持服务
 
 登录 DataFoundry，点击“后端支持服务”，查看后端支持服务。
 
 ![](img/Backing_Services.png)
 
-### 2. 申请后端支持服务实例
+#### 2. 申请后端支持服务实例
 
 点击“申请实例”，输入后端支持服务实例名称，选择服务套餐，点击创建。
 
 ![](img/Backing_Service_Instance.png)
 
-### 3. 查看已申请的后端支持服务实例
+#### 3. 查看已申请的后端支持服务实例
 
 点击“我的后端服务实例”，查看已申请的后端支持服务实例。
 
 ![](img/Backing_Service_Instance_List.png)
 
-### 4. 绑定后端支持服务实例
+#### 4. 绑定后端支持服务实例
 
 点击“我的后端服务实例”，点击“服务绑定”、“新增绑定”，从服务列表中，选择要绑定的服务。
 
