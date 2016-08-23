@@ -1,4 +1,4 @@
-## 第一节 访问私有代码仓库
+## 访问私有代码仓库
 
 为了让 DataFoundry 在构建镜像时访问私有代码，我们需要在 DataFoundry 中创建 secrets 资源，并把 secrets 绑定到平台中。具体过程如下：
 
