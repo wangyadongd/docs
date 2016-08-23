@@ -1,8 +1,8 @@
-# 第四节：使用 User Provided Service - RStudio
+## 第四节：使用 User Provided Service - RStudio
 
 > 本教程基于 DataFoundry 经典界面编写，考虑到产品的快速演进，部分步骤和图示可能已经改变。
 
-## 1 第四节所覆盖的知识点
+### 1 第四节所覆盖的知识点
 
 在第四节，我们将学会如何进行：
 
@@ -10,13 +10,13 @@
 * 自定义后端支持服务实例
 * 将应用与自定义后端支持服务绑定
 
-## 2 关于 RStudio 应用
+### 2 关于 RStudio 应用
 
 RStudio 是一款免费的编程工具，它运行用户通过 RStudio 直接从源代码编辑器中执行程序和处理多个项目、工作文件夹，同时还提供了大量的图形和统计方法、统计计算和图形，并支持语法高亮、只能缩进、搜索跳转、预览等多种特色！
 
 在本节，我们将演示如何通过 DataFoundry 平台提供的公有镜像部署 RStudio 应用绑定自定义后端支持服务实例。
 
-## 3 开始前的准备工作
+### 3 开始前的准备工作
 
 在你开始之前，你需要在 DataFoundry 注册一个帐号。
 
@@ -34,13 +34,13 @@ RStudio 是一款免费的编程工具，它运行用户通过 RStudio 直接从
 * [Mac](https://s3.cn-north-1.amazonaws.com.cn/datafoundry/client/mac.zip)
 * [Windows](https://s3.cn-north-1.amazonaws.com.cn/datafoundry/client/windows.zip)
 
-## 4 Step by Step 详细操作
+### 4 Step by Step 详细操作
 
 下面分别对图形界面和命令行两种方式进行介绍。
 
-### 4.1 命令行操作
+#### 4.1 命令行操作
 
-#### Step 1 ：服务部署
+##### Step 1 ：服务部署
 
 1）命令行操作时，“服务部署“可以通过一个命令 `oc run` 完成。
 
@@ -59,7 +59,7 @@ $ oc get pods
   rstudio-2-24p9b   1/1       Running   0          1m
 ```
 
-#### Step 2：自定义后端支持服务实例
+##### Step 2：自定义后端支持服务实例
 
 1）DataFoundry 提供两种后端支持服务实例创建方式：
 
@@ -122,7 +122,7 @@ $ oc describe bsi ups-mongodb
   No events.
 ```
 
-#### Step 4：后端服务实例绑定
+##### Step 4：后端服务实例绑定
 
 1）以上服务实例创建完成，我们继续把 ups-mongodb 绑定到 RStudio 应用中：
 
