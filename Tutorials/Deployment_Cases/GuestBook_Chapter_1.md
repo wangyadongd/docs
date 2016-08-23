@@ -1,4 +1,4 @@
-# 第一节：第一个应用 - TensorFlow Playground
+# 第一节：简单应用 - TensorFlow Playground
 
 > 本教程基于 DataFoundry 经典界面编写，考虑到产品的快速演进，部分步骤和图示可能已经改变。
 
