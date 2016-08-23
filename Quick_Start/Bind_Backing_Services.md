@@ -136,19 +136,19 @@ $ oc get pods
 ## 通过界面方式创建后端服务的过程为
 
 1. 点击“后端服务” 可以看到目前 DataFoundry 所能提供的各类后端服务
-![](../img/BackingServices.png)
+![](img/BackingServices.png)
 
 2. 点击“申请实例”，填入“服务名称”，在选择“服务套餐”后点击“创建”
-![](../img/Backing_Service_Instance_Apply.png)
+![](img/Backing_Service_Instance_Apply.png)
 
 3. 后端服务创建完成后，可以显示创建后端服务详细信息
-![](../img/Backing_Service_Detail.png)
+![](img/Backing_Service_Detail.png)
 
 4. 回到“后端服务”，点击“我的后端服务实例” Tab 页，在这里可以看到所有已创建的后端服务实例
-![](../img/My_Backing_Service_Instances.png)
+![](img/My_Backing_Service_Instances.png)
 
 5. 点击“服务绑定”按钮，在窗口中点击“新增绑定”
-![](../img/New_Binding.png)
+![](img/New_Binding.png)
 
 6. 在弹出窗口中选择需要绑定后端服务的应用，后端服务与应用绑定完成
 
