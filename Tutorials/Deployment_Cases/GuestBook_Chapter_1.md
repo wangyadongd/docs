@@ -1,4 +1,4 @@
-# 第一节：简单应用 - TensorFlow Playground
+## 第一节：简单应用 - TensorFlow Playground
 
 > 本教程基于 DataFoundry 经典界面编写，考虑到产品的快速演进，部分步骤和图示可能已经改变。
 
@@ -13,20 +13,20 @@
 {% endraw %}
 
 
-## 1 第一节所覆盖的知识点
+### 1 第一节所覆盖的知识点
 
 在第一节，我们将学会如何进行：
 
 - 代码构建
 - 服务部署
 
-## 2 关于 TensorFlow Playground 应用
+### 2 关于 TensorFlow Playground 应用
 
 TensorFlow Playground 是一个交互式可视化 nodejs 应用，它通过 d3.js 以动态方式演示了一个神经网络模型的训练过程。
 在本节我们将通过 DataFoundry 平台部署 TensorFlow Playground。
 ![](img/deep_playground.png)
 
-## 3 开始前的准备工作
+### 3 开始前的准备工作
 
 在你开始之前，你需要在 DataFoundry 注册一个帐号。
 
@@ -52,13 +52,13 @@ Fork TensorFLow Playground 源码到自己的代码仓库：
 
 
 
-## 4 Step by Step 详细操作
+### 4 Step by Step 详细操作
 
 下面分别对图形界面和命令行两种方式进行介绍。
 
-### 4.1 图形界面操作
+#### 4.1 图形界面操作
 
-#### Step 1：代码构建
+##### Step 1：代码构建
 
 1）登录平台：
 ![](img/login.png)
