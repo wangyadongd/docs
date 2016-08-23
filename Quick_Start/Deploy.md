@@ -1,4 +1,4 @@
-## 第一节 Hello WordPress
+## 第二节 Hello WordPress
 
 ### 登录 DataFoundry 平台
 
