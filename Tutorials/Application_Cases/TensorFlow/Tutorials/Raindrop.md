@@ -132,7 +132,7 @@ for i in range(1000):
 
 ### 代码下载
 
-* code: [pde\_raindrop.py](../code/pde_raindrop.py)
-* notebook: [pde\_raindrop.ipynb](../notebook/pde_raindrop.ipynb)
+* code: [pde_raindrop.py](../Code/pde_raindrop.py)
+* notebook: [pde_raindrop.ipynb](../Notebook/pde_raindrop.ipynb)
 
 
