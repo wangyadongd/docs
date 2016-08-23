@@ -94,30 +94,30 @@ $ oc delete imagestream <imagestream-name>
 ## 通过界面部署 WordPress
 
 1. 登录平台
-  ![](../img/Login.png)
+  ![](img/Login.png)
 
 2. 在左侧菜单中点击“代码构建”
-  ![](../img/Code_Build.png)
+  ![](img/Code_Build.png)
 
 3. 点击“新建构建”
-  ![](../img/New_Build.png)
+  ![](img/New_Build.png)
 
 4. 输入“构建名称”、“代码 URL ”后，点击“开始构建”
-  ![](../img/Build_Detail.png)
+  ![](img/Build_Detail.png)
 
 5. 在状态页中可以查看构建状态，构建完成后可以镜像仓库中查看本次构建的镜像，鼠标移动到镜像仓库上后，可以点击“部署最新版本”来部署该镜像
-  ![](../img/Build_Latest.png)
+  ![](img/Build_Latest.png)
 
 6. 在部署容器镜像时，可填写“服务名称”、“容器名称”、容器启动时占用的端口和对应服务的端口，点击“创建服务”
-  ![](../img/Create_Service.png)
+  ![](img/Create_Service.png)
 
 7. 点击“创建服务”后，界面进入“服务详情”页，点击”启动“来触发容器启动
-  ![](../img/Service_Detail.png)
+  ![](img/Service_Detail.png)
 
 8. 在“服务详情”页的“高级配置”区域，可以看到“路由设置”开关，在这里可以为服务配置 route 信息
-  ![](../img/Route.png)
+  ![](img/Route.png)
 
 9. 配置完成后，点击“更新”，保存已修改的服务配置
-  ![](../img/Update.png)
+  ![](img/Update.png)
 
 
