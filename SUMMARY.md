@@ -20,7 +20,7 @@
         * [通过界面部署服务](Function/Service_Deployment/Deploy_GUI.md)
 * [进阶教程](Tutorials/README.md)
     * [部署教程](Tutorials/Deployment_Cases/README.md)
-        * [第一个应用 - TensorFlow Playground](Tutorials/Deployment_Cases/GuestBook_Chapter_1.md)
+        * [简单应用 - TensorFlow Playground](Tutorials/Deployment_Cases/GuestBook_Chapter_1.md)
         * [使用后端服务 - WordPress](Tutorials/Deployment_Cases/GuestBook_Chapter_2.md)
         * [进行 CI/CD - 2048](Tutorials/Deployment_Cases/GuestBook_Chapter_3.md)
         * [使用 User Provided Service - RStudio](Tutorials/Deployment_Cases/GuestBook_Chapter_4.md)
