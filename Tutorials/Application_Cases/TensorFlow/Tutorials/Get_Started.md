@@ -1,6 +1,6 @@
 ## Get_Started：用平面拟合三维数据
 
-一起来了解和运行 TensorFlow!
+一起来了解和运行 TensorFlow！
 
 在开始之前，让我们先看一段使用 Python API 撰写的 TensorFlow 示例代码，让你对将要学习的内容有初步的印象。
 
