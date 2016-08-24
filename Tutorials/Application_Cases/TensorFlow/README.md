@@ -35,7 +35,7 @@
 
   本节从一段用 Python API 撰写的 TensorFlow 示例代码起步，让你对将要学习的内容有初步的印象。
 
-- [MNIST：机器学习](Tutorials/MNIST.md)
+- [MNIST：机器学习入门](Tutorials/MNIST.md)
 
   本节讲述一个经典的手写数字识别 (MNIST) 问题，分别提供了简单实现和基于卷积神经网络的实现。
 
