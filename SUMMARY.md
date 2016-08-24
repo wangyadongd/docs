@@ -28,8 +28,8 @@
         * [TensorFlow](Tutorials/Application_Cases/TensorFlow/README.md)
             * [Get Started](Tutorials/Application_Cases/TensorFlow/Tutorials/Get_Started.md)
             * [MNIST](Tutorials/Application_Cases/TensorFlow/Tutorials/MNIST.md)
-            * [PDE Raindrop](Tutorials/Application_Cases/TensorFlow/Tutorials/PDE_Raindrop.md)
             * [Word2Vec](Tutorials/Application_Cases/TensorFlow/Tutorials/Word2Vec.md)
+            * [PDE Raindrop](Tutorials/Application_Cases/TensorFlow/Tutorials/PDE_Raindrop.md)
 * [常见问题](FAQ.md)
 * [文案写作规范](Writing_Norms.md)
 
