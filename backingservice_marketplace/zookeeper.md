@@ -18,8 +18,14 @@ ZooKeeper是一个分布式的，开放源码的分布式应用程序协调服�
 
 ### ZooKeeper实例的环境变量举例
 
-- BSI_ZOOKEEPER_ZOOKEEPERTEST_USERNAME=super- BSI_ZOOKEEPER_ZOOKEEPERTEST_PASSWORD=7bfee9a5d26c077e9d73f3c21460504- BSI_ZOOKEEPER_ZOOKEEPERTEST_HOST=sb-vjk2uvnkkwvfk-zk.service-brokers.svc.cluster.local- BSI_ZOOKEEPER_ZOOKEEPERTEST_PORT=2181
-- JSON:{"ZooKeeper":[{"name":"zookeeper-test","label":"","plan":"standalone","credentials":{"Host":"sb-vjk2uvnkkwvfk-zk.service-brokers.svc.cluster.local","Name":"","Password":"37bfee9a5d26c077e9d73f3c21460504","Port":"2181","Uri":"","Username":"super","Vhost":""}}]}
+- BSI_ZOOKEEPER_ZOOKEEPERTEST_USERNAME=super
+- BSI_ZOOKEEPER_ZOOKEEPERTEST_PASSWORD=7bfee9a5d26c077e9d73f3c21460504
+- BSI_ZOOKEEPER_ZOOKEEPERTEST_HOST=sb-vjk2uvnkkwvfk-zk.service-brokers.svc.cluster.local
+- BSI_ZOOKEEPER_ZOOKEEPERTEST_PORT=2181
+
+- JSON:
+
+{"ZooKeeper":[{"name":"zookeeper-test","label":"","plan":"standalone","credentials":{"Host":"sb-vjk2uvnkkwvfk-zk.service-brokers.svc.cluster.local","Name":"","Password":"37bfee9a5d26c077e9d73f3c21460504","Port":"2181","Uri":"","Username":"super","Vhost":""}}]}
 
 ## 其他文档
 
