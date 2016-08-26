@@ -37,4 +37,5 @@
    * ZooKeeper
    * RabbitMQ
    * Spark
+   * etcd
 
