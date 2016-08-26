@@ -40,4 +40,5 @@
    * etcd
    * Storm
    * Cassandra
+   * Kafka
 
