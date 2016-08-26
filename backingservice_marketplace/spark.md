@@ -1,6 +1,6 @@
 # Spark
 
-![Mou icon](../img/Spark.png)
+![](img/Spark.png)
 
 版本：v1.5.2
 
@@ -14,7 +14,8 @@ Spark是UC Berkeley AMP lab所开源的类Hadoop MapReduce的通用并行框架�
 
 ### Spark 仪表盘
 
-![Mou icon](../img/Spark-dashbroad.png)
+![](img/Spark-dashbroad.png)
+
 
 ### Spark 实例环境变量举例
 
