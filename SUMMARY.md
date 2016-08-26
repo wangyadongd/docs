@@ -36,4 +36,5 @@
    * [Redis](backingservice_marketplace/redis.md)
    * ZooKeeper
    * RabbitMQ
+   * Spark
 
