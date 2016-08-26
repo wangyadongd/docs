@@ -10,6 +10,4 @@
 - [Storm](backingservice_marketplace/storm.md)
 - [Cassandra](backingservice_marketplace/cassandra.md)
 - [Kafka](backingservice_marketplace/kafka.md)
-- 
-
 
