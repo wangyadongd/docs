@@ -38,7 +38,7 @@
    * [RabbitMQ](backingservice_marketplace/rabbitmq.md)
    * [Spark](backingservice_marketplace/spark.md)
    * [etcd](backingservice_marketplace/etcd.md)
-   * Storm
+   * [Storm](backingservice_marketplace/storm.md)
    * Cassandra
    * Kafka
 
