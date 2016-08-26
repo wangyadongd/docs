@@ -1,6 +1,6 @@
 # Redis
 
-![Mou icon](../img/Redis.png)
+
 
 版本：v2.8
 
