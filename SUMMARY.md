@@ -37,7 +37,7 @@
    * [ZooKeeper](backingservice_marketplace/zookeeper.md)
    * [RabbitMQ](backingservice_marketplace/rabbitmq.md)
    * [Spark](backingservice_marketplace/spark.md)
-   * etcd
+   * [etcd](backingservice_marketplace/etcd.md)
    * Storm
    * Cassandra
    * Kafka
