@@ -18,8 +18,14 @@ Redis是一个可基于内存亦可持久化的日志型、Key-Value数据库。
 
 ### Redis实例环境变量举例
 
-- BSI_REDIS_REDISTEST_PASSWORD=8cefc7cb5901b914bf265631f0aa9113- BSI_REDIS_REDISTEST_HOST=sb-ggmmyzrtthgom-redis.service-brokers.svc.cluster.local- BSI_REDIS_REDISTEST_PORT="26379"- BSI_REDIS_REDISTEST_NAME=cluster-sb-ggmmyzrtthgom-redis- JSON:
-{"Redis":[{"name":"redis-test","label":"","plan":"standalone","credentials":{"Host":"sb-ggmmyzrtthgom-redis.service-brokers.svc.cluster.local","Name":"cluster-sb-ggmmyzrtthgom-redis","Password":"8cefc7cb5901b914bf265631f0aa9113","Port":"26379","Uri":"","Username":"","Vhost":""}}]}
+- BSI_REDIS_REDISTEST_PASSWORD=8cefc7cb5901b914bf265631f0aa9113
+- BSI_REDIS_REDISTEST_HOST=sb-ggmmyzrtthgom-redis.service-brokers.svc.cluster.local
+- BSI_REDIS_REDISTEST_PORT="26379"
+- BSI_REDIS_REDISTEST_NAME=cluster-sb-ggmmyzrtthgom-redis
+
+- JSON:
+
+{"Redis":[{"name":"redis-test","label":"","plan":"standalone","credentials":{"Host":"sb-ggmmyzrtthgom-redis.service-brokers.svc.cluster.local","Name":"cluster-sb-ggmmyzrtthgom-redis","Password":"8cefc7cb5901b914bf265631f0aa9113","Port":"26379","Uri":"","Username":"","Vhost":""}}]}
 
 ### 使用Redis实例
 
@@ -31,6 +37,10 @@ Redis 的 Master 的 IP 地址需要通过 BSI_REDIS_REDISTEST_HOST、BSI_REDIS_
 
 ## 其他文档
 
-官方文档：http://www.redis.net.cn/官方教程：http://www.redis.net.cn/tutorial/3501.htmlAPI文档:http://redis.io/topics/data-types-intro
+官方文档：http://www.redis.net.cn/
+
+官方教程：http://www.redis.net.cn/tutorial/3501.html
+
+API文档:http://redis.io/topics/data-types-intro
 
 
