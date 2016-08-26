@@ -35,7 +35,7 @@
 * [后端支持服务市场](backingservice_marketplace/README.md)
    * [Redis](backingservice_marketplace/redis.md)
    * [ZooKeeper](backingservice_marketplace/zookeeper.md)
-   * RabbitMQ
+   * [RabbitMQ](backingservice_marketplace/rabbitmq.md)
    * Spark
    * etcd
    * Storm
