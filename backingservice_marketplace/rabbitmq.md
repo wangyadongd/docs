@@ -1,6 +1,6 @@
 # RabbitMQ
 
-![Mou icon](../img/RabbitMQ.png)
+![](img/RabbitMQ.png)
 
 版本：v3.6.1
 
@@ -14,7 +14,8 @@ RabbitMQ是流行的开源消息队列系统。用于在分布式系统中存储
 
 ### RabbitMQ 仪表盘
 
-![Mou icon](../img/RabbitMQ-DashBroad.png)
+![](img/RabbitMQ-DashBroad.png)
+
 
 ### RabbitMQ 实例环境变量举例
 
