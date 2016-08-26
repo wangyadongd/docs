@@ -1,6 +1,6 @@
 # ZooKeeper
 
-![Mou icon](../img/ZooKeeper.png)
+![](img/ZooKeeper.png)
 
 版本：v3.4.8
 
