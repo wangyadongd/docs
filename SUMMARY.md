@@ -39,6 +39,6 @@
    * [Spark](backingservice_marketplace/spark.md)
    * [etcd](backingservice_marketplace/etcd.md)
    * [Storm](backingservice_marketplace/storm.md)
-   * Cassandra
+   * [Cassandra](backingservice_marketplace/cassandra.md)
    * Kafka
 
