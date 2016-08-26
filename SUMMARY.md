@@ -39,4 +39,5 @@
    * Spark
    * etcd
    * Storm
+   * Cassandra
 
