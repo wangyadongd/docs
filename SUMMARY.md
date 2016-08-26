@@ -33,4 +33,5 @@
 * [常见问题](FAQ.md)
 * [文案写作规范](Writing_Norms.md)
 * 后端支持服务市场
+   * Redis
 
