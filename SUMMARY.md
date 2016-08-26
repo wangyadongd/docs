@@ -34,7 +34,7 @@
 * [文案写作规范](Writing_Norms.md)
 * [后端支持服务市场](backingservice_marketplace/README.md)
    * [Redis](backingservice_marketplace/redis.md)
-   * ZooKeeper
+   * [ZooKeeper](backingservice_marketplace/zookeeper.md)
    * RabbitMQ
    * Spark
    * etcd
