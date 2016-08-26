@@ -36,7 +36,7 @@
    * [Redis](backingservice_marketplace/redis.md)
    * [ZooKeeper](backingservice_marketplace/zookeeper.md)
    * [RabbitMQ](backingservice_marketplace/rabbitmq.md)
-   * Spark
+   * [Spark](backingservice_marketplace/spark.md)
    * etcd
    * Storm
    * Cassandra
