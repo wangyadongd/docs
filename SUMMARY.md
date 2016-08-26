@@ -38,4 +38,5 @@
    * RabbitMQ
    * Spark
    * etcd
+   * Storm
 
