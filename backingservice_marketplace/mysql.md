@@ -35,7 +35,7 @@ Mysql 实例与服务绑定后，使用host、 port、 username、 password、ur
 
 ## 其他文档
 
-官方：https://www.mysql.com/
+官网：https://www.mysql.com/
 
 API文档：http://dev.mysql.com/doc/ndbapi/en/preface.html
 
