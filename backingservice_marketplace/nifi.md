@@ -31,7 +31,7 @@ NiFi 实例与服务绑定后，使用host、 port等环境变量连接 NiFi 实
 
 ## 其他文档
 
-官方文档：http://nifi.apache.org/
+官网网址：http://nifi.apache.org/
 
 帮助文档：http://nifi.apache.org/docs.html
 
