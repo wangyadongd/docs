@@ -19,14 +19,14 @@ Kettle是一款国外开源的ETL工具。可以使用 job 作业方式或操作
 ### Kettle实例环境变量举例
 
 - BSI_KETTLE_KETTLET2_USERNAME=-fz-_3-_328
-- BSI_KETTLE_KETTLET2_PASSWORD=aa3*****d1a81a7fb9d3920b
-- BSI_KETTLE_KETTLET2_HOST=sb-4fy****oi6rvc-kettle.service-brokers.svc.cluster.local
+- BSI_KETTLE_KETTLET2_PASSWORD=aa3asdjaskdd1a81a7fb9d3920b
+- BSI_KETTLE_KETTLET2_HOST=sb-4fyxckkjlasf12oi6rvc-kettle.service-brokers.svc.cluster.local
 - BSI_KETTLE_KETTLET2_PORT="8080"
-- BSI_KETTLE_KETTLET2_URI='File Uploader URL: http://sb-4******rvc-kettle-file-uploader.app.dataos.io'
+- BSI_KETTLE_KETTLET2_URI='File Uploader URL: http://sb-4askjlqwervc-kettle-file-uploader.app.dataos.io'
 
 - JSON:
 
-{"Kettle":[{"name":"kettle-t2","label":"","plan":"standalone","credentials":{"Host":"sb-4**eoi6rvc-kettle.service-brokers.svc.cluster.local","Name":"","Password":"aa39**26d1a81a7fb9d3920b","Port":"8080","Uri":"File Uploader URL: http://sb-4fyd**8c-kettle-file-uploader.app.dataos.io","Username":"-fz-_3-_328","Vhost":""}}]}
+{"Kettle":[{"name":"kettle-t2","label":"","plan":"standalone","credentials":{"Host":"sb-4askljklqeoi6rvc-kettle.service-brokers.svc.cluster.local","Name":"","Password":"aa39aslkdlas26d1a81a7fb9d3920b","Port":"8080","Uri":"File Uploader URL: http://sb-4fydasdasl8c-kettle-file-uploader.app.dataos.io","Username":"-fz-_3-_328","Vhost":""}}]}
 
 ### 使用Kettle实例
 
