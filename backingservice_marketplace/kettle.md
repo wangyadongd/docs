@@ -26,7 +26,7 @@ Kettle是一款国外开源的ETL工具。可以使用 job 作业方式或操作
 
 - JSON:
 
-{"Kettle":[{"name":"kettle-t2","label":"","plan":"standalone","credentials":{"Host":"sb-4*****eoi6rvc-kettle.service-brokers.svc.cluster.local","Name":"","Password":"aa39****26d1a81a7fb9d3920b","Port":"8080","Uri":"File Uploader URL: http://sb-4fyd*****8c-kettle-file-uploader.app.dataos.io","Username":"-fz-_3-_328","Vhost":""}}]}
+{"Kettle":[{"name":"kettle-t2","label":"","plan":"standalone","credentials":{"Host":"sb-4**eoi6rvc-kettle.service-brokers.svc.cluster.local","Name":"","Password":"aa39**26d1a81a7fb9d3920b","Port":"8080","Uri":"File Uploader URL: http://sb-4fyd**8c-kettle-file-uploader.app.dataos.io","Username":"-fz-_3-_328","Vhost":""}}]}
 
 ### 使用Kettle实例
 
