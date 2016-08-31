@@ -40,4 +40,4 @@ Kettle 实例与服务绑定后，使用host、 port、 username、 password、u
 
 帮助文档：https://help.pentaho.com/Documentation/6.1
 
-API文档:http://wiki.pentaho.com/display/EAI/Pentaho+Data+Integration+-+Java+API+Examples
+API文档：http://wiki.pentaho.com/display/EAI/Pentaho+Data+Integration+-+Java+API+Examples
