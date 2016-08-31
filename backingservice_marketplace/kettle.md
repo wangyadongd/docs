@@ -34,7 +34,7 @@ Kettle 实例与服务绑定后，使用host、 port、 username、 password、u
 
 ## 其他文档
 
-官方文档：http://community.pentaho.com/projects/data-integration/
+官网：http://community.pentaho.com/projects/data-integration/
 
 开源社区：http://www.ukettle.org/
 
