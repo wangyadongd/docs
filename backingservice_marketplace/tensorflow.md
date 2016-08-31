@@ -30,7 +30,7 @@ TensorFlow 实例与服务绑定后，使用host环境变量连接 TensorFlow �
 
 ## 其他文档
 
-官方文档：https://www.tensorflow.org/
+官网网址：https://www.tensorflow.org/
 
 帮助文档：https://github.com/tensorflow/tensorflow
 
